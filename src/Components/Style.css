@@ -1,0 +1,283 @@
+.Header{
+    width: 100%;
+    height: 60px;
+    /* background: pink; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.HeaderLogo{
+    width: 17%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.HeaderLogo img{
+    width: 150%;
+    height: 150%;
+    object-fit: contain;
+}
+
+.HeaderLink{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.Active{
+    font-size: 17px;
+    color: white;
+    cursor: pointer;
+    transition: all 350ms ease-in;
+    transform: scale(1);
+    text-decoration: none;
+    background: #05446E;
+    width: 15%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+}
+.Active:hover{
+    transform: scale(1.1);
+    color: #fb8500;
+  }
+.Inactive{
+    font-size: 17px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: #fb8500;
+    cursor: pointer;
+    transition: all 350ms ease-in;
+    transform: scale(1);
+    text-decoration: none;
+}
+.Inactive:hover{
+    transform: scale(1.1);
+    color: #05446E;
+  }
+.HeaderProfile{
+    width: 10%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ProfileLogo{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.HeaderMobile{
+    display: none;
+}
+.SearchBody{
+    width: 80%;
+    height: 9rem;
+    background: pink;
+    position: absolute;
+    top: 90%;
+    left: 10%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.SearchTitle{
+    width: 50%;
+    height: 40%;
+    border: 2px solid black;
+    display: flex;
+    align-items: center;
+    padding-inline: 15px;
+}
+.SearchInputField{
+    width: 100%;
+    height: 60%;
+    border: 2px solid black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.SearchDestination{
+    width: 40%;
+    height: 70%;
+    border: 2px solid black;
+}
+
+@media screen and (max-width: 800px) {
+    .Header{
+        /* background: pink; */
+        position: relative;
+    }
+    .HeaderLink,
+    .HeaderProfile{
+        display: none;
+    }
+    .HeaderMobile{
+         width: 20%;
+         height: 2.5rem;
+        /* background: purple; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .MenuHold{
+        font-size: 1.4rem;
+        cursor: pointer;
+        color: #05446E;
+        position: absolute;
+        right: 10%;
+    }
+    .HeaderHold{
+        width: 100%;
+        height: 25rem;
+        background: #05446E;
+        position: absolute;
+        top: 90%;
+        right: 1%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 8px;
+    }
+    .Active{
+        width: 60%;
+        height: 7%;
+    }
+}
+@media screen and (max-width: 600px) {
+    .Header{
+        /* background: pink; */
+        position: relative;
+    }
+    .HeaderLink,
+    .HeaderProfile{
+        display: none;
+    }
+    .HeaderMobile{
+         width: 20%;
+         height: 2.5rem;
+        /* background: purple; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .MenuHold{
+        font-size: 1.4rem;
+        cursor: pointer;
+        color: #05446E;
+        position: absolute;
+        right: 10%;
+    }
+    .HeaderHold{
+        width: 100%;
+        height: 25rem;
+        background: #05446E;
+        position: absolute;
+        top: 90%;
+        right: 1%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 8px;
+    }
+    .Active{
+        width: 60%;
+        height: 7%;
+    }
+}
+
+@media screen and (max-width: 400px) {
+    .Header{
+        /* background: pink; */
+        position: relative;
+    }
+    .HeaderLink,
+    .HeaderProfile{
+        display: none;
+    }
+    .HeaderMobile{
+         width: 20%;
+         height: 2.5rem;
+        /* background: purple; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .MenuHold{
+        font-size: 1.4rem;
+        cursor: pointer;
+        color: #05446E;
+        position: absolute;
+        right: 10%;
+    }
+    .HeaderHold{
+        width: 100%;
+        height: 25rem;
+        background: #05446E;
+        position: absolute;
+        top: 90%;
+        right: 1%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 8px;
+    }
+    .Active{
+        width: 60%;
+        height: 7%;
+    }
+}
+
+
+@media screen and (max-width: 320px) {
+    .Header{
+        /* background: pink; */
+        position: relative;
+    }
+    .HeaderLink,
+    .HeaderProfile{
+        display: none;
+    }
+    .HeaderMobile{
+         width: 20%;
+         height: 2.5rem;
+        /* background: purple; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .MenuHold{
+        font-size: 1.4rem;
+        cursor: pointer;
+        color: #05446E;
+        position: absolute;
+        right: 10%;
+    }
+    .HeaderHold{
+        width: 100%;
+        height: 25rem;
+        background: #05446E;
+        position: absolute;
+        top: 90%;
+        right: 1%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 8px;
+    }
+    .Active{
+        width: 60%;
+        height: 7%;
+    }
+}
