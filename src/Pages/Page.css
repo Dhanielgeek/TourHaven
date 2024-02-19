@@ -55,7 +55,7 @@
   .AboutBody{
     width: 100%;
     height: 100vh;
-    background: #000;
+    background: red;
   }
 
   @media screen and (max-width: 800px) {
