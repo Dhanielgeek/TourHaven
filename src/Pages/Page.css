@@ -1,13 +1,11 @@
 /*  */
   .HeroBody{
     width: 100%;
-    height: 90vh;
+    height: 91.5vh;
     /* background: #000; */
     background-image:  url('../assets/Hero.svg');
     background-size: cover;
     background-position: center;
-    position: relative;
-
   }
   .HeroWrapper{
     width: 100%;
@@ -15,6 +13,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
   }
   .HeroContainer{
     width: 70%;
@@ -26,22 +25,22 @@
   }
   .HeroTitle{
     width: 100%;
-    height: 50%;
+    height: 60%;
     display: flex;
     justify-content: center;
     align-items: center;
   }
   .HeroTitle h1{
-    font-size: 4rem;
-    font-style: italic;
+    font-size: 4.8rem;
     font-weight: 500;
     color: #ffff;
-    font-family: 'Aladin', system-ui;
+    font-family: 'Lora',serif;
+    text-align: center;
   }
   .HeroSubTitle{
-    width: 70%;
+    width: 60%;
     height: 24%;
-    background: #05446E;
+    background: #fb8500;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -50,13 +49,136 @@
   .HeroSubTitle h3{
     font-weight: 400;
     color: #ffff;
-    font-size: 1.3rem;
+    font-size: 1.7rem;
+    font-family: 'Lora', serif;
   }
-  .AboutBody{
+  .SearchBody{
+    width: 80%;
+    height: 15%;
+    background: #fdfdf7;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .SearchDestination{
+    width: 40%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .SearchCheck{
+    width: 25%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .SearchBtn{
+    width: 20%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .SearchBtn button{
+    width: 90%;
+    height: 90%;
+    background: #05446E;
+    font-size: 1.5rem;
+    font-family: 'Lora',serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+  }
+  .InputfileDestination{
     width: 100%;
-    height: 100vh;
-    background: red;
+    height: 70%;
+    background: white;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    border-radius: 7px;
+    padding-right: 3px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
   }
+  .InputfileDestination input{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    padding-left: 9px;
+    font-size: 1.1rem;
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    border-radius: 7px;
+  }
+  .DateCheck{
+    width: 100%;
+    height: 70%;
+    background: white;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    border-radius: 9px;
+    padding-right: 3px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .DateCheck input{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    padding-left: 12px;
+    font-size: 1.1rem;
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    border-radius: 9px;
+  }
+  .BestBody{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+  }
+  .BestTitle{
+    width: 40%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .BestTitle h1{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #05446E;
+    font-family: 'Lora', serif;
+    text-align: center;
+  }
+  .BestSubTitle{
+    width: 40%;
+    height: 60%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2%;
+  }
+  .BestSubTitle span{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #05446E;
+    font-family: 'Lora', serif;
+    text-align: center;
+  }
+ 
+
 
   @media screen and (max-width: 800px) {
    
@@ -83,6 +205,27 @@
      .HeroSubTitle h3{
        font-size: 1.8rem;
      }
+     .BestBody{
+      width: 100%;
+      height: 25vh;
+      /* background: #000; */
+    }
+    .BestTitle{
+      width: 90%;
+      height: 50%;
+      /* border: 2px solid white; */
+    }
+    .BestTitle h1{
+      font-size: 2rem;
+    }
+    .BestSubTitle{
+      width: 90%;
+      height: 50%;
+      /* border: 2px solid white; */
+    }
+    .BestSubTitle span{
+      font-size: 1.3rem;
+    }
   }
 
   @media screen and (max-width: 600px) {
@@ -110,6 +253,46 @@
      .HeroSubTitle h3{
        font-size: 1.1rem;
      }
+     .SearchBody{
+      width: 94%;
+    }
+    .SearchDestination{
+      width: 80%;
+    }
+    .SearchCheck{
+      display: none;
+    }
+    .SearchBtn{
+      width: 30%;
+      height: 60%;
+    }
+    .SearchBtn button{
+      font-size: 0.9rem;
+    }
+    .InputfileDestination input{
+      font-size: 0.8rem;
+    }
+    .BestBody{
+      width: 100%;
+      height: 25vh;
+      /* background: #000; */
+    }
+    .BestTitle{
+      width: 90%;
+      height: 50%;
+      /* border: 2px solid white; */
+    }
+    .BestTitle h1{
+      font-size: 1.2rem;
+    }
+    .BestSubTitle{
+      width: 90%;
+      height: 50%;
+      /* border: 2px solid white; */
+    }
+    .BestSubTitle span{
+      font-size: 0.9rem;
+    }
      
   }
   @media screen and (max-width: 400px) {
@@ -137,6 +320,46 @@
      .HeroSubTitle h3{
        font-size: 1.1rem;
      }
+     .SearchBody{
+      width: 94%;
+    }
+    .SearchDestination{
+      width: 80%;
+    }
+    .SearchCheck{
+      display: none;
+    }
+    .SearchBtn{
+      width: 30%;
+      height: 60%;
+    }
+    .SearchBtn button{
+      font-size: 0.9rem;
+    }
+    .InputfileDestination input{
+      font-size: 0.8rem;
+    }
+    .BestBody{
+      width: 100%;
+      height: 25vh;
+      /* background: #000; */
+    }
+    .BestTitle{
+      width: 90%;
+      height: 50%;
+      /* border: 2px solid white; */
+    }
+    .BestTitle h1{
+      font-size: 1.2rem;
+    }
+    .BestSubTitle{
+      width: 90%;
+      height: 50%;
+      /* border: 2px solid white; */
+    }
+    .BestSubTitle span{
+      font-size: 0.9rem;
+    }
      
   }
 
@@ -161,8 +384,55 @@
   .HeroSubTitle{
     width: 95%;
     text-align: center;
+    height: 20%;
   }
   .HeroSubTitle h3{
     font-size: 1.1rem;
   }
+  .SearchBody{
+    width: 94%;
+  }
+  .SearchDestination{
+    width: 80%;
+  }
+  .SearchCheck{
+    display: none;
+  }
+  .SearchBtn{
+    width: 30%;
+    height: 60%;
+  }
+  .SearchBtn button{
+    font-size: 0.9rem;
+  }
+  .InputfileDestination input{
+    font-size: 0.8rem;
+  }
+  .BestBody{
+    width: 100%;
+    height: 25vh;
+    /* background: #000; */
+  }
+  .BestTitle{
+    width: 90%;
+    height: 50%;
+    /* border: 2px solid white; */
+  }
+  .BestTitle h1{
+    font-size: 1.2rem;
+  }
+  .BestSubTitle{
+    width: 90%;
+    height: 50%;
+    /* border: 2px solid white; */
+  }
+  .BestSubTitle span{
+    font-size: 0.9rem;
+  }
+
+
+
+
+
+
   }

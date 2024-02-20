@@ -1,12 +1,13 @@
 import React from 'react'
 import Hero from './Hero'
-import Search from '../Components/Search'
+import BestHotels from './BestHotels'
+
 
 const Home = () => {
   return (
     <>
     <Hero/>
-    <Search/>
+    <BestHotels/>
     </>
   )
 }

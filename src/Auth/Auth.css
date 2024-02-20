@@ -139,7 +139,7 @@ width: 50%;
     border: none;
     outline: none;
     border-radius: 5px;
-    border: 2px solid #05446E;
+    border: 2px solid #d9d9d9;
     font-size: 1rem;
     font-weight: 500;
     color: black;
@@ -153,7 +153,7 @@ width: 50%;
     border: none;
     outline: none;
     border-radius: 5px;
-    border: 2px solid #05446E;
+    border: 2px solid #d9d9d9;
     font-size: 1rem;
     font-weight: 500;
     color: black;
@@ -168,11 +168,11 @@ width: 50%;
 }
 .SignupEmail input{
     width: 100%;
-    height: 50%;
+    height: 55%;
     border: none;
     outline: none;
     border-radius: 5px;
-    border: 2px solid #05446E;
+    border: 2px solid #d9d9d9;
     font-size: 1rem;
     font-weight: 500;
     color: black;
@@ -187,11 +187,11 @@ width: 50%;
 }
 .SignupPhoneNumber input{
     width: 100%;
-    height: 50%;
+    height: 55%;
     border: none;
     outline: none;
     border-radius: 5px;
-    border: 2px solid #05446E;
+    border: 2px solid #d9d9d9;
     font-size: 1rem;
     font-weight: 500;
     color: black;
@@ -204,7 +204,7 @@ width: 50%;
     display: flex;
     flex-direction: column;
 }
-.SignupPassword input{
+/* .SignupPassword input{
     width: 100%;
     height: 50%;
     border: none;
@@ -216,7 +216,7 @@ width: 50%;
     color: black;
     background: transparent;
     position: relative;
-}
+} */
 .SignupConfirmPassword{
     width: 90%;
     height: 15%;
@@ -224,7 +224,7 @@ width: 50%;
     display: flex;
     flex-direction: column;
 }
-.SignupConfirmPassword input{
+/* .SignupConfirmPassword input{
     width: 100%;
     height: 50%;
     border: none;
@@ -235,7 +235,7 @@ width: 50%;
     font-weight: 500;
     color: black;
     background: transparent;
-}
+} */
 
 
 .SignupBtn{
@@ -303,9 +303,12 @@ width: 50%;
 .LoginRight{
     width: 40%;
     height: 100%;
-    /* border: 2px solid black; */
     background: #FDFDF7;
     border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
 }
 
 .LoginLeft{
@@ -375,14 +378,16 @@ width: 50%;
     gap: 10%;
 }
 .LoginTitle h2{
-    font-size: 1.1rem;
+    font-size: 1.5rem;
     font-weight: 700;
     color: #05446E;
+    font-family: 'Lora', serif;
 }
 .LoginTitle span{
-    font-size: 0.8rem;
+    font-size: 1.1rem;
     font-weight: 400;
     color: #05446E;
+    font-family: 'Lora', serif;
 }
 .LoginForm{
     width: 100%;
@@ -394,7 +399,7 @@ width: 50%;
 }
 .LoginEmail{
     width: 90%;
-    height: 20%;
+    height: 16%;
     /* border: 2px solid black; */
     display: flex;
     flex-direction: column;
@@ -405,7 +410,7 @@ width: 50%;
     border: none;
     outline: none;
     border-radius: 5px;
-    border: 2px solid #05446E;
+    border: 2px solid #d9d9d9;
     font-size: 1rem;
     font-weight: 500;
     color: black;
@@ -413,16 +418,17 @@ width: 50%;
 }
 .LoginPassword{
     width: 90%;
-    height: 20%;
+    height: 18%;
     /* border: 2px solid black; */
     display: flex;
     flex-direction: column;
 }
 .LoginPassword,
 .LoginEmail label{
-    font-size: 1.1rem;
+    font-size: 1.2rem;
     font-weight: 500;
     color: #05446E;
+    font-family: 'Lora', serif;
 }
 .LoginPassword input{
     width: 100%;
@@ -439,16 +445,17 @@ width: 50%;
 .LoginForgetPassword{
     width: 90%;
     height: 15%;
-    /* border: 2px solid black; */
     display: flex;
     justify-content: space-between;
     align-items: center;
+    font-family: 'Lora', serif;
 }
 .LoginRemeber span{
-    font-size: 0.8rem;
+    font-size: 1.2rem;
     font-weight: 500;
     color: #05446E;
 }
+
 .LoginBtn{
     width: 90%;
     height: 15%;
@@ -470,6 +477,7 @@ width: 50%;
     background: #05446E;
     transition: all 0.3s ease;
     transform: scale(1);
+    font-family: 'Lora', serif;
 }
 .LoginBtn button:hover{
     transform: scale(1.05);
@@ -482,9 +490,13 @@ width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Lora', serif;
+}
+.LoginAlready span{
+    font-size: 1.1rem;
 }
 .ForgetPass{
-    font-size: 1rem;
+    font-size: 1.1rem;
     color: #fb8500;
     font-weight: 500;
     cursor: pointer;
@@ -712,12 +724,12 @@ width: 50%;
 
 .PasswordInput{
     width: 100%;
-    height: 35px;
-    border: 2px solid #05446E;
+    height: 60%;
+    border: 2px solid #d9d9d9;
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
-    border-radius: 5px;
+    border-radius: 8px;
     padding-right: 15px;
 }
 .PasswordInput input{
@@ -729,12 +741,12 @@ width: 50%;
 }
 .SignupConfirmeyes{
     width: 100%;
-    height: 35px;
-    border: 2px solid #05446E;
+    height: 60%;
+    border: 2px solid #d9d9d9;
     display: flex;
     /* justify-content: space-between; */
     align-items: center;
-    border-radius: 5px;
+    border-radius: 7px;
     padding-right: 15px;
 }
 .SignupConfirmeyes input{
@@ -747,7 +759,7 @@ width: 50%;
 .ShowPasswrd{
     width: 100%;
     height: 47px;
-    border: 2px solid #05446E;
+    border: 2px solid #d9d9d9;
     display: flex;
     /* justify-content: space-between; */
     align-items: center;

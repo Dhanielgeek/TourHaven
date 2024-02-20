@@ -8,6 +8,7 @@ import Layout from './Components/Layout'
 import Home from './Pages/Home'
 import AboutUs from './Pages/AboutUs'
 import Contact from './Pages/Contact'
+import Team from './Pages/Team'
 
 
 
@@ -46,6 +47,10 @@ const router = createBrowserRouter([
         path: 'contact',
         element: <Contact/>
       },
+      {
+        path:'team',
+        element: <Team/>
+      }
       
     ]
   }

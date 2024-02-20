@@ -75,7 +75,7 @@ const Login = () => {
               <button>Login</button>
             </div>
             <div className="LoginAlready">
-              <span>Don't have an account?</span> &nbsp; <Link to="/signup" style={{textDecoration:"none",color:"#EC8B05"}}>Sign Up</Link>
+              <span>Don't have an account?</span> &nbsp; <Link to="/signup" style={{textDecoration:"none",color:"#EC8B05",fontSize:"1.2rem"}}>Sign Up</Link>
             </div>
           </div>
         </div>
