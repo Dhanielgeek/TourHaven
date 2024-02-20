@@ -40,6 +40,7 @@ const Hero = () => {
           </div>
           <div className="HeroSubTitle">
             <h3>{texts[textIndex].subTitle}</h3>
+
           </div>
         </div>
         <Search/>
