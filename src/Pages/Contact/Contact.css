@@ -1,0 +1,99 @@
+body{
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+  }
+
+
+.ContactBody{
+    width: 100%;
+    height: 100vh;
+    background-color: black;
+}
+
+.ContactWrap{
+    width: 100%;
+    height: 100%;
+    background-color: #FDFDF7;
+}
+
+.ContactHero{
+    width: 100%;
+    height: 30rem;
+    background-color: black;
+    display: flex;
+}
+
+.HeroLeft{
+    width: 60%;
+    height: 100%;
+    /* background-color: blueviolet; */
+}
+
+.HeroRight{
+    width:40%;
+    height: 100%;
+    /* background-color: #05446E; */
+}
+
+.TalkPage{
+    width: 100%;
+    height: 90%;
+    /* background-color: bisque; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  
+}
+
+.TalkWrap{
+    width: 80%;
+    height: 90%;
+    background-color: red;
+    display: flex;
+    gap: 5%;
+}
+
+
+.TalkLeft{
+    width: 50%;
+    height: 100%;
+    /* background-color: blue; */
+}
+
+.TalkLeft h3{
+    font-size: 40px;
+    font-weight: 500;
+    color: #05446E;
+    font-family: "Lora", serif;
+}
+
+.TalkLeft p{
+    font-size: 20px;
+    font-weight: 200;
+    color: #05446E;
+    font-family: "Lora", serif;
+}
+
+
+.TalkRight{
+    width: 50%;
+    height: 180%;
+    background-color: blueviolet;
+}
+
+.IconHold{
+    width: 50%;
+    height: 80%;
+    background-color: bisque;
+    display: flex;
+    align-items: center;
+   
+}
+
+.IconHoldWrap{
+    width: 100%;
+    height: 80%;
+    background-color: goldenrod;
+}
+
+
