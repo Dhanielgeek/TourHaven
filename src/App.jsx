@@ -6,8 +6,10 @@ import ForgetPassword from './Auth/ForgetPassword'
 import ResetPassword from './Auth/ResetPassword'
 import Layout from './Components/Layout'
 import Home from './Pages/Home'
+
 import About from './Pages/About/About'
 import Contact from './Pages/Contact/Contact'
+
 
 
 
@@ -46,6 +48,10 @@ const router = createBrowserRouter([
         path: 'contact',
         element: <Contact/>
       },
+      {
+        path:'team',
+        element: <Team/>
+      }
       
     ]
   }
