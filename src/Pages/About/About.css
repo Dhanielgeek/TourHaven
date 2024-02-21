@@ -1,0 +1,214 @@
+body{
+  font-family: "Lora", serif;
+  font-optical-sizing: auto;
+
+}
+.AboutHero{
+    width: 100%;
+    height: 40rem;
+    /* background-color: black; */
+}
+
+.AboutUsPage{
+    width: 100%;
+    height: 80%;
+    /* background-color: #cccc16; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3%;
+}
+
+.AboutUsPage h1{
+    font-size: 50px;
+    font-weight: 500;
+    color: #05446E;
+    text-align: center;
+    font-family: "Lora", serif;
+}
+.AboutUs{
+    height:80% ;
+    width: 95%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.LeftAboutUs{
+    width: 49%;
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.LeftHold{
+    width: 80%;
+    height: 90%;
+    /* border: 2px solid black; */
+    display: flex;
+}
+.LeftHold p{
+    font-size: 1.4rem;
+}
+.RightAboutUs{
+    width: 49%;
+    height: 100%;
+    /* background-color: red; */
+}
+
+.IMG{
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+}
+
+.MissionPage{
+    width: 100%;
+    height: 80%;
+    /* background-color: #cccc16; */
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 3%;
+}
+
+.MissionPage h1{
+    font-size: 50px;
+    font-weight: 500;
+    color: #05446E;
+    text-align: center;
+    font-family: "Lora", serif;
+}
+
+.OurMission{
+    height:80% ;
+    width: 95%;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.LeftOurMission{
+    width: 49%;
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.RightMisson{
+    width: 80%;
+    height: 90%;
+    
+   
+}
+
+.RightMission p{
+    font-size: 1.4rem;
+}
+
+.RightOurMission{
+    width: 49%;
+    height: 100%;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    /* background-color: red; */
+}
+
+.MeetUsPage{
+    width: 100%;
+    height: 80%;
+    /* background-color: #cccc16; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.MeetUsPage h1{
+    font-size: 50px;
+    font-weight: 500;
+    color: #05446E;
+    text-align: center;
+    font-family: "Lora", serif;
+}
+
+.MeetUs{
+    width: 80%;
+    height: 20%;
+    /* background-color: green; */
+   
+}
+
+.MeetUs p{
+    font-size: 1.4rem;
+    color: #164361;
+    font-family: "Lora", serif;
+    font-weight: 200;
+    text-align: center;
+}
+
+.ImageHolderPage{
+    width: 100%;
+    height: 80%;
+    /* background-color: plum; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.ImageHolderWrap{
+    width: 80%;
+    height: 90%;
+    /* background-color: green; */
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 20%;
+    
+}
+
+.Cards{
+    width: 20%;
+    height: 95%;
+    background-color: #05446E;
+    border-radius: 0 60px 0 60px;
+    display: flex;
+    /* justify-content: center; */
+    align-items: center;
+    flex-direction: column;
+}
+
+.CardUp{
+    width:100%;
+    height: 75%;
+    /* background-color: green; */
+}
+.CardDown{
+    width:80%;
+    height: 15%;
+    /* background-color: goldenrod; */
+}
+.img{
+    width: 100%;
+    height: 100%;
+    border-radius: 0 60px 0 0;
+}
+
+.CardDown p{
+    font-size: 1.4rem;
+    color: #fdfdf7;
+    font-family: "Lora", serif;
+    font-weight: 200;
+    text-align: center;
+}
+
+
+
+   
