@@ -6,7 +6,7 @@ import ForgetPassword from './Auth/ForgetPassword'
 import ResetPassword from './Auth/ResetPassword'
 import Layout from './Components/Layout'
 import Home from './Pages/Home'
-
+import Team from './Pages/Team'
 import About from './Pages/About/About'
 import Contact from './Pages/Contact/Contact'
 

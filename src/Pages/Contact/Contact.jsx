@@ -6,10 +6,9 @@ import './Contact.css'
 const Contact = () => {
   return (
     <div className='ContactBody'>
-       <div className='ContactWrap'>
        <ContactUs/>
        <Talk/>
-      </div>
+      
     </div>
   )
 }
