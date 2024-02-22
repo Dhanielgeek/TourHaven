@@ -1,8 +1,16 @@
 import React from 'react'
+import './HotelDescription.css'
+import DescriptionHero from './DescriptionHero'
+import Hotels from './Hotels'
+import Features from './Features'
 
 const HotelDescription = () => {
   return (
-    <div>HotelDescription</div>
+    <div className='DescriptionBody'>
+      <DescriptionHero/>
+      <Hotels/>
+      <Features/>
+    </div>
   )
 }
 
