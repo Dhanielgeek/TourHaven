@@ -9,6 +9,8 @@ import Home from './Pages/Home'
 import Team from './Pages/Team'
 import About from './Pages/About/About'
 import Contact from './Pages/Contact/Contact'
+import HotelListing from './Components/HotelListing/HotelListing'
+import HotelDescription from './Components/HotelDescription/HotelDescription'
 
 
 
@@ -51,6 +53,14 @@ const router = createBrowserRouter([
       {
         path:'team',
         element: <Team/>
+      },
+      {
+        path:'hotelist',
+        element: <HotelListing/>
+      },
+      {
+        path:'hoteldes',
+        element: <HotelDescription/>
       }
       
     ]

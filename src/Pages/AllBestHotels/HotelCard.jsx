@@ -3,6 +3,7 @@ import './AllBest.css'
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMdStar } from "react-icons/io";
 import Hotels from '../../assets/hotelsss.svg'
+import { Link } from 'react-router-dom';
 
 const HotelCard = () => {
   return (
@@ -28,7 +29,9 @@ const HotelCard = () => {
                 </div>
             </div>
             <div className="HotelBtn">
-                <button>View Hotel</button>
+                <button>
+                    <Link to='/hoteldes' style={{textDecoration:'none',color:'white'}}>View Hotel</Link>
+                </button>
             </div>
         </div>
     </div>

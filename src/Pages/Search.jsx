@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { IoBed } from 'react-icons/io5';
-import { BsCalendar2DateFill } from 'react-icons/bs';
 import { format } from 'date-fns';
 import './Page.css';
+import { Link } from 'react-router-dom';
 
 const Search = () => {
   const [selectedDate, setSelectedDate] = useState(new Date())
@@ -31,7 +31,7 @@ const Search = () => {
         </div>
       </div>
       <div className="SearchBtn">
-        <button>Search</button>
+        <button> <Link to='/hotelist' style={{textDecoration:'none',color:'white'}}>Search</Link></button>
       </div>
     </div>
   )
