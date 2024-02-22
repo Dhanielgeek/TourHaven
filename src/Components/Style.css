@@ -137,8 +137,9 @@
 }
 .FooterBody{
     width: 100%;
-    height: 60vh;
+    height: 40vh;
     background: #05446E;
+    margin-top: 30%;
 }
 .FooterContainer{
     width: 100%;

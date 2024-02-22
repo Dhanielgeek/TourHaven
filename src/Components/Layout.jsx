@@ -1,19 +1,16 @@
-import React from 'react'
-import { Outlet } from 'react-router-dom'
-import Headers from './Header'
-import Footers from './Footer'
-
+import React from 'react';
+import Headers from './Header';
+import Footers from './Footer';
+import { Outlet } from 'react-router-dom';
 
 const Layout = () => {
   return (
-    <>
-     <Headers/>
-     <Outlet/>
-     <Footers/>
-    
-    </>
-   
-  )
-}
+    <div style={{ display: 'flex', flexDirection: 'column', minHeight: '100vh', }}>
+      <Headers />
+      <Outlet/>
+      <Footers/>
+    </div>
+  );
+};
 
-export default Layout
+export default Layout;
