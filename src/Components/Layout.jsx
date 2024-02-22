@@ -9,7 +9,7 @@ const Layout = () => {
     <>
      <Headers/>
      <Outlet/>
-     {/* <Footers/> */}
+     <Footers/>
     
     </>
    

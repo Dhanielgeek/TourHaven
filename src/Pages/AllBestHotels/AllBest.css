@@ -1,0 +1,267 @@
+.AllHotels{
+    width: 100%;
+    height: 55rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fefcfb;
+}
+.AllCardHolder{
+    width: 70%;
+    height: 96%;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    padding: 20px 30px;
+}
+.HotelCardHold{
+    width: 27.5%;
+    height: 46.7%;
+    background: #fdfdf7;
+    margin: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.HotelImg{
+    width: 100%;
+    height: 67.4%;
+    background: #000;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+.HotelImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.HotelInfo{
+    width: 100%;
+    height: 32.6%;
+    /* background: green; */
+}
+.HotelName{
+    width: 100%;
+    height: 30%;
+    /* border: 2px solid white; */
+    display: flex;
+    align-items: center;
+    padding-inline: 8px;
+    justify-content: flex-start;
+}
+.HotelName h3{
+    font-size: 1.2rem;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+    color: #05446E;
+}
+.HotelLocation{
+    width: 100%;
+    height: 30%;
+    /* border: 2px solid white; */
+    display: flex;
+    justify-content: center;
+    gap: 2%;
+}
+.HotelLocationdIcon{
+    width: 45%;
+    height: 100%;
+    /* background: pink; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 2%;
+}
+.HotelLocationdIcon h3{
+    font-size: 1.2rem;
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    color:#D3D3D3;
+}
+.HotelStarIcon{
+    width: 45%;
+    height: 100%;
+    /* background: pink; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.HotelStarIcon .StarIcon{
+    font-size: 1.5rem;
+    color: #EC8B05;
+}
+
+.HotelCardHold .StarIconLast{
+    font-size: 1.5rem;
+    color: #000;
+}
+.HotelBtn{
+    width: 100%;
+    height: 40%;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding-inline: 8px;
+}
+.HotelBtn button{
+    width: 40%;
+    height:65%;
+    background: #EC8B05;
+    font-size: 1rem;
+    font-family: 'Lora', serif;
+    border: none;
+    border-radius: 5px;
+    font-weight: 500;
+    outline: none;
+    cursor: pointer;
+    color: white;
+}
+@media screen and (max-width: 800px) {
+    .AllHotels{
+        /* background: #000; */
+        width: 100%;
+        height: 75rem;
+    }
+    .AllCardHolder{
+        width: 100%;
+        height: 100%;
+        /* background: red; */
+    }
+    .HotelCardHold{
+        width: 38%;
+        height: 30%;
+        /* background: green; */
+    }
+    .HotelName h3{
+        font-size: 3rem;
+    }
+    .AllCardHolder h3{
+        font-size: 1.3rem;
+    }
+    .LocationIcon{
+        font-size: 1.2rem;
+    }
+    .HotelStarIcon .StarIcon{
+        font-size: 0.9rem;
+    }
+   .HotelStarIcon .StarIconLast{
+        font-size: 0.9rem;
+    }
+    .HotelBtn button{
+        height: 60%;
+        width: 70%;
+    }
+   
+
+}
+@media screen and (max-width: 600px) {
+    .AllHotels{
+        /* background: #000; */
+        width: 100%;
+        height: 55rem;
+    }
+    .AllCardHolder{
+        width: 100%;
+        height: 100%;
+        /* background: red; */
+    }
+    .HotelCardHold{
+        width: 44.5%;
+        height: 30%;
+        /* background: green; */
+    }
+    .HotelName h3{
+        font-size: 1.2rem;
+    }
+    .AllCardHolder h3{
+        font-size: 0.7rem;
+    }
+    .LocationIcon{
+        font-size: 0.6rem;
+    }
+    .HotelStarIcon .StarIcon{
+        font-size: 0.9rem;
+    }
+   .HotelStarIcon .StarIconLast{
+        font-size: 0.9rem;
+    }
+    .HotelBtn button{
+        height: 60%;
+        width: 70%;
+    }
+   
+
+}
+
+@media screen and (max-width: 400px) {
+    .AllHotels{
+        /* background: #000; */
+        width: 100%;
+        height: auto;
+    }
+    .AllCardHolder{
+        width: 100%;
+        height: 100rem;
+    }
+    .HotelCardHold{
+        width: 90%;
+        height: 15.8%;
+    }
+    .HotelName h3{
+        font-size: 1rem;
+    }
+    .AllCardHolder h3{
+        font-size: 0.9rem;
+    }
+    .LocationIcon{
+        font-size: 0.9rem;
+    }
+    .HotelStarIcon .StarIcon{
+        font-size: 0.9rem;
+    }
+   .HotelStarIcon .StarIconLast{
+        font-size: 0.9rem;
+    }
+    .HotelBtn button{
+        height: 75%;
+    }
+   
+
+}
+
+@media screen and (max-width: 320px) {
+    .AllHotels{
+        /* background: #000; */
+        width: 100%;
+        height: auto;
+    }
+    .AllCardHolder{
+        width: 100%;
+        height: 100rem;
+    }
+    .HotelCardHold{
+        width: 90%;
+        height: 15.8%;
+    }
+    .HotelName h3{
+        font-size: 1rem;
+    }
+    .AllCardHolder h3{
+        font-size: 0.9rem;
+    }
+    .LocationIcon{
+        font-size: 0.9rem;
+    }
+    .HotelStarIcon .StarIcon{
+        font-size: 0.9rem;
+    }
+   .HotelStarIcon .StarIconLast{
+        font-size: 0.9rem;
+    }
+    .HotelBtn button{
+        height: 75%;
+    }
+   
+
+}

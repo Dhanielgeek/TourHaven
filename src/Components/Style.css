@@ -135,6 +135,133 @@
 .NewMember span{
     color: #05446E;
 }
+.FooterBody{
+    width: 100%;
+    height: 60vh;
+    background: #05446E;
+}
+.FooterContainer{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.FooterLastLine{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border-top: 2px solid white;
+}
+.FooterLastLine p{
+    font-size: 18px;
+    font-family: 'Lora', serif;
+    color: white;
+}
+.FooterDetail{
+    width: 30%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.FooterDetailHeader{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.FooterDetailImgHold{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.FooterDetailImgHold img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.FooterDetailHeader h3{
+    font-size: 20px;
+    font-family: 'Lora', serif;
+    color: white;
+}
+.FooterContext{
+    width: 80%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.FooterContext span{
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Lora', serif;
+    color: white;
+}
+.FooterSocial{
+    width: 60%;
+    height: 20%;
+    background: pink;
+}
+.FooterLinks{
+    width: 30%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.FooterLinksHeader{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.FooterHold{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.FooterwebHold{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.FooterwebHold span{
+    color: #fdfdf7;
+    cursor: pointer;
+    font-family:'Lora', serif;
+}
+.FooterserHold{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.FooterLinksHeader h3{
+    font-size: 20px;
+    font-family: 'Lora', serif;
+    color: white;
+}    
+
+.FooterserHold span{
+    color: #fdfdf7;
+    cursor: pointer;
+    font-family:'Lora', serif;
+}
 
 
 
@@ -180,6 +307,27 @@
         width: 60%;
         height: 7%;
     }
+    .FooterBody{
+        height: 40rem;
+    }
+    .FooterContainer{
+        flex-direction: column;
+    }
+    .FooterDetail{
+        width: 90%;
+    }
+    .FooterDetailHeader h3{
+        font-size: 1.2rem;
+    }
+    .FooterContext span{
+        font-size: 0.8rem;
+    }
+    .FooterLinks{
+        width: 70%;
+    }
+    .FooterLastLine{
+        text-align: center;
+    }
 }
 @media screen and (max-width: 600px) {
     .Header{
@@ -220,6 +368,27 @@
     .Active{
         width: 60%;
         height: 7%;
+    }
+    .FooterBody{
+        height: 40rem;
+    }
+    .FooterContainer{
+        flex-direction: column;
+    }
+    .FooterDetail{
+        width: 90%;
+    }
+    .FooterDetailHeader h3{
+        font-size: 1.2rem;
+    }
+    .FooterContext span{
+        font-size: 0.8rem;
+    }
+    .FooterLinks{
+        width: 100%;
+    }
+    .FooterLastLine{
+        text-align: center;
     }
 }
 
@@ -263,6 +432,27 @@
     .Active{
         width: 60%;
         height: 7%;
+    }
+    .FooterBody{
+        height: 40rem;
+    }
+    .FooterContainer{
+        flex-direction: column;
+    }
+    .FooterDetail{
+        width: 90%;
+    }
+    .FooterDetailHeader h3{
+        font-size: 1.2rem;
+    }
+    .FooterContext span{
+        font-size: 0.8rem;
+    }
+    .FooterLinks{
+        width: 100%;
+    }
+    .FooterLastLine{
+        text-align: center;
     }
 }
 
@@ -311,5 +501,26 @@
     }
     .HeaderLogo{
         margin-right: 80px;
+    }
+    .FooterBody{
+        height: 40rem;
+    }
+    .FooterContainer{
+        flex-direction: column;
+    }
+    .FooterDetail{
+        width: 90%;
+    }
+    .FooterDetailHeader h3{
+        font-size: 1.2rem;
+    }
+    .FooterContext span{
+        font-size: 0.8rem;
+    }
+    .FooterLinks{
+        width: 100%;
+    }
+    .FooterLastLine{
+        text-align: center;
     }
 }
