@@ -41,7 +41,7 @@
 }
 .TalkPage{
     width: 100%;
-    height: 50%;
+    height: 55%;
     /* background: pink; */
     display: flex;
 }
@@ -53,7 +53,7 @@
 
 .Suggestion{
     width: 100%;
-    /* height: 50%; */
+    height: 30%;
     /* background-color: burlywood; */
     display: flex;
     justify-content: center;
@@ -62,25 +62,29 @@
 }
 
 .Suggestion h3{
-    font-size: 50px;
+    font-size: 2.1rem;
     color: #05446E;
     font-family: "Lora", serif;
-    font-weight: 500;
+    font-weight: 700;
 }
 
 .Suggestion p{
-    font-size: 23px;
+    font-size: 0.9rem;
     color: #164361;
     font-family: "Lora", serif;
     font-weight: 200;
-    padding-top: 3px;
+    /* padding-top: 3px; */
 }
 
 .IconHold{
     width: 100%;
     height: 50%;
-    /* background-color: blue; */
-    padding-left: 7%;
+    /* background:green; */
+    display:flex;
+    justify-content:center;
+    align-items:flex-start;
+    flex-direction:column;
+    padding-inline: 40px;
 }
 
 
@@ -94,24 +98,18 @@
 }
 
 .IconHolder{
-    width: 100%;
-    height: 25%;
-    /* background-color: blueviolet; */
+    width:50%;
+    height:30%;
+    /* background:blue; */
+    display:flex;
+    justify-content:space-around;
     align-items: center;
-    gap: 7px;
-    display: flex;
 }
-
-.Location{
-    font-size: 2rem;
-    color: #05446E;
-}
-
 .IconHolder h5{
-    font-size: 18px;
+    font-size: 1.2rem;
     color: #05446E;
-    font-family: "Lora", serif;
-    font-weight: 150;
+    font-weight: 400;
+    font-family: 'Lora',serif;
 }
 
 .PhoneHolder{

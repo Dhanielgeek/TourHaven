@@ -7,7 +7,7 @@ const [Client, setClient] = useState(0)
 const [Hotels, setHotels] = useState(0)
 const [Satisfaction, setSatisfaction] = useState(0)
 
-const TargetClient = 80
+const TargetClient = 180
 const TargetHotels = 200
 const TargetSatifaction = 100
 

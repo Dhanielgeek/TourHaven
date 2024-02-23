@@ -15,7 +15,7 @@ const Talk = () => {
            </div>
             <div className='IconHold'>
                 <div className="IconHolder">
-                  <CiLocationOn className='Location'/>
+                  <CiLocationOn className='Location' style={{fontSize:"0.3rem",width:'10%',height:'100%',color:"#05446E"}}/>
                   <h5>24 Road, Carat 24, Festac, Lagos.</h5>
                 </div>
                 <div className="PhoneHolder">
