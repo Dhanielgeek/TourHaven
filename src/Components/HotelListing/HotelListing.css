@@ -1,0 +1,254 @@
+/* *{
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+} */
+
+.HotelListingbody{
+    width: 100%;
+    height: 100vh;  
+    background-color:rgb(185, 179, 179);
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    
+
+    /* justify-content: center;
+    align-items: center;
+    display: flex; */
+}
+
+.Searchbar{
+    width: 95%;
+    height: 10%;
+    background-color: rgba(255, 165, 0, 1);
+    border-radius: 10px;
+    gap: 5%;
+}
+
+.HotelNumber{
+    width: 90%;
+    height: 5%;
+    background-color: rgb(184, 37, 37);
+    margin-top: 1%;
+}
+
+.Bookingholder{
+    width: 90%;
+    height: 85%;
+    background-color: white;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.Hotel1{
+    width: 80%;
+    height: 44%;
+    /* background-color: aqua; */
+    display: flex;
+    gap: 5%;
+    border-radius: 12px, 0px, 0px, 12px;
+    border: 1px solid rgba(255, 165, 0, 1)
+}
+
+.Roompictureholder{
+    width: 30%;
+    height: 100%;
+    background-color: rgb(182, 120, 27);
+}
+
+.Hotelname{
+    width: 30%;
+    height: 90%;
+    /* background-color: rgb(190, 183, 173); */
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+
+.Name{
+    width: 90%;
+    height: 20%;
+    /* background-color: gray; */
+    margin-top: 5%;
+}
+
+.Name h2{
+    font-family: Lora;
+    font-size: 140%;
+    font-weight: 700;
+    line-height: 41px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: rgba(17, 34, 17, 1);
+}
+
+.Hotelrating{
+    width: 90%;
+    height: 70%;
+    /* background-color: rgb(133, 11, 11); */
+    justify-content: space-between;
+    display: flex;
+    flex-direction: column;
+}
+
+.Location{
+    width: 90%;
+    height: 25%;
+    /* background-color: rgb(12, 64, 231); */
+    display: flex;
+}
+
+.icon{
+    width: 20%;
+    height: 90%;
+    /* background-color: blueviolet; */
+}
+
+.Location h4{
+    font-family: Lora;
+    font-size: 50%;
+    font-weight: 500;
+    color: rgba(17, 34, 17, 1);
+    opacity: 0.75;
+}
+
+.Starholder{
+    width: 90%;
+    height: 25%;
+    /* background-color: rgb(204, 62, 173); */
+    display: flex;
+    gap: 3%;
+    align-items: center;
+}
+
+.Star{
+    height: 70%;
+    width: 10%;
+    /* background-color: rgb(221, 113, 12); */
+}
+
+
+
+
+
+.Good{
+    width: 90%;
+    height: 30%;
+    /* background-color: rgb(255, 255, 255); */
+   display: flex;
+   /* flex-direction: column; */
+}
+
+.Perrate{
+    width: 25%;
+    height: 100%;
+    /* background-color: rgb(22, 176, 223); */
+    border: 1px solid blue;
+    border-radius: 10%;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.Perrate ul{
+    margin-top: 10%;
+}
+
+.comment{
+    width: 35%;
+    height: 100%;
+    background-color: aqua;
+    text-align: center;
+    display: flex;
+    align-items: center;
+}
+
+.comment h5{  
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 10%;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+}
+
+.HotelBooknow{
+    width: 20%;
+    height: 100%;
+    /* background-color: rgb(189, 13, 22); */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 44%;
+}
+
+.Hotelamount{
+    width: 90%;
+    height: 30%;
+    /* background-color: rgb(53, 19, 247); */
+}
+
+.Hotelamount h6{
+    font-family: Montserrat;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 29px;
+    letter-spacing: 0em;
+    text-align: right;
+    color: rgba(5, 68, 110, 1);
+
+}
+
+.Booknowbutton {
+    width: 70%;
+    height: 15%;
+    background: rgba(255, 165, 0, 1);
+    border-radius: 5%;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.Booknowbutton h6{
+    font-family: Montserrat;
+    font-size: 12px;
+    font-weight: 10%;
+    line-height: 15px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: white;
+    cursor: pointer;
+}
+
+
+.HotelNumber{
+    width: 90%;
+    height: 5%;
+    background-color: rgb(184, 37, 37);
+    margin-top: 1%;
+}
+
+.Bookingholder{
+    width: 90%;
+    height: 85%;
+    background-color: white;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.Hotel2{
+    width: 80%;
+    height: 44%;
+    /* background-color: aqua; */
+    display: flex;
+    gap: 5%;
+    border-radius: 12px, 0px, 0px, 12px;
+    border: 1px solid rgba(255, 165, 0, 1)
+}
