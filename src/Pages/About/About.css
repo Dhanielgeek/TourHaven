@@ -1,214 +1,252 @@
-body{
-  font-family: "Lora", serif;
-  font-optical-sizing: auto;
-
-}
 .AboutHero{
     width: 100%;
-    height: 40rem;
-    /* background-color: black; */
+    height: 90vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
+.AboutHero img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
 .AboutUsPage{
     width: 100%;
-    height: 80%;
-    /* background-color: #cccc16; */
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 3%;
 }
-
-.AboutUsPage h1{
-    font-size: 50px;
-    font-weight: 500;
+.AboutHeader{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.AboutHeader h1{
+    font-size: 2.6rem;
     color: #05446E;
-    text-align: center;
-    font-family: "Lora", serif;
 }
 .AboutUs{
-    height:80% ;
-    width: 95%;
-    /* background-color: blue; */
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
-.LeftAboutUs{
-    width: 49%;
-    height: 100%;
-    /* background-color: green; */
+    width: 100%;
+    height: 80%;
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.LeftHold{
-    width: 80%;
-    height: 90%;
-    /* border: 2px solid black; */
-    display: flex;
-}
-.LeftHold p{
-    font-size: 1.4rem;
+    
 }
 .RightAboutUs{
-    width: 49%;
-    height: 100%;
-    /* background-color: red; */
+    width: 50%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 5%;
 }
-
-.IMG{
+.RightAboutUs img{
     width: 100%;
     height: 100%;
-    border-radius: 5px;
+    object-fit: cover;
 }
-
+.LeftAboutUs{
+    width: 50%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 7%;
+    flex-direction: column;
+    font-family: 'Lora',serif;
+}
+.LeftHold{
+    font-size: 1.3rem;
+    color: #05446E;
+}
 .MissionPage{
     width: 100%;
-    height: 80%;
-    /* background-color: #cccc16; */
+    height: 70vh;
     display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.OurMission{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.LeftOurMission{
+    width: 50%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 5%;
+}
+.LeftOurMission img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.RightOurMission{
+    width: 50%;
+    height: 90%;
+    display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 3%;
+    padding-inline: 7%;
+    font-family: 'Lora',serif;
 }
-
-.MissionPage h1{
-    font-size: 50px;
-    font-weight: 500;
+.OurMissionHeader{
+    width: 80%;
+    height: 20%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.OurMissionHeader h1{
+    font-size: 2.5rem;
     color: #05446E;
-    text-align: center;
-    font-family: "Lora", serif;
 }
-
-.OurMission{
-    height:80% ;
-    width: 95%;
-    /* background-color: blue; */
+.RightMission p{
+    font-size: 1.2rem;
+    color: #05446E;
+}
+.RightMission{
+    height: 40%;
+    width: 80%;
+}
+.MeetUsPage{
+    width: 100%;
+    height: 100vh;
+    /* background: pink; */
+}
+.MeetTeamHeader{
+    width: 100%;
+    height: 13%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    gap: 5%;
+}
+.MeetTeamHeader p{
+    text-align: center;
+    font-size: 0.9rem;
+    font-family: 'Lora',serif;
+    font-weight: 600;
+    color: #05446E;
+}
+.MeetTeamHeader h1{
+    font-family: 'Lora',serif;
+    font-weight: 600;
+    color: #05446E;
+}
+.ImageHolderPage{
+    width: 100%;
+    height: 87%;
+    /* background: purple; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ImageHolderWrap{
+    width: 90%;
+    height: 90%;
+    /* border: 3px solid white; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 30px ;
+}
+.Cards{
+    width: 23.7%;
+    height: 70%;
+    background: #fdfdf7;
     display: flex;
     justify-content: space-between;
     align-items: center;
-}
-
-.LeftOurMission{
-    width: 49%;
-    height: 100%;
-    /* background-color: green; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.RightMisson{
-    width: 80%;
-    height: 90%;
-    
-   
-}
-
-.RightMission p{
-    font-size: 1.4rem;
-}
-
-.RightOurMission{
-    width: 49%;
-    height: 100%;
-    display: flex;
-    /* justify-content: center; */
-    /* align-items: center; */
-    /* background-color: red; */
-}
-
-.MeetUsPage{
-    width: 100%;
-    height: 80%;
-    /* background-color: #cccc16; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
     flex-direction: column;
+    margin: 10px;
+    border-radius: 12px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
-
-.MeetUsPage h1{
-    font-size: 50px;
-    font-weight: 500;
-    color: #05446E;
-    text-align: center;
-    font-family: "Lora", serif;
-}
-
-.MeetUs{
-    width: 80%;
-    height: 20%;
-    /* background-color: green; */
-   
-}
-
-.MeetUs p{
-    font-size: 1.4rem;
-    color: #164361;
-    font-family: "Lora", serif;
-    font-weight: 200;
-    text-align: center;
-}
-
-.ImageHolderPage{
-    width: 100%;
-    height: 80%;
-    /* background-color: plum; */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.ImageHolderWrap{
-    width: 80%;
-    height: 90%;
-    /* background-color: green; */
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 20%;
-    
-}
-
-.Cards{
-    width: 20%;
-    height: 95%;
-    background-color: #05446E;
-    border-radius: 0 60px 0 60px;
-    display: flex;
-    /* justify-content: center; */
-    align-items: center;
-    flex-direction: column;
-}
-
 .CardUp{
-    width:100%;
-    height: 75%;
-    /* background-color: green; */
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.CardUp img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .CardDown{
-    width:80%;
-    height: 15%;
-    /* background-color: goldenrod; */
-}
-.img{
     width: 100%;
-    height: 100%;
-    border-radius: 0 60px 0 0;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
 }
 
 .CardDown p{
-    font-size: 1.4rem;
-    color: #fdfdf7;
-    font-family: "Lora", serif;
-    font-weight: 200;
-    text-align: center;
+    font-size: 1.2rem;
+    color: #05446E;
+    font-family: 'Lora',serif;
+    font-weight: 700;
 }
 
+@media screen  and (max-width:320px) {
+    .AboutUs{
+        flex-direction: column;
+       gap: 7%;
+    }
+    .LeftHold p{
+        font-size: 0.7rem;
+    }
+    .LeftAboutUs{
+        width: 90%;
+    }
+    .AboutHeader h1{
+        font-size: 1.5rem;
+    }
+    .RightAboutUs{
+        width: 90%;
+    }
+    .OurMission{
+        flex-direction: column-reverse;
+        gap: 8%;
+    }
+    .LeftOurMission{
+        width: 90%;
+    }
+    .RightOurMission{
+        width: 90%;
+        justify-content: space-evenly;
+    }
+    .RightMission p{
+        font-size: 0.7rem;
+    }
+    .OurMissionHeader h1{
+        font-size: 1.5rem;
+    }
+    .MeetUsPage{
+        height: 80rem;
+        background: #000;
+    }
+    .ImageHolderWrap{
+        flex-direction: column;
+    }
+    .Cards{
+        width: 90%;
+        height: 25%;
+    }
+}
 
-
-   

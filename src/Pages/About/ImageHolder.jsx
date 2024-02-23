@@ -7,7 +7,9 @@ const ImageHolder = (props) => {
    <img src={props.image} alt="" className='img'/> 
    </div>
    <div className="CardDown">
-    <p>{props.Name} <br/>{props.stack}</p>
+    <p>{props.Name} <br/> <span style={{fontWeight:"500",color:"#fb8500"}}>
+    {props.stack}
+      </span> </p>
    </div>  
    </div>
   )
