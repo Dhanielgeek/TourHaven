@@ -239,7 +239,7 @@
     }
     .MeetUsPage{
         height: 80rem;
-        background: #000;
+        /* background: #000; */
     }
     .ImageHolderWrap{
         flex-direction: column;
