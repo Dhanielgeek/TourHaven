@@ -7,7 +7,7 @@ const HotelListing = () => {
 
       <div className='Searchbar'>  </div>
 
-      <div className='HotelNumber'></div>
+      {/* <div className='HotelNumber'></div> */}
 
     <div className='Bookingholder'>
 
