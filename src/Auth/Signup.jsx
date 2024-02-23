@@ -102,7 +102,9 @@ const Signup = () => {
         <label>I agree to terms of use</label>
       </div>
       <div className="SignupBtn">
-        <button>Sign Up</button>
+        <button>
+        <Link to='/login'style={{textDecoration:"none",color:"white",fontSize:"1.2rem"}}>Sign Up</Link>
+        </button>
       </div>
       <div className="SignupAlready">
      <span>Already have an account?&nbsp;</span> <Link to="/login" style={{textDecoration:"none",color:"#EC8B05"}}>Login</Link>

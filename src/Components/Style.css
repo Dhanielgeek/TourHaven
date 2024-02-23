@@ -27,7 +27,7 @@
     align-items: center;
 }
 .Active{
-    font-size: 20px;
+    font-size: 17px;
     color: #fb8500;
     cursor: pointer;
     transition: all 350ms ease-in;
@@ -100,7 +100,7 @@
     flex-direction: column;
 }
 .SignUpOfferText span{
-    font-size: 20px;
+    font-size: 17px;
     font-family: 'Lora', serif;
     color: #05446E;
     text-align: center;

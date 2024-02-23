@@ -72,7 +72,9 @@ const Login = () => {
                 <Link className='ForgetPass' to='/forgetpass' >Forgot Password?</Link>
             </div>
             <div className="LoginBtn">
-              <button>Login</button>
+              <button>
+                <Link to='/'style={{textDecoration:"none",color:"white",fontSize:"1.2rem"}}>Login</Link>
+              </button>
             </div>
             <div className="LoginAlready">
               <span>Don't have an account?</span> &nbsp; <Link to="/signup" style={{textDecoration:"none",color:"#EC8B05",fontSize:"1.2rem"}}>Sign Up</Link>
