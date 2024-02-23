@@ -28,7 +28,7 @@ const Hotels = () => {
         </div>
       </div>
     </div>
-  )
+  ) 
 }
 
 export default Hotels
