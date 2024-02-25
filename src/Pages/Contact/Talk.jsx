@@ -1,7 +1,8 @@
 import React from 'react'
-import { CiLocationOn } from "react-icons/ci";
+import { FaLocationDot } from "react-icons/fa6";
 import { FiPhoneCall } from "react-icons/fi";
 import { CiMail } from "react-icons/ci";
+import './Contact.css'
 
 
 
@@ -15,23 +16,23 @@ const Talk = () => {
            </div>
             <div className='IconHold'>
                 <div className="IconHolder">
-                  <CiLocationOn className='Location' style={{fontSize:"0.3rem",width:'10%',height:'100%',color:"#05446E"}}/>
+                  <FaLocationDot style={{color:'#05446E'}}/>
                   <h5>24 Road, Carat 24, Festac, Lagos.</h5>
                 </div>
                 <div className="PhoneHolder">
-                <FiPhoneCall className='Phone'/>
+                <FiPhoneCall style={{color:'#05446E'}}/>
                   <h5>+234 9074639869</h5>
                 </div>
                 <div className="MailHolder">
-                  <CiMail className='Mail'/>
+                  <CiMail style={{color:'#05446E'}}/>
                   <h5>tourhaven@gmail.com</h5>
                 </div> 
             </div>
             </div>
             <div className="TalkRight">
-              <div className="InputHolder">
+              <div className="FormHo">
               <div className="NameHolder">
-                <input type="text"  placeholder='Helen|'/>
+                <input type="text"  placeholder='First Name'/>
                 <input type="text"  placeholder='Last Name'/>
               </div>
               <div className="EmailHolder">
@@ -43,7 +44,7 @@ const Talk = () => {
               <div className="TextareaHolder">
                 <textarea type="text" placeholder='Your Message' />
               </div>
-             <div className="ButtonHolder">
+             <div className="ContactBtn">
              <button className='Btn'>Send Message</button>
              </div>
               </div>

@@ -1,272 +1,351 @@
-.ContactBody{
-    width: 100%;
-    height: 100vh;
-    background: #FDFDF7;
-}
 .ContactHero{
     width: 100%;
-    height: 60%;
-    background: linear-gradient(#05446E, #FDFDF7);
-    display: flex;
-    
+    height: 20rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(#05446E,#FDFDF7);
 }
-
 .HeroLeft{
-    width: 60%;
+    width: 50%;
     height: 100%;
-   
- 
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
-
-.HeroRight{
-    width: 40%;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.HeroRight h1{
-    font-size: 80px;
-    color: #05446E;
-    font-family: "Lora", serif;
-    font-weight: 500;
-}
-
-.Contact{
+.HeroLeft img{
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    
+    object-fit: contain;
+}
+.HeroRight{
+    width: 50%;
+    height: 100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.HeroRight{
+    font-size:2rem;
+    font-family:'Lora',serif;
+    font-weight: 700;
+    color: #FDFDF7;
 }
 .TalkPage{
     width: 100%;
-    height: 55%;
-    /* background: pink; */
-    display: flex;
+    height:25rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
 }
 .TalkLeft{
     width: 50%;
     height: 100%;
-    /* background: grey; */
-}
-
-.Suggestion{
-    width: 100%;
-    height: 30%;
-    /* background-color: burlywood; */
     display: flex;
     justify-content: center;
-    padding: 7%;
+    align-items: center;
     flex-direction: column;
 }
-
+.Suggestion{
+    width: 50%;
+    height: 20%;
+}
 .Suggestion h3{
-    font-size: 2.1rem;
-    color: #05446E;
-    font-family: "Lora", serif;
-    font-weight: 700;
-}
+    font-size: 1.4rem;
+    font-family: 'Lora',serif;
+    color:#05446E;
 
+}
 .Suggestion p{
-    font-size: 0.9rem;
-    color: #164361;
-    font-family: "Lora", serif;
-    font-weight: 200;
-    /* padding-top: 3px; */
+    font-family: 'Lora',serif;
+    font-size: 0.9rem; 
+    color: #D9D9D9;
 }
-
 .IconHold{
-    width: 100%;
+    width: 50%;
     height: 50%;
-    /* background:green; */
-    display:flex;
-    justify-content:center;
-    align-items:flex-start;
-    flex-direction:column;
-    padding-inline: 40px;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
 }
-
-
+.IconHolder{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3%;
+}
+.IconHolder,
+.PhoneHolder,
+.MailHolder, h5{
+    font-size: 0.9rem;
+    font-family: 'Lora',serif;
+    font-weight: 600;
+    color:#05446E;
+}
+.PhoneHolder{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3%;
+}
+.MailHolder{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3%;
+}
 .TalkRight{
     width: 50%;
     height: 100%;
-    /* background: salmon; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
-.IconHolder{
-    width:50%;
-    height:30%;
-    /* background:blue; */
-    display:flex;
-    justify-content:space-around;
-    align-items: center;
+.FormHo{
+    width: 70%;
+    height: 90%;
 }
-.IconHolder h5{
-    font-size: 1.2rem;
-    color: #05446E;
-    font-weight: 400;
-    font-family: 'Lora',serif;
-}
-
-.PhoneHolder{
-    width: 100%;
-    height: 25%;
-    /* background-color: aqua; */
-    display: flex;
-    align-items: center;
-    gap: 12px;
-}
-
-
-.Phone{
-    font-size: 2rem;
-    color: #05446E;
-}
-
-.PhoneHolder h5{
-    font-size: 18px;
-    color: #05446E;
-    font-family: "Lora", serif;
-    font-weight: 150;
-}
-
-.MailHolder{
-    width: 100%;
-    height: 25%;
-    /* background-color: blueviolet; */
-    display: flex;
-    align-items: center;
-    gap: 8px;
-}
-
-.Mail{
-    font-size: 2rem;
-    color:#05446E;
-}
-
-.MailHolder h5{
-    font-size: 18px;
-    color: #05446E;
-    font-family: "Lora", serif;
-    font-weight: 150;
-}
-
-.InputHolder{
-    width: 50%;
-    height: 100%;
-    background-color:#FDFDF7;
-    /* background-color: black; */
-   margin-top: 7%;
-    box-shadow: 1px 1px 1px 1px;
-    display: flex;
-    justify-content:flex-start  ;
-    align-items: center;
-    flex-direction: column;
-}
-
 .NameHolder{
- width: 100%;
- height: 20%;
- display: flex;
- justify-content: space-around;
- align-items: center;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
 }
-
 .NameHolder input{
     width: 40%;
-    height: 50%;
-    border: 2px solid #05446E;
-    padding: 3px;
-    border-radius: 2px;
-    outline: none;  
-    border-radius: 8px;
-    padding-inline: 10px;
+    height: 70%;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid #828282;
+    padding-inline: 5px;
+    background: transparent;
 }
 .EmailHolder{
     width: 100%;
-    height: 20%;
-    /* background: green; */
+    height: 15%;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-    padding-inline: 15px;
+    justify-content: center;
 }
 .EmailHolder input{
-    width: 100%;
-    height: 50%;
-    border: 2px solid #05446E;
-    padding: 3px;
-    border-radius: 2px;
+    width: 90%;
+    height: 70%;
+    border-radius: 10px;
     outline: none;
-    border-radius: 8px;
-    padding-inline: 10px;
+    border: 2px solid #828282;
+    padding-inline: 5px;
+    background: transparent;
 }
-
 .PhoneNumberHolder{
     width: 100%;
-    height: 20%;
-    /* background: green; */
+    height: 15%;
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-    padding-inline: 15px;
+    justify-content: center;
 }
-
 .PhoneNumberHolder input{
-    width: 100%;
-    height: 50%;
-    border: 2px solid #05446E;
-    padding: 3px;
-    border-radius: 2px;
+    width: 90%;
+    height: 70%;
+    border-radius: 10px;
     outline: none;
-    border-radius: 8px;
-    padding-inline: 10px;
+    border: 2px solid #828282;
+    padding-inline: 5px;
+    background: transparent;
 }
-
 .TextareaHolder{
     width: 100%;
     height: 40%;
-    /* background: green; */
     display: flex;
-    justify-content: flex-start;
     align-items: center;
-    padding-inline: 15px;
+    justify-content: center;
 }
-
 .TextareaHolder textarea{
-    width: 100%;
+    width: 90%;
     height: 80%;
-    border: 2px solid #05446E;
-    padding: 3px;
-    border-radius: 2px;
-    outline: none;
-    border-radius: 8px;
-    padding-inline: 10px;
-}
-
-.Btn{
-    width: 100%;
-    height: 55%;
-    outline: none;
     border-radius: 10px;
-    border: none;
-    background-color: #05446E;
-    color: #FDFDF7;
+    outline: none;
+    border: 2px solid #828282;
+    padding: 10px 5px;
+    background: transparent;
 }
-
-.ButtonHolder{
+.ContactBtn{
     width: 100%;
-    height: 20%;
-    /* background: green; */
+    height: 15%;
     display: flex;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
-    padding-inline: 15px;
 }
+.ContactBtn button{
+    width: 90%;
+    height: 70%;
+    border: none;
+    background: #05446E;
+    color: #FDFDF7;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+@media screen and (max-width: 800px) {
+    .HeroRight{
+       font-size: 1.1rem;
+       width: 70%;
+    }
+    .TalkPage{
+       flex-direction: column;
+    }
+    .TalkLeft{
+       width: 100%;
+       
+    }
+    .TalkRight{
+       width: 90%;
+    }
+    .Suggestion{
+       width: 90%;
+       height: 50%;
+    }
+    .Suggestion h3{
+       font-size: 1.4rem;
+    }
+    .Suggestion p{
+       font-size: 0.7rem;
+    }
+    .IconHold{
+       width: 90%;
+    }
+    .IconHolder,
+    .PhoneHolder,
+    .MailHolder , h5{
+       font-size: 0.7rem;
+    }
+    .FormHo{
+       width: 100%;
+       height: 17rem;
+    }
+   }
+
+@media screen and (max-width:600px) {
+    .HeroRight{
+       font-size: 1.1rem;
+       width: 70%;
+    }
+    .TalkPage{
+       flex-direction: column;
+    }
+    .TalkLeft{
+       width: 100%;
+       
+    }
+    .TalkRight{
+       width: 100%;
+    }
+    .Suggestion{
+       width: 90%;
+       height: 50%;
+    }
+    .Suggestion h3{
+       font-size: 1.4rem;
+    }
+    .Suggestion p{
+       font-size: 0.7rem;
+    }
+    .IconHold{
+       width: 90%;
+    }
+    .IconHolder,
+    .PhoneHolder,
+    .MailHolder , h5{
+       font-size: 0.7rem;
+    }
+    .FormHo{
+       width: 100%;
+       height: 15rem;
+    }
+   }
 
 
+@media screen and (max-width: 400px) {
+    .HeroRight{
+       font-size: 1.1rem;
+       width: 70%;
+    }
+    .TalkPage{
+       flex-direction: column;
+    }
+    .TalkLeft{
+       width: 100%;
+       
+    }
+    .TalkRight{
+       width: 100%;
+    }
+    .Suggestion{
+       width: 90%;
+       height: 50%;
+    }
+    .Suggestion h3{
+       font-size: 1.4rem;
+    }
+    .Suggestion p{
+       font-size: 0.7rem;
+    }
+    .IconHold{
+       width: 90%;
+    }
+    .IconHolder,
+    .PhoneHolder,
+    .MailHolder , h5{
+       font-size: 0.7rem;
+    }
+    .FormHo{
+       width: 100%;
+       height: 15rem;
+    }
+   }
 
+@media screen and (max-width: 320px) {
+ .HeroRight{
+    font-size: 1.1rem;
+    width: 70%;
+ }
+ .TalkPage{
+    flex-direction: column;
+ }
+ .TalkLeft{
+    width: 100%;
+    
+ }
+ .TalkRight{
+    width: 100%;
+ }
+ .Suggestion{
+    width: 90%;
+    height: 50%;
+ }
+ .Suggestion h3{
+    font-size: 1.4rem;
+ }
+ .Suggestion p{
+    font-size: 0.7rem;
+ }
+ .IconHold{
+    width: 90%;
+ }
+ .IconHolder,
+ .PhoneHolder,
+ .MailHolder , h5{
+    font-size: 0.7rem;
+ }
+ .FormHo{
+    width: 100%;
+    height: 15rem;
+ }
+}

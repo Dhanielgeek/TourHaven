@@ -197,11 +197,162 @@
 }
 
 .CardDown p{
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     color: #05446E;
     font-family: 'Lora',serif;
-    font-weight: 700;
+    font-weight: 500;
 }
+
+@media screen  and (max-width:800px) {
+    .AboutUs{
+        flex-direction: column;
+       gap: 2%;
+    }
+    .LeftHold p{
+        font-size: 0.8rem;
+    }
+    .LeftAboutUs{
+        width: 90%;
+    }
+    .AboutHeader h1{
+        font-size: 1.5rem;
+    }
+    .RightAboutUs{
+        width: 90%;
+    }
+    .OurMission{
+        flex-direction: column-reverse;
+        gap: 5%;
+    }
+    .LeftOurMission{
+        width: 90%;
+    }
+    .RightOurMission{
+        width: 90%;
+        justify-content: space-evenly;
+    }
+    .RightMission p{
+        font-size: 0.8rem;
+    }
+    .OurMissionHeader h1{
+        font-size: 1.6rem;
+    }
+    .MeetUsPage{
+        height: 80rem;
+        /* background: #000; */
+    }
+    .ImageHolderWrap{
+        flex-wrap: wrap;
+    }
+    .Cards{
+        width: 40%;
+        height: 30%;
+    }
+}
+
+
+
+
+
+@media screen  and (max-width:600px) {
+    .AboutUs{
+        flex-direction: column;
+       gap: 7%;
+    }
+    .LeftHold p{
+        font-size: 0.7rem;
+    }
+    .LeftAboutUs{
+        width: 90%;
+    }
+    .AboutHeader h1{
+        font-size: 1.5rem;
+    }
+    .RightAboutUs{
+        width: 90%;
+    }
+    .OurMission{
+        flex-direction: column-reverse;
+        gap: 8%;
+    }
+    .LeftOurMission{
+        width: 90%;
+    }
+    .RightOurMission{
+        width: 90%;
+        justify-content: space-evenly;
+    }
+    .RightMission p{
+        font-size: 0.7rem;
+    }
+    .OurMissionHeader h1{
+        font-size: 1.5rem;
+    }
+    .MeetUsPage{
+        height: 80rem;
+        /* background: #000; */
+    }
+    .ImageHolderWrap{
+        flex-direction: column;
+    }
+    .Cards{
+        width: 90%;
+        height: 25%;
+    }
+}
+
+
+
+
+
+@media screen  and (max-width:400px) {
+    .AboutUs{
+        flex-direction: column;
+       gap: 7%;
+    }
+    .LeftHold p{
+        font-size: 0.7rem;
+    }
+    .LeftAboutUs{
+        width: 90%;
+    }
+    .AboutHeader h1{
+        font-size: 1.5rem;
+    }
+    .RightAboutUs{
+        width: 90%;
+    }
+    .OurMission{
+        flex-direction: column-reverse;
+        gap: 8%;
+    }
+    .LeftOurMission{
+        width: 90%;
+    }
+    .RightOurMission{
+        width: 90%;
+        justify-content: space-evenly;
+    }
+    .RightMission p{
+        font-size: 0.7rem;
+    }
+    .OurMissionHeader h1{
+        font-size: 1.5rem;
+    }
+    .MeetUsPage{
+        height: 80rem;
+        /* background: #000; */
+    }
+    .ImageHolderWrap{
+        flex-direction: column;
+    }
+    .Cards{
+        width: 90%;
+        height: 25%;
+    }
+}
+
+
 
 @media screen  and (max-width:320px) {
     .AboutUs{
@@ -242,7 +393,7 @@
         /* background: #000; */
     }
     .ImageHolderWrap{
-        flex-direction: column;
+        flex-direction: column !important;
     }
     .Cards{
         width: 90%;
