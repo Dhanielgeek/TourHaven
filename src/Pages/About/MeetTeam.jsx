@@ -13,7 +13,7 @@ const MeetTeam = () => {
       <div className='ImageHolderPage'>
         <div className="ImageHolderWrap">
       <ImageHolder image="./src/assets/Daniel.jpg"
-      Name="Daniel Ben"
+      Name="Ben Daniel"
       stack="Frontend Developer"
       />
       <ImageHolder image="./src/assets/Maro.jpg" 

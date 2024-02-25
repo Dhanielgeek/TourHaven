@@ -1,8 +1,11 @@
 import React from 'react'
+import MeetTeam from './About/MeetTeam'
 
 const Team = () => {
   return (
-    <div>Team</div>
+   <div className="Meet">
+    <MeetTeam/>
+   </div>
   )
 }
 

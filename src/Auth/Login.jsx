@@ -6,6 +6,7 @@ import {AiOutlineEye, AiOutlineEyeInvisible} from "react-icons/ai";
 import LoginRoom1 from '../assets/LoginRomm1.jpeg'
 import LoginRoom2 from '../assets/loginromm2.jpeg'
 import axios from 'axios';
+import Loader from '../Components/Loader/Loading'
 
 const Login = () => {
 
@@ -62,62 +63,66 @@ const HandleLogs = async (e)=>{
 
   return (
     <div className="LoginBody">
-      <div className="LoginContainer">
-        <div className="LoginLeft">
-          <img src={ImageHold[NumIndex % ImageHold.length]} alt=""/>
-            <div className="LoginHoldSpan">
-          <span onClick={HandleNext}></span>
-          <span onClick={HandleNext}></span>
-          <span onClick={HandleNext}></span>
-        </div>
-        </div>
-        <div className="LoginRight">
-          <div className="LoginHeader">
-            <div className="LoginImg">
-              <img src={LoginLogo} alt="" />
-            </div>
-            <div className="LoginTitle">
-              <h2>Login</h2>
-              <span>Login to access your account</span>
-            </div>
+      {
+        Isloading === true ? <Loader/> : (
+          <div className="LoginContainer">
+          <div className="LoginLeft">
+            <img src={ImageHold[NumIndex % ImageHold.length]} alt=""/>
+              <div className="LoginHoldSpan">
+            <span onClick={HandleNext}></span>
+            <span onClick={HandleNext}></span>
+            <span onClick={HandleNext}></span>
           </div>
-          <div className="LoginForm">
-            <div className="LoginEmail">
-              <label>Email</label>
-              <input type="email" />
-            </div>
-            <div className="LoginPassword">
-              <label>Password</label>
-              <div className="ShowPasswrd">
-              <input type={Showpassword ? "text" : "password"} />
-              {
-            Showpassword?
-            <AiOutlineEye onClick={handleShowPassword}/>
-            :
-            <AiOutlineEyeInvisible onClick={handleShowPassword}/>
-          }
+          </div>
+          <div className="LoginRight">
+            <div className="LoginHeader">
+              <div className="LoginImg">
+                <img src={LoginLogo} alt="" />
+              </div>
+              <div className="LoginTitle">
+                <h2>Login</h2>
+                <span>Login to access your account</span>
               </div>
             </div>
-            <div className="LoginForgetPassword">
-              <div className="LoginRemeber">
-              <input type="checkbox" />
-              &nbsp;
-                <span>Remember Me</span>
+            <div className="LoginForm">
+              <div className="LoginEmail">
+                <label>Email</label>
+                <input type="email" />
               </div>
-                <Link className='ForgetPass' to='/forgetpass' >Forgot Password?</Link>
-            </div>
-            <div className="LoginBtn">
-              <button>
-                <Link to='/'style={{textDecoration:"none",color:"white",fontSize:"1.2rem"}}>Login</Link>
-              </button>
-            </div>
-            <div className="LoginAlready">
-              <span>Don't have an account?</span> &nbsp; <Link to="/signup" style={{textDecoration:"none",color:"#EC8B05",fontSize:"1rem"}}>Sign Up</Link>
+              <div className="LoginPassword">
+                <label>Password</label>
+                <div className="ShowPasswrd">
+                <input type={Showpassword ? "text" : "password"} />
+                {
+              Showpassword?
+              <AiOutlineEye onClick={handleShowPassword}/>
+              :
+              <AiOutlineEyeInvisible onClick={handleShowPassword}/>
+            }
+                </div>
+              </div>
+              <div className="LoginForgetPassword">
+                <div className="LoginRemeber">
+                <input type="checkbox" />
+                &nbsp;
+                  <span>Remember Me</span>
+                </div>
+                  <Link className='ForgetPass' to='/forgetpass' >Forgot Password?</Link>
+              </div>
+              <div className="LoginBtn">
+                <button onClick={HandleLogs}>
+                  Login
+                </button>
+              </div>
+              <div className="LoginAlready">
+                <span>Don't have an account?</span> &nbsp; <Link to="/signup" style={{textDecoration:"none",color:"#EC8B05",fontSize:"1rem"}}>Sign Up</Link>
+              </div>
             </div>
           </div>
         </div>
-      </div>
-       
+        )
+      }
+
     </div>
   )
 }

@@ -281,7 +281,11 @@ width: 50%;
     display: flex;
     justify-content: center;
     align-items: center;
-    /* text-decoration: none; */
+    transform: scale(1);
+    transition: all 350ms ease-in-out;
+}
+.SignupBtn button:hover{
+    background-color: #fb8500;
 }
 .SignupAlready{
     width: 100%;
@@ -504,12 +508,11 @@ width: 50%;
     cursor: pointer;
     color: #ffff;
     background: #05446E;
-    transition: all 0.3s ease;
+    transition: all 0.3s ease-in-out;
     transform: scale(1);
     font-family: 'Lora', serif;
 }
 .LoginBtn button:hover{
-    transform: scale(1.05);
     background: #fb8500;
 }
 .LoginAlready{

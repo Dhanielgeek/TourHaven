@@ -9,36 +9,39 @@ import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
 
 const Header = () => {
-  const [Toggle, setToggle] = useState(false);
-  const [Open, setOpen] = useState(false);
+  const [Toggle, setToggle] = useState(false)
+  const [Open, setOpen] = useState(false)
 
   const handleToggle = () => {
-    setToggle(!Toggle);
-  };
+    setToggle(!Toggle)
+  }
 
   const handleOpen = () => {
     setOpen(!Open);
-  };
+  }
 
   const handleClose = () => {
-    setOpen(false);
-  };
+    setOpen(false)
+    setToggle(false)
+  }
 
   const headerVariants = {
     open: { opacity: 1, x: 0 },
     closed: { opacity: 0, x: '-100%' },
-  };
+  }
 
   return (
+        // Web View
     <div className="Header">
       <div className="HeaderLogo">
         <img src={HeaderLogo} alt="" />
       </div>
       <div className="HeaderLink">
-        <NavLink to="/" className={({ isActive }) => isActive ? 'Active' : 'Inactive'}> Home</NavLink>
-        <NavLink to="/about" className={({ isActive }) => isActive ? 'Active' : 'Inactive'}>About Us</NavLink>
-        <NavLink to="/contact" className={({ isActive }) => isActive ? 'Active' : 'Inactive'}>Contact</NavLink>
-        <NavLink to="/team" className={({ isActive }) => isActive ? 'Active' : 'Inactive'}>Team</NavLink>
+        <NavLink to="/" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} onClick={handleClose}> Home</NavLink>
+        <NavLink to="/" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} onClick={handleClose}>Bookings</NavLink>
+        <NavLink to="/about" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} onClick={handleClose}>About Us</NavLink>
+        <NavLink to="/contact" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} onClick={handleClose}>Contact</NavLink>
+        <NavLink to="/team" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} onClick={handleClose}>Team</NavLink>
       </div>
       <div className="HeaderProfile">
         <div className="ProfileLogo" onClick={handleOpen}>
@@ -67,7 +70,9 @@ const Header = () => {
             </motion.div>
           )}
         </AnimatePresence>
+        
       </div>
+      {/* Mobile View */}
       <div className="HeaderMobile">
         {Toggle ? (
           <MdOutlineClear className="MenuHold" onClick={handleToggle} />
@@ -75,7 +80,7 @@ const Header = () => {
           <RxHamburgerMenu className="MenuHold" onClick={handleToggle} />
         )}
         <AnimatePresence>
-          {Toggle && (
+          { Toggle && (
             <motion.div
               className="HeaderHold"
               initial="closed"
@@ -85,18 +90,27 @@ const Header = () => {
               transition={{ duration: 0.3 }}
             >
               <NavLink to="/" className={({ isActive }) => isActive ? 'Active' : 'Inactive'}>Home</NavLink>
+              {/* <NavLink to="/" className={({ isActive }) => isActive ? 'Active' : 'Inactive'}>Bookings</NavLink> */}
               <NavLink to="/about" className={({ isActive }) => isActive ? 'Active' : 'Inactive'}>About Us</NavLink>
-              <NavLink to="/signup" className={({ isActive }) => isActive ? 'Active' : 'Inactive'}>Contact</NavLink>
-              <NavLink to="/login" className={({ isActive }) => isActive ? 'Active' : 'Inactive'}>Team</NavLink>
-              <div className="ProfileLogo">
-                <FaRegCircleUser style={{ fontSize: '1.8rem' }} />
+              <NavLink to="/contact" className={({ isActive }) => isActive ? 'Active' : 'Inactive'}>Contact</NavLink>
+              <NavLink to="/team" className={({ isActive }) => isActive ? 'Active' : 'Inactive'}>Team</NavLink>
+              <div className="ProfileUser">
+                <button className='UserLog'>
+                  <NavLink to='/login' style={{textDecoration:"none",color:"#05446E"}}> Login </NavLink>
+                </button>
+                <button className='UserSign'>
+                <NavLink to='/signup' style={{textDecoration:"none",color:"#ffff"}}> Create Account </NavLink>
+                </button>
               </div>
+              
             </motion.div>
           )}
         </AnimatePresence>
       </div>
+     
     </div>
-  );
-};
+    
+  )
+}
 
-export default Header;
+export default Header
