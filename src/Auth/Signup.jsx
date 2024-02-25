@@ -1,179 +1,219 @@
-import React,{useState} from 'react'
-import './Auth.css'
-import Logo from '../assets/TourHavenLo.png'
-import {Link} from 'react-router-dom'
-import {AiOutlineEye, AiOutlineEyeInvisible} from "react-icons/ai";
-import SideImg from '../assets/signnnn4.jpeg'
-import SideImg2 from '../assets/signnnn3.jpeg'
-import axios from  'axios'
-import Loader from '../Components/Loader/Loading'
+import React, { useState } from 'react';
+import './Auth.css';
+import Logo from '../assets/TourHavenLo.png';
+import { Link,useNavigate } from 'react-router-dom';
+import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
+import SideImg from '../assets/signnnn4.jpeg';
+import SideImg2 from '../assets/signnnn3.jpeg';
+import axios from 'axios';
+import Loader from '../Components/Loader/Loading';
+import Swal from 'sweetalert2'
+
 
 
 const Signup = () => {
+  const [Showpassword, setShowpassword] = useState(false);
+  const [ShowConfirmPassword, setShowConfirmPassword] = useState(false);
+  const [ImageChange, setImageChange] = useState([SideImg, SideImg2]);
+  const [Num, setNum] = useState(0);
+  const [IsLoading, setIsLoading] = useState(false);
+  const [firstName, setFirstName] = useState('');
+  const [lastName, setLastName] = useState('');
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const [confirmPassword, setConfirmPassword] = useState('');
+  const [phoneNumber, setPhoneNumber] = useState('');
+  const [errorMessages, setErrorMessages] = useState({
+    firstName: '',
+    lastName: '',
+    email: '',
+    password: '',
+    confirmPassword: '',
+    phoneNumber: ''
+  });
 
-  const [Showpassword, setShowpassword] = useState(false)
-  const [ShowConfirmPassword, setShowConfirmPassword] = useState(false)
-  const [ImageChange, setImageChange] = useState([
-    SideImg,
-    SideImg2
-  ])
-  const [Num, setNum] = useState(0)
-  const [IsLoading, setIsLoading] = useState(false)
-  const [firstName, setfirstName] = useState('')
-  const [lastName, setlastName] = useState('')
-  const [email, setemail] = useState('')
-  const [password, setpassword] = useState('')
-  const [confirmPassword, setconfirmPassword] = useState('')
-  const [phoneNumber, setphoneNumber] = useState('')
+  const Navigate = useNavigate();
 
-  // Getting user value
-
-  const HandleFirstName = (e)=>{
-    setfirstName(e.target.value)
-  }
-  const HandleLastName = (e)=>{
-    setlastName(e.target.value)
-  }
-  const HandleEmail = (e)=>{
-    setemail(e.target.value)
-  }
-  const HandlePassword = (e)=>{
-    setpassword(e.target.value)
-  }
-  const HandleConfirmPassword = (e)=>{
-    setconfirmPassword(e.target.value)
-  }
-  const HandlePhoneNumber = (e)=>{
-    setphoneNumber(e.target.value)
+  const HandleFirstName = (e) => {
+    setFirstName(e.target.value);
+    setErrorMessages({ ...errorMessages, firstName: '' })
   }
 
+  const HandleLastName = (e) => {
+    setLastName(e.target.value);
+    setErrorMessages({ ...errorMessages, lastName: '' })
+  }
+
+  const HandleEmail = (e) => {
+    setEmail(e.target.value);
+    setErrorMessages({ ...errorMessages, email: '' })
+  }
+
+  const HandlePassword = (e) => {
+    setPassword(e.target.value);
+    setErrorMessages({ ...errorMessages, password: '' })
+  }
+
+  const HandleConfirmPassword = (e) => {
+    setConfirmPassword(e.target.value);
+    setErrorMessages({ ...errorMessages, confirmPassword: '' })
+  }
+
+  const HandlePhoneNumber = (e) => {
+    setPhoneNumber(e.target.value);
+    setErrorMessages({ ...errorMessages, phoneNumber: '' })
+  }
+
+  const HandleSignUp = async () => {
+    if (!firstName || !lastName || !email || !password || !confirmPassword || !phoneNumber) {
+      setErrorMessages({
+        firstName: !firstName ? 'First Name is required' : '',
+        lastName: !lastName ? 'Last Name is required' : '',
+        email: !email ? 'Email is required' : '',
+        password: !password ? 'Password is required' : '',
+        confirmPassword: !confirmPassword ? 'Confirm Password is required' : '',
+        phoneNumber: !phoneNumber ? 'Phone Number is required' : ''
+      });
+      return;
+    }
+
+    if (password !== confirmPassword) {
+      setErrorMessages({ ...errorMessages, confirmPassword: 'Passwords do not match' });
+      return;
+    }
 
 
+    // Perform axios post request here
+    const Url = 'https://tour-haven-application.vercel.app/api/v1/users/signup';
+    const dataNeeded = { firstName, lastName, email, password, confirmPassword, phoneNumber };
 
-
-
-  //Handling Signup Function
-  const Url = 'https://tour-haven-application.vercel.app/signup'
-  const dataNeeded = {firstName,lastName,email,password,confirmPassword,phoneNumber}
-
-  const HandleSignUp = async (e)=>{
-    e.preventDefault()
-    try{
-      setIsLoading(true)
-      const res = await axios.post(Url,dataNeeded)
+    try {
+      setIsLoading(true);
+      const res = await axios.post(Url, dataNeeded);
+      Swal.fire({
+        title: 'Registration Successful!',
+        text: 'You have successfully signed up.',
+        icon: 'success',
+        showCancelButton: false,
+        confirmButtonColor: '#00a6fb',
+        confirmButtonText: 'Go to Login',
+        allowOutsideClick: false,
+      })
       console.log(res.data);
-    }
-    catch (error){
-      console.log(error.message);
-    }
-    finally{
-      setIsLoading(false)
+      // Redirect to success page or handle success as needed
+    } catch (error) {
+      Swal.fire({
+        icon: "error",
+        title: "Oops...",
+        text: `${error.res.message}`,
+        // footer: '<a href="#">Why do I have this issue?</a>'
+      });
+      console.log(error.res.message);
+    } finally {
+      setIsLoading(false);
     }
   }
 
-
-  
-  const HandleNext = ()=>{
-    console.log("show");
-    setNum(Num + 1)
+  const HandleNext = () => {
+    setNum(Num + 1);
   }
 
-  const handleShowPassword = ()=>{
-    console.log("show");
-    setShowpassword(!Showpassword)
+  const handleShowPassword = () => {
+    setShowpassword(!Showpassword);
   }
-  const handleShowConfirmPassword = ()=>{
-    console.log("show");
-    setShowConfirmPassword(!ShowConfirmPassword)
+
+  const handleShowConfirmPassword = () => {
+    setShowConfirmPassword(!ShowConfirmPassword);
   }
 
 
   return (
-<div className="SignupBody">
-  {
-    IsLoading === true ? <Loader/> : (
-      <div className="SignupContainer">
-      <div className="SignSideImg">
-        <img src={ImageChange[Num % ImageChange.length]} alt="" />
-        <div className="HoldSpan">
+    <div className="SignupBody">
+      {IsLoading ? <Loader /> : (
+        <div className="SignupContainer">
+          <div className="SignSideImg">
+            <img src={ImageChange[Num % ImageChange.length]} alt="" />
+            <div className="HoldSpan">
               <span onClick={HandleNext}></span>
               <span onClick={HandleNext}></span>
               <span onClick={HandleNext}></span>
             </div>
-      </div>
-      <div className="SignHoldAll">
-         <div className="SignupHeader">
-          <div className="SignupImg">
-            <img src={Logo} alt="" />
           </div>
-          <div className="SignupTitle">
-            <h4>Sign Up</h4>
-            <span>Let's get you set up so you can access your account</span>
+          <div className="SignHoldAll">
+            <div className="SignupHeader">
+              <div className="SignupImg">
+                <img src={Logo} alt="" />
+              </div>
+              <div className="SignupTitle">
+                <h4>Sign Up</h4>
+                <span>Let's get you set up so you can access your account</span>
+              </div>
+            </div>
+            <div className="SignupForm">
+              <div className="SignupFirstandLastName">
+                <div className="SignupFirst">
+                  <label>First Name</label>
+                  <input type="text" onChange={HandleFirstName} />
+                  <p className="error">{errorMessages.firstName}</p>
+                </div>
+                <div className="SignupLast">
+                  <label>Last Name</label>
+                  <input type="text" onChange={HandleLastName} />
+                  <p className="error">{errorMessages.lastName}</p>
+                </div>
+              </div>
+              <div className="SignupEmail">
+                <label>Email</label>
+                <input type="email" onChange={HandleEmail} />
+                <p className="error">{errorMessages.email}</p>
+              </div>
+              <div className="SignupPhoneNumber">
+                <label>Phone Number</label>
+                <input type="text" onChange={HandlePhoneNumber} />
+                <p className="error">{errorMessages.phoneNumber}</p>
+              </div>
+              <div className="SignupPassword">
+                <label>Password</label>
+                <div className="PasswordInput">
+                  <input type={Showpassword ? "text" : "password"} onChange={HandlePassword} />
+                  {Showpassword ?
+                    <AiOutlineEye onClick={handleShowPassword} />
+                    :
+                    <AiOutlineEyeInvisible onClick={handleShowPassword} />
+                  }
+                </div>
+                <p className="error">{errorMessages.password}</p>
+              </div>
+              <div className="SignupConfirmPassword">
+                <label>ConfirmPassword</label>
+                <div className="SignupConfirmeyes">
+                  <input type={ShowConfirmPassword ? "text" : "password"} onChange={HandleConfirmPassword} />
+                  {ShowConfirmPassword ?
+                    <AiOutlineEye onClick={handleShowConfirmPassword} />
+                    :
+                    <AiOutlineEyeInvisible onClick={handleShowConfirmPassword} />
+                  }
+                </div>
+                <p className="error">{errorMessages.confirmPassword}</p>
+              </div>
+              <div className="SignupAgreeTerms">
+                <input type="checkbox" />
+                &nbsp;
+                <label>I agree to terms of use</label>
+              </div>
+              <div className="SignupBtn">
+                <button onClick={HandleSignUp}>
+                  Sign Up
+                </button>
+              </div>
+              <div className="SignupAlready">
+                <span>Already have an account?&nbsp;</span> <Link to="/login" style={{ textDecoration: "none", color: "#EC8B05" }}>Login</Link>
+              </div>
+            </div>
           </div>
         </div>
-        <div className="SignupForm">
-          <div className="SignupFirstandLastName">
-            <div className="SignupFirst">
-              <label>First Name</label>
-              <input type="text" onChange={HandleFirstName}/>
-            </div>
-            <div className="SignupLast">
-              <label>Last Name</label>
-              <input type="text" onChange={HandleLastName} />
-            </div>
-          </div>
-          <div className="SignupEmail">
-            <label>Email</label>
-            <input type="email" onChange={HandleEmail} />
-          </div>
-          <div className="SignupPhoneNumber">
-        <label>Phone Number</label>
-          <input type="text" onChange={HandlePhoneNumber} />
-          </div>
-          <div className="SignupPassword">
-            <label>Password</label>
-            <div className="PasswordInput">
-            <input type={Showpassword ? "text" : "password"} onChange={HandlePassword} />
-            {
-              Showpassword?
-              <AiOutlineEye onClick={handleShowPassword}/>
-              :
-              <AiOutlineEyeInvisible onClick={handleShowPassword}/>
-            }
-            </div>
-          </div>
-          <div className="SignupConfirmPassword">
-            <label>ConfirmPassword</label>
-            <div className="SignupConfirmeyes">
-            <input type={ShowConfirmPassword ? "text": "password"} onChange={HandleConfirmPassword} />
-              {
-                ShowConfirmPassword ?
-                <AiOutlineEye onClick={handleShowConfirmPassword}/>
-                :
-                <AiOutlineEyeInvisible onClick={handleShowConfirmPassword}/>
-              }
-            </div>
-          </div>
-          <div className="SignupAgreeTerms">
-            <input type="checkbox"/>
-            &nbsp;
-            <label>I agree to terms of use</label>
-          </div>
-          <div className="SignupBtn">
-            <button onClick={HandleSignUp}>
-              Sign Up
-            </button>
-          </div>
-          <div className="SignupAlready">
-         <span>Already have an account?&nbsp;</span> <Link to="/login" style={{textDecoration:"none",color:"#EC8B05"}}>Login</Link>
-          </div>
-        </div>
-      </div>
-       
-      </div>
-    )
-  }
-</div>
+      )}
+    </div>
   )
 }
 

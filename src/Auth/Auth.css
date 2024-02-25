@@ -773,6 +773,11 @@ width: 50%;
     height: 100%;
     padding-left: 10px;
 }
+.error{
+    font-size: 0.6rem;
+    color: red;
+    font-family: 'Explora',sans-serif;
+}
 
 
 
@@ -812,6 +817,13 @@ width: 50%;
     }
     .ResetHeader{
         width: 50%;
+    }
+    .LoginPassword,
+    .LoginEmail label{
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #05446E;
+        font-family: 'Lora', serif;
     }
 
 }
@@ -856,6 +868,22 @@ width: 50%;
     }
     .ResetHeader{
         width: 90%;
+    }
+    .LoginPassword,
+    .LoginEmail label{
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #05446E;
+        font-family: 'Lora', serif;
+    }
+    .LoginRemeber span{
+        font-size: 0.7rem;
+    }
+    .LoginTitle span{
+        font-size: 0.8rem;
+    }
+    .LoginTitle h2{
+        font-size: 1.2rem;
     }
    
 }
@@ -912,6 +940,22 @@ width: 50%;
     }
     .ResetHeader{
         width: 90%;
+    }
+    .LoginPassword,
+    .LoginEmail label{
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #05446E;
+        font-family: 'Lora', serif;
+    }
+    .LoginRemeber span{
+        font-size: 0.7rem;
+    }
+    .LoginTitle span{
+        font-size: 0.8rem;
+    }
+    .LoginTitle h2{
+        font-size: 1.2rem;
     }
  
 }
@@ -980,5 +1024,12 @@ width: 50%;
     .LoginTitle h2{
         font-size: 1.2rem;
     }
+    .LoginPassword,
+.LoginEmail label{
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #05446E;
+    font-family: 'Lora', serif;
+}
     
 }

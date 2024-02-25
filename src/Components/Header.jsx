@@ -37,11 +37,11 @@ const Header = () => {
         <img src={HeaderLogo} alt="" />
       </div>
       <div className="HeaderLink">
-        <NavLink to="/" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} onClick={handleClose}> Home</NavLink>
-        <NavLink to="/" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} onClick={handleClose}>Bookings</NavLink>
-        <NavLink to="/about" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} onClick={handleClose}>About Us</NavLink>
-        <NavLink to="/contact" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} onClick={handleClose}>Contact</NavLink>
-        <NavLink to="/team" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} onClick={handleClose}>Team</NavLink>
+        <NavLink to="/" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} > Home</NavLink>
+        <NavLink to="/" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} >Bookings</NavLink>
+        <NavLink to="/about" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} >About Us</NavLink>
+        <NavLink to="/contact" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} >Contact</NavLink>
+        <NavLink to="/team" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} >Team</NavLink>
       </div>
       <div className="HeaderProfile">
         <div className="ProfileLogo" onClick={handleOpen}>
@@ -88,12 +88,13 @@ const Header = () => {
               exit="closed"
               variants={headerVariants}
               transition={{ duration: 0.3 }}
+              onClick={handleClose}
             >
-              <NavLink to="/" className={({ isActive }) => isActive ? 'Active' : 'Inactive'}>Home</NavLink>
+              <NavLink to="/" className={({ isActive }) => isActive ? 'Active' : 'Inactive'}onClick={handleClose}>Home</NavLink>
               {/* <NavLink to="/" className={({ isActive }) => isActive ? 'Active' : 'Inactive'}>Bookings</NavLink> */}
-              <NavLink to="/about" className={({ isActive }) => isActive ? 'Active' : 'Inactive'}>About Us</NavLink>
-              <NavLink to="/contact" className={({ isActive }) => isActive ? 'Active' : 'Inactive'}>Contact</NavLink>
-              <NavLink to="/team" className={({ isActive }) => isActive ? 'Active' : 'Inactive'}>Team</NavLink>
+              <NavLink to="/about" className={({ isActive }) => isActive ? 'Active' : 'Inactive'}onClick={handleClose}>About Us</NavLink>
+              <NavLink to="/contact" className={({ isActive }) => isActive ? 'Active' : 'Inactive'}onClick={handleClose}>Contact</NavLink>
+              <NavLink to="/team" className={({ isActive }) => isActive ? 'Active' : 'Inactive'}onClick={handleClose}>Team</NavLink>
               <div className="ProfileUser">
                 <button className='UserLog'>
                   <NavLink to='/login' style={{textDecoration:"none",color:"#05446E"}}> Login </NavLink>
