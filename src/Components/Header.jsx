@@ -62,7 +62,7 @@ const Header = () => {
                 <Link to="/login" style={{ textDecoration: 'none', color: '#EC8B05' }}>Login</Link>
               </div>
               <div className="NewMember">
-                <span>New member ? </span> &nbsp; <Link to="/signup" style={{ textDecoration: 'none', color: '#EC8B05', fontWeight: '700' }}>Sign Up</Link>
+                <span>New member ? </span> &nbsp; <Link to="/signup" style={{ textDecoration: 'none', color: '#EC8B05', fontWeight: '700',fontSize:'1rem' }}>Sign Up</Link>
               </div>
             </motion.div>
           )}

@@ -5,11 +5,46 @@ import { Link } from 'react-router-dom'
 import {AiOutlineEye, AiOutlineEyeInvisible} from "react-icons/ai";
 import LoginRoom1 from '../assets/LoginRomm1.jpeg'
 import LoginRoom2 from '../assets/loginromm2.jpeg'
-import {motion} from 'framer-motion'
+import axios from 'axios';
 
 const Login = () => {
+
   const [Showpassword, setShowpassword] = useState(false)
- 
+  const [email, setemail] = useState('')
+  const [password, setpassword] = useState('')
+  const [Isloading, setIsloading] = useState(false)
+
+  // Catching user's value 
+
+  const HandleEmail = (e)=>{
+    setemail(e.target.value)
+  }
+  const HandlePassword = (e)=>{
+    setpassword(e.target.value)
+  }
+
+/// Handling user Login 
+
+
+
+const Url = 'https://tour-haven-application.vercel.app/login'
+const dataNeeded = {email,password}
+
+const HandleLogs = async (e)=>{
+  e.preventDefault()
+  try{
+    setIsloading(true)
+    const response = await axios.post(Url,dataNeeded)
+    console.log(response.data);
+  }
+  catch(error){
+    console.log(error.message);
+  }
+  finally{
+    setIsloading(false)
+  }
+}
+
   const ImageHold = [LoginRoom1,LoginRoom2]
   const [NumIndex, setNumIndex] = useState(0)
 
@@ -77,7 +112,7 @@ const Login = () => {
               </button>
             </div>
             <div className="LoginAlready">
-              <span>Don't have an account?</span> &nbsp; <Link to="/signup" style={{textDecoration:"none",color:"#EC8B05",fontSize:"1.2rem"}}>Sign Up</Link>
+              <span>Don't have an account?</span> &nbsp; <Link to="/signup" style={{textDecoration:"none",color:"#EC8B05",fontSize:"1rem"}}>Sign Up</Link>
             </div>
           </div>
         </div>

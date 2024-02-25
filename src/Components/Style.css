@@ -100,7 +100,7 @@
     flex-direction: column;
 }
 .SignUpOfferText span{
-    font-size: 17px;
+    font-size: 15px;
     font-family: 'Lora', serif;
     color: #05446E;
     text-align: center;
@@ -134,7 +134,7 @@
 }
 .NewMember span{
     color: #05446E;
-    font-size:1rem;
+    font-size:0.9rem;
 }
 .FooterBody{
     width: 100%;
