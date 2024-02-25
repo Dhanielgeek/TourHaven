@@ -142,7 +142,7 @@ width: 50%;
     border: 2px solid #d9d9d9;
     font-size: 1rem;
     font-weight: 500;
-    color: black;
+    color: #494848;
     background: transparent;
 }
 
@@ -156,7 +156,7 @@ width: 50%;
     border: 2px solid #d9d9d9;
     font-size: 1rem;
     font-weight: 500;
-    color: black;
+    color: #494848;
     background: transparent;
 }
 .SignupEmail{
@@ -175,7 +175,7 @@ width: 50%;
     border: 2px solid #d9d9d9;
     font-size: 1rem;
     font-weight: 500;
-    color: black;
+    color: #494848;
     background: transparent;
 }
 .SignupPhoneNumber{
@@ -194,7 +194,7 @@ width: 50%;
     border: 2px solid #d9d9d9;
     font-size: 1rem;
     font-weight: 500;
-    color: black;
+    color: #494848;
     background: transparent;
 }
 .SignupPassword{
@@ -220,6 +220,10 @@ width: 50%;
     width: 100%;
     height: 100%;
     padding-left: 10px;
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #494848;
 }
 
 .SignupConfirmPassword{
@@ -245,6 +249,10 @@ width: 50%;
     width: 100%;
     height: 100%;
     padding-left: 10px;
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #494848;
 }
 
 
