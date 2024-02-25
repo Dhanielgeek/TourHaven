@@ -86,7 +86,7 @@ const Header = () => {
             >
               <NavLink to="/" className={({ isActive }) => isActive ? 'Active' : 'Inactive'}>Home</NavLink>
               <NavLink to="/about" className={({ isActive }) => isActive ? 'Active' : 'Inactive'}>About Us</NavLink>
-              <NavLink to="/contact" className={({ isActive }) => isActive ? 'Active' : 'Inactive'}>Contact</NavLink>
+              <NavLink to="/signup" className={({ isActive }) => isActive ? 'Active' : 'Inactive'}>Contact</NavLink>
               <NavLink to="/login" className={({ isActive }) => isActive ? 'Active' : 'Inactive'}>Team</NavLink>
               <div className="ProfileLogo">
                 <FaRegCircleUser style={{ fontSize: '1.8rem' }} />
