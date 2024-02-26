@@ -7,6 +7,9 @@ import LoginRoom1 from '../assets/LoginRomm1.jpeg'
 import LoginRoom2 from '../assets/loginromm2.jpeg'
 import axios from 'axios';
 import Loader from '../Components/Loader/Loading'
+import Swal from 'sweetalert2'
+import {  useDispatch } from 'react-redux';
+import { userData } from '../Functions/Features';
 
 const Login = () => {
 
@@ -14,32 +17,60 @@ const Login = () => {
   const [email, setemail] = useState('')
   const [password, setpassword] = useState('')
   const [Isloading, setIsloading] = useState(false)
+  const [ErrorMessage, setErrorMessage] = useState({
+    email: "",
+    password: ""
+  })
 
   // Catching user's value 
 
   const HandleEmail = (e)=>{
     setemail(e.target.value)
+    setErrorMessage({...ErrorMessage,email: ''})
   }
   const HandlePassword = (e)=>{
     setpassword(e.target.value)
+    setErrorMessage({...ErrorMessage,password:''})
   }
 
 /// Handling user Login 
 
-
-
-const Url = 'https://tour-haven-application.vercel.app/login'
-const dataNeeded = {email,password}
+const Url = 'https://tour-haven-application.vercel.app/api/v1/users/login'
+const data = {email,password}
+const Dispatch = useDispatch()
 
 const HandleLogs = async (e)=>{
+
+  if(!email || !password){
+    setErrorMessage({
+      email: !email ? "Email is Required" : '',
+      password: !password ? "Password" : ''
+    })
+    return;
+   }
+
   e.preventDefault()
   try{
     setIsloading(true)
-    const response = await axios.post(Url,dataNeeded)
+    const response = await axios.post(Url,data)
+    Dispatch(userData(response.data.data))
+    Swal.fire({
+      position: "center",
+      icon: "success",
+      title: `${response.data}`,
+      showConfirmButton: false,
+      timer: 1500
+    });
     console.log(response.data);
   }
   catch(error){
-    console.log(error.message);
+    Swal.fire({
+      icon: "error",
+      title: "Oops...",
+      text: `${error.response.error}`,
+      // footer: '<a href="#">Why do I have this issue?</a>'
+    });
+    console.log(error.response.error);
   }
   finally{
     setIsloading(false)
@@ -87,12 +118,13 @@ const HandleLogs = async (e)=>{
             <div className="LoginForm">
               <div className="LoginEmail">
                 <label>Email</label>
-                <input type="email" />
+                <input type="email" onChange={HandleEmail}/>
+                <p className="error">{ErrorMessage.email}</p>
               </div>
               <div className="LoginPassword">
                 <label>Password</label>
                 <div className="ShowPasswrd">
-                <input type={Showpassword ? "text" : "password"} />
+                <input type={Showpassword ? "text" : "password"} onChange={HandlePassword} />
                 {
               Showpassword?
               <AiOutlineEye onClick={handleShowPassword}/>
@@ -100,6 +132,7 @@ const HandleLogs = async (e)=>{
               <AiOutlineEyeInvisible onClick={handleShowPassword}/>
             }
                 </div>
+                <p className="error">{ErrorMessage.password}</p>
               </div>
               <div className="LoginForgetPassword">
                 <div className="LoginRemeber">

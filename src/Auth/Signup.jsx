@@ -92,7 +92,7 @@ const Signup = () => {
       const res = await axios.post(Url, dataNeeded);
       Swal.fire({
         title: 'Registration Successful!',
-        text: 'You have successfully signed up.',
+        text: 'You have successfully signed up. A message has been sent to your mail for verification',
         icon: 'success',
         showCancelButton: false,
         confirmButtonColor: '#00a6fb',
@@ -105,10 +105,10 @@ const Signup = () => {
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: `${error.res.message}`,
+        text: `${error.error}`,
         // footer: '<a href="#">Why do I have this issue?</a>'
       });
-      console.log(error.res.message);
+      console.log(error.error);
     } finally {
       setIsLoading(false);
     }

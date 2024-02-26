@@ -957,7 +957,7 @@
     font-size: 2.2rem;
   }
   .ServicesContainer span{
-    font-size: 1.3rem;
+    font-size: 1rem;
   }
   .TestimonalsHeader{
   justify-content: center;
@@ -965,10 +965,10 @@
   height: 10%;
   }
   .TestimonalsHeader h1{
-  font-size: 1.3rem;
+  font-size: 1.1rem;
   }
   .TestimonalsHeader h3{
-  font-size: 1.2rem;
+  font-size: 0.9rem;
   }
   .TestimonalsBody{
     height: 50rem;
@@ -982,7 +982,7 @@
     height: 30%;
   }
   .TestimonialsText span{
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
   .Testimonalimgholder{
     width: 50px;

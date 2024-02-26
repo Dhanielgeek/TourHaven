@@ -1,12 +1,12 @@
 import React from 'react';
 import './loading.css';
-import { Audio } from 'react-loader-spinner';
+import { Audio, DNA } from 'react-loader-spinner';
 
 const Loading = () => {
   return (
     <div className="Loader">
       <div className="LoaderContent">
-        <Audio
+        <DNA
           height="80"
           width="80"
           radius="9"
