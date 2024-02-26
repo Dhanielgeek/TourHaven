@@ -84,7 +84,7 @@ const Signup = () => {
 
 
     // Perform axios post request here
-    const Url = 'https://tour-haven-application.vercel.app/api/v1/users/signup';
+    const Url = 'https://tourhaven.onrender.com/api/v1/users/signup';
     const dataNeeded = { firstName, lastName, email, password, confirmPassword, phoneNumber };
 
     try {
