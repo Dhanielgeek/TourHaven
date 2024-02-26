@@ -11,6 +11,7 @@ import About from './Pages/About/About'
 import Contact from './Pages/Contact/Contact'
 import HotelListing from './Components/HotelListing/HotelListing'
 import HotelDescription from './Components/HotelDescription/HotelDescription'
+import Verify from './Auth/Verify'
 
 
 
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
   {
     path: '/resetpass',
     element: <ResetPassword/>
+  },
+  {
+    path: '/verify',
+    element: <Verify/>
   },
   {
     path: '/',

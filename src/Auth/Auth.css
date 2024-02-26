@@ -778,6 +778,67 @@ width: 50%;
     color: red;
     font-family: 'Explora',sans-serif;
 }
+.VerifyBody{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.VerifyContainer{
+    width: 30%;
+    height: 70%;
+    background: #FDFDF7;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.VerifyIcon{
+    width: 90%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.VerifyTitle{
+    width: 90%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.VerifyTitle h2{
+    font-size: 1.5rem;
+    font-family: 'Lora',serif;
+    font-weight: 500;
+    color: #05446E;
+}
+.VerifyTitle span{
+    font-family: 'Lora',serif;
+    font-size: 0.9rem;
+    color: #615b5b;
+}
+.VerifyBtn{
+    width: 90%;
+    height: 13%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.VerifyBtn button{
+    width: 90%;
+    height: 90%;
+    background: #05446E;
+    color: #FDFDF7;
+    border: none;
+    border-radius: 9px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
 
 
 
@@ -824,6 +885,21 @@ width: 50%;
         font-weight: 500;
         color: #05446E;
         font-family: 'Lora', serif;
+    }
+    .VerifyContainer{
+        width: 60%;
+    }
+    .VerifyTitle{
+        width: 100%;
+        text-align: center;
+        height: 20%;
+        gap: 8%;
+    }
+    .VerifyTitle span{
+        font-size: 0.8rem;
+    }
+    .VerifyTitle h2{
+        font-size: 1.1rem;
     }
 
 }
@@ -884,6 +960,21 @@ width: 50%;
     }
     .LoginTitle h2{
         font-size: 1.2rem;
+    }
+    .VerifyContainer{
+        width: 90%;
+    }
+    .VerifyTitle{
+        width: 100%;
+        text-align: center;
+        height: 20%;
+        gap: 5%;
+    }
+    .VerifyTitle span{
+        font-size: 0.8rem;
+    }
+    .VerifyTitle h2{
+        font-size: 1.1rem;
     }
    
 }
@@ -956,6 +1047,20 @@ width: 50%;
     }
     .LoginTitle h2{
         font-size: 1.2rem;
+    }
+    .VerifyContainer{
+        width: 90%;
+    }
+    .VerifyTitle{
+        width: 100%;
+        text-align: center;
+        height: 20%;
+    }
+    .VerifyTitle span{
+        font-size: 0.8rem;
+    }
+    .VerifyTitle h2{
+        font-size: 1.1rem;
     }
  
 }
@@ -1030,6 +1135,20 @@ width: 50%;
     font-weight: 500;
     color: #05446E;
     font-family: 'Lora', serif;
+}
+.VerifyContainer{
+    width: 90%;
+}
+.VerifyTitle{
+    width: 100%;
+    text-align: center;
+    height: 20%;
+}
+.VerifyTitle span{
+    font-size: 0.8rem;
+}
+.VerifyTitle h2{
+    font-size: 1.1rem;
 }
     
 }
