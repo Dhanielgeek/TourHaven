@@ -12,6 +12,7 @@ import Contact from './Pages/Contact/Contact'
 import HotelListing from './Components/HotelListing/HotelListing'
 import HotelDescription from './Components/HotelDescription/HotelDescription'
 import Verify from './Auth/Verify'
+import Bookings from './Components/Bookings/Bookings'
 
 
 
@@ -66,6 +67,10 @@ const router = createBrowserRouter([
       {
         path:'hoteldes',
         element: <HotelDescription/>
+      },
+      {
+        path: 'bookings',
+        element: <Bookings/>
       }
       
     ]
