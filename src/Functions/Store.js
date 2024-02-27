@@ -1,9 +1,9 @@
-import { configureStore } from "@reduxjs/toolkit";
+import {configureStore} from '@reduxjs/toolkit'
 import MySliceReducer from './Features'
 
 const MyStore = configureStore({
-    reducer: {
-        user: MySliceReducer
+    reducer:{
+        mySlice : MySliceReducer
     }
 })
 

@@ -544,6 +544,14 @@ width: 50%;
     align-items: center;
     flex-direction: column;
 }
+.ForgetHolder{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
 .ForgetHeader{
     width: 40%;
     height: 15%;
@@ -634,6 +642,15 @@ width: 50%;
 .ResetpasswordBody{
     width: 100%;
     height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.ResetHolder{
+    width: 100%;
+    height: 100%;
     background: white;
     display: flex;
     justify-content: center;
@@ -1101,8 +1118,11 @@ width: 50%;
     .ForgetHeader{
         width: 100%;
     }
+    .ForgetHeader h1{
+        font-size: 1.3rem;
+    }
     .ForgetTitle span{
-        font-size: 1rem;
+        font-size: 0.9rem;
         text-align: center;
     }
     .SignSideImg{

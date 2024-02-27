@@ -1,7 +1,7 @@
 import React,{useEffect, useState} from 'react'
 import './Auth.css'
 import LoginLogo from '../assets/TourHavenLo.png'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import {AiOutlineEye, AiOutlineEyeInvisible} from "react-icons/ai";
 import LoginRoom1 from '../assets/LoginRomm1.jpeg'
 import LoginRoom2 from '../assets/loginromm2.jpeg'
@@ -9,7 +9,8 @@ import axios from 'axios';
 import Loader from '../Components/Loader/Loading'
 import Swal from 'sweetalert2'
 import {  useDispatch } from 'react-redux';
-import { userData } from '../Functions/Features';
+import { Userdata,UserToken } from '../Functions/Features';
+
 
 const Login = () => {
 
@@ -38,6 +39,7 @@ const Login = () => {
 const Url = 'https://tour-haven-application.vercel.app/api/v1/users/login'
 const data = {email,password}
 const Dispatch = useDispatch()
+const Navigate = useNavigate()
 
 const HandleLogs = async (e)=>{
 
@@ -50,24 +52,32 @@ const HandleLogs = async (e)=>{
    }
 
   e.preventDefault()
-  try{
+  try{ 
     setIsloading(true)
-    const response = await axios.post(Url,data)
-    Dispatch(userData(response.data.data))
+    const res = await axios.post(Url,data)
+    Dispatch(Userdata(res.data.data))
+    Dispatch(UserToken(res.data.token))
+    console.log(res);
     Swal.fire({
-      position: "center",
-      icon: "success",
-      title: `${response.data}`,
-      showConfirmButton: false,
-      timer: 1500
-    });
-    console.log(response.data);
-  }
+        title: 'Login Successful!',
+        text: `${res.data.message}`,
+        icon: 'success',
+        showCancelButton: false,
+        confirmButtonColor: '#05446E',
+        confirmButtonText: 'Get Started',
+        allowOutsideClick: false,
+      }).then((result) => {
+        if (result.isConfirmed) {
+            Navigate('/');
+        }
+      });
+      console.log(res.message);
+}
   catch(error){
     Swal.fire({
       icon: "error",
       title: "Oops...",
-      text: `${error.response.error}`,
+      text: `${error}`,
       // footer: '<a href="#">Why do I have this issue?</a>'
     });
     console.log(error.response.error);

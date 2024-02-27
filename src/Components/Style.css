@@ -79,7 +79,7 @@
     display: none;
 }
 .UserDropDown{
-    width: 100%;
+    width: 90%;
     height:13rem;
     position: absolute;
     top: 75%;
@@ -90,6 +90,14 @@
     align-items: center;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
     border-radius: 8px;
+}
+.SignsHoldall{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
 }
 .SignUpOfferText{
     width: 100%;
@@ -264,7 +272,76 @@
     cursor: pointer;
     font-family:'Lora', serif;
 }
+.UserNameHolderCircle{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid #05446E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 350ms ease-in-out;
+}
+.UserNameHolderCircle:hover{
+    background: #05446E;
+}
 
+.UserNameHolderCircle h3{
+    font-size: 0.9rem;
+    font-family: 'Lora',serif;
+    color: #fb8500;
+}
+.UserHoldall{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8%;
+}
+.ViewAccount{
+    width: 80%;
+    height: 18%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    transition: all 350ms ease-in-out;
+}
+.ViewAccount span{
+    font-family: 'Lora',serif;
+    cursor: pointer;
+    color: #05446E;
+    font-weight: 600;
+}
+.ViewAccount:hover{
+    background: #fb8500;
+}
+.HeaderLogOut{
+    width: 90%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.HeaderLogOut button{
+    width: 80%;
+    height: 90%;
+    border: 1px solid #05446E;
+    border-radius: 8px;
+    color: #fb8500;
+    cursor: pointer;
+    background: none;
+    font-family: 'Lora',serif;
+    font-size: 0.9rem;
+    transition: all 350ms ease-in-out;
+}
+.HeaderLogOut button:hover{
+    background: #fb8500;
+    border: none;
+    color: #fdfdf7;
+}
 
 
 

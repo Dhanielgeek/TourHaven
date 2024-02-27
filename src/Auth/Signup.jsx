@@ -96,7 +96,7 @@ const Signup = () => {
         icon: 'success',
         showCancelButton: false,
         confirmButtonColor: '#00a6fb',
-        confirmButtonText: 'Go to Login',
+        // confirmButtonText: 'Go to Login',
         allowOutsideClick: false,
       })
       console.log(res.data);

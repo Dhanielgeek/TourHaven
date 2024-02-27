@@ -7,6 +7,12 @@ import { RxHamburgerMenu } from 'react-icons/rx';
 import { MdOutlineClear } from 'react-icons/md';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Link } from 'react-router-dom';
+import {  useSelector } from 'react-redux';
+import Swal from 'sweetalert2';
+import { UserToken } from '../Functions/Features';
+import axios from 'axios';
+
+
 
 const Header = () => {
   const [Toggle, setToggle] = useState(false)
@@ -30,6 +36,47 @@ const Header = () => {
     closed: { opacity: 0, x: '-100%' },
   }
 
+  //Handle Logout Function 
+  const userToken = useSelector((state) => state.mySlice.userToken) 
+  const Url = 'https://tour-haven-application.vercel.app/logout'
+  const headers = {
+    Authorization : `Bearer${userToken}` 
+  }
+
+  const HandleLogout = async () => {
+    try {
+      const res = await axios.post(Url, null, { headers });
+      // Assuming successful logout action based on response status
+      if (res.status === 200) {
+        Swal.fire({
+          title: "Logged out successfully",
+          text: res.data.message, // Assuming your backend sends a message
+          icon: "success"
+        });
+        // Perform any additional cleanup, like clearing local storage, etc.
+      } else {
+        // Handle unexpected status code
+        Swal.fire({
+          title: "Logout failed",
+          text: "An unexpected error occurred",
+          icon: "error"
+        });
+      }
+    } catch (error) {
+      // Handle network errors or other exceptions
+      console.error("Error logging out:", error);
+      Swal.fire({
+        title: "Logout failed",
+        text: "An error occurred while logging out",
+        icon: "error"
+      });
+    }
+  };
+  
+
+  // Handle the selector from redux 
+  const user = useSelector((state)=> state.mySlice.user)
+
   return (
         // Web View
     <div className="Header">
@@ -44,8 +91,18 @@ const Header = () => {
         <NavLink to="/team" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} >Team</NavLink>
       </div>
       <div className="HeaderProfile">
-        <div className="ProfileLogo" onClick={handleOpen}>
-          <FaRegCircleUser style={{ fontSize: '1.8rem' }} />
+      <div className="ProfileLogo" onClick={handleOpen}>
+          {user && user.firstName && user.lastName ? (
+            <div className="UserNameHolderCircle">
+               <h3>
+              {user.firstName.charAt(0)}
+              {user.lastName.charAt(0)}
+            </h3> 
+            </div>
+          
+          ) : (
+            <FaRegCircleUser style={{ fontSize: '1.8rem' }} />
+          )}
         </div>
         <AnimatePresence>
           {Open && (
@@ -57,16 +114,32 @@ const Header = () => {
               transition={{ duration: 0.3 }}
               onClick={handleClose}
             >
-              <div className="SignUpOfferText">
-                <span>Sign up for amazing offer</span>
-                <div className="LineSign"></div>
-              </div>
-              <div className="LoginLink">
-                <Link to="/login" style={{ textDecoration: 'none', color: '#EC8B05' }}>Login</Link>
-              </div>
-              <div className="NewMember">
-                <span>New member ? </span> &nbsp; <Link to="/signup" style={{ textDecoration: 'none', color: '#EC8B05', fontWeight: '700',fontSize:'1rem' }}>Sign Up</Link>
-              </div>
+            {
+              user && user.firstName && user.lastName ? (
+                <div className="UserHoldall">
+                  <div className="ViewAccount">
+                    <span>View Account</span>
+                  </div>
+                  <div className="LineSign"></div>
+                  <div className="HeaderLogOut">
+                    <button onClick={HandleLogout}>LogOut</button>
+                  </div>
+                </div>
+              ) : (
+                <div className="SignsHoldall">
+                  <div className="SignUpOfferText">
+                    <span>Sign up for amazing offer</span>
+                    <div className="LineSign"></div>
+                  </div>
+                  <div className="LoginLink">
+                    <Link to="/login" style={{ textDecoration: 'none', color: '#EC8B05' }}>Login</Link>
+                  </div>
+                  <div className="NewMember">
+                    <span>New member ? </span> &nbsp; <Link to="/signup" style={{ textDecoration: 'none', color: '#EC8B05', fontWeight: '700',fontSize:'1rem' }}>Sign Up</Link>
+                  </div>
+                </div>
+              )
+            }
             </motion.div>
           )}
         </AnimatePresence>
