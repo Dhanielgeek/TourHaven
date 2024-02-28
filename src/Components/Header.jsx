@@ -6,18 +6,22 @@ import { FaRegCircleUser } from 'react-icons/fa6';
 import { RxHamburgerMenu } from 'react-icons/rx';
 import { MdOutlineClear } from 'react-icons/md';
 import { motion, AnimatePresence } from 'framer-motion';
-import { Link } from 'react-router-dom';
-import { useSelector } from 'react-redux';
-import Swal from 'sweetalert2';
-import { UserToken } from '../Functions/Features';
+import { Link, useNavigate } from 'react-router-dom';
+import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
-import { Dropdown, Menu } from 'antd';
+import Swal from 'sweetalert2';
+import { Dropdown, Menu, Modal } from 'antd';
+import { UserToken,RemoveUser} from '../Functions/Features';
 
-const { SubMenu} = Menu;
+
+const { SubMenu } = Menu;
 
 const Header = () => {
   const [Toggle, setToggle] = useState(false);
   const [Open, setOpen] = useState(false);
+  const [logoutModalVisible, setLogoutModalVisible] = useState(false); 
+  const Navigate = useNavigate(); 
+  const Dispatch = useDispatch()
 
   const handleToggle = () => {
     setToggle(!Toggle);
@@ -33,81 +37,81 @@ const Header = () => {
   };
 
   const headerVariants = {
-    open: { opacity: 1, x: 0 },
-    closed: { opacity: 0, x: '-100%' },
-  };
-
-  //Handle Logout Function 
-  const userToken = useSelector((state) => state.mySlice.userToken);
-  const Url = 'https://tour-haven-application.vercel.app/logout';
-  const headers = {
-    Authorization: `Bearer${userToken}`,
-  };
-
-  const HandleLogout = async () => {
-    try {
-      const res = await axios.post(Url, null, { headers });
-   
-      if (res.status === 200) {
-        Swal.fire({
-          title: 'Logged out successfully',
-          text: res.data.message, 
-          icon: 'success',
-        });
-        
-      } else {
-        // Handle unexpected status code
-        Swal.fire({
-          title: 'Logout failed',
-          text: 'An unexpected error occurred',
-          icon: 'error',
-        });
-      }
-    } catch (error) {
-      // Handle network errors or other exceptions
-      console.error('Error logging out:', error);
-      Swal.fire({
-        title: 'Logout failed',
-        text: 'An error occurred while logging out',
-        icon: 'error',
-      });
-    }
+    open: { opacity: 1, x: 5 },
+    closed: { opacity: 0, x: '100%' },
   };
 
   // Handle the selector from redux 
   const user = useSelector((state) => state.mySlice.user);
+  const userToken = useSelector((state)=> state.mySlice.userToken)
 
+  // Function to show logout confirmation modal
+  const showLogoutModal = () => {
+    setLogoutModalVisible(true);
+  };
+
+  // Handle Function for the Logout 
+
+  const headers = {
+    Authorization : `Bearer ${userToken}`
+  }
+  const Url = 'https://tour-haven-application.vercel.app/api/v1/users/logout'
+
+  const HandleLogout = async() => {
+    try {
+      const response = await axios.post(Url,null,{headers});
+  
+      // Check if the logout request was successful
+      if (response.status === 200) {
+        // Show a success message
+        Swal.fire({
+          title: 'Logged out successfully',
+          icon: 'success',
+        });
+  
+        // Redirect the user to the home page after successful logout
+        Navigate('/');
+        Dispatch(RemoveUser())
+        setLogoutModalVisible(false)
+      } else {
+        // Show an error message if the logout request was not successful
+        Swal.fire({
+          title: 'Logout Failed',
+          text: 'Failed to logout. Please try again later.',
+          icon: 'error',
+        });
+      }
+    } catch (error) {
+      // Handle any errors that occur during the logout process
+      console.error('Logout error:', error);
+      Swal.fire({
+        title: 'Logout Failed',
+        text: 'An error occurred while logging out. Please try again later.',
+        icon: 'error',
+      });
+    }
+  };
+  
+
+  // Function to handle canceling logout
+  const handleCancelLogout = () => {
+    setLogoutModalVisible(false);
+  };
+
+  // flexDirection: 'column', justifyContent: 'space-around', alignItems: 'center'display: 'flex',
   const menu = (
-    <Menu onClick={handleClose}
-    style={{width:'10rem',
-    height:'7rem',
-    display:'flex',
-    flexDirection:"column",
-    justifyContent:'space-around',
-    alignItems:'center'
-    }}>
+    <Menu onClick={handleClose} style={{ width: '10rem', height: '7rem', }}>
       <Menu.Item>
-        <Link to="/user" 
-        style={{ fontFamily:'Lora',
-        color:'#fb8500'
-        }}>Account</Link>
+        <Link to="/user" style={{ fontFamily: 'Lora', color: '#fb8500' }}>Account</Link>
       </Menu.Item>
       <Menu.Item>
-        <button onClick={HandleLogout} 
-        style={{paddingLeft:'40px',
-        paddingRight:'40px',
-        paddingBottom:'10px',
-        paddingTop:'10px',
-        border:'1px solid #05446E',
-        background:'none',
-        fontFamily:'Lora',
-        borderRadius:'7px'
-      }}  >Logout</button>
+        <button onClick={showLogoutModal} style={{ paddingLeft: '40px', paddingRight: '40px', paddingBottom: '10px', paddingTop: '10px', border: '1px solid #05446E', background: 'none', fontFamily: 'Lora', borderRadius: '7px' }}>Logout</button>
       </Menu.Item>
     </Menu>
   );
 
   return (
+    // Web view
     <div className="Header">
       <div className="HeaderLogo">
         <img src={HeaderLogo} alt="" />
@@ -128,7 +132,6 @@ const Header = () => {
                 {user.lastName.charAt(0)}
               </h3>
             </div>
-
           ) : (
             <FaRegCircleUser style={{ fontSize: '1.8rem' }} />
           )}
@@ -143,40 +146,38 @@ const Header = () => {
               transition={{ duration: 0.3 }}
               onClick={handleClose}
             >
-              {
-                user && user.firstName && user.lastName ? (
-                    <div className="UserHoldall">
-                      <div className="ViewAccount">
-                        <span>
-                          <Link to='/user' style={{textDecoration:'none',color:"#05446E" }}>Account</Link>
-                        </span>
-                      </div>
-                      <div className="LineSign"></div>
-                      <div className="HeaderLogOut">
-                        <button onClick={HandleLogout}>LogOut</button>
-                      </div>
-                    </div>
-
-                ) : (
-                  <div className="SignsHoldall">
-                    <div className="SignUpOfferText">
-                      <span>Sign up for amazing offer</span>
-                      <div className="LineSign"></div>
-                    </div>
-                    <div className="LoginLink">
-                      <Link to="/login" style={{ textDecoration: 'none', color: '#EC8B05', fontSize: '0.9rem' }}>Login</Link>
-                    </div>
-                    <div className="NewMember">
-                      <span>New member ? </span> &nbsp; <Link to="/signup" style={{ textDecoration: 'none', color: '#EC8B05', fontWeight: '700', fontSize: '1rem' }}>Sign Up</Link>
-                    </div>
+              {user && user.firstName && user.lastName ? (
+                <div className="UserHoldall">
+                  <div className="ViewAccount">
+                    <span>
+                      <Link to='/user' style={{ textDecoration: 'none', color: "#05446E" }}>Account</Link>
+                    </span>
                   </div>
-                )
-              }
+                  <div className="LineSign"></div>
+                  <div className="HeaderLogOut">
+                    <button onClick={showLogoutModal}>LogOut</button>
+                  </div>
+                </div>
+              ) : (
+                <div className="SignsHoldall">
+                  <div className="SignUpOfferText">
+                    <span>Sign up for amazing offer</span>
+                    <div className="LineSign"></div>
+                  </div>
+                  <div className="LoginLink">
+                    <Link to="/login" style={{ textDecoration: 'none', color: '#EC8B05', fontSize: '0.9rem' }}>Login</Link>
+                  </div>
+                  <div className="NewMember">
+                    <span>New member ? </span> &nbsp; <Link to="/signup" style={{ textDecoration: 'none', color: '#EC8B05', fontWeight: '700', fontSize: '1rem' }}>Sign Up</Link>
+                  </div>
+                </div>
+              )}
             </motion.div>
           )}
         </AnimatePresence>
-
       </div>
+      {/* End of Web view */}
+
       {/* Mobile View */}
       <div className="HeaderMobile">
         {Toggle ? (
@@ -184,6 +185,24 @@ const Header = () => {
         ) : (
           <RxHamburgerMenu className="MenuHold" onClick={handleToggle} />
         )}
+           <div className="ProfileUser">
+                {user && user.firstName && user.lastName ? (
+                  <Dropdown overlay={menu}>
+                    <div className='UserInitials'>
+                      <h3>{user.firstName.charAt(0)}{user.lastName.charAt(0)}</h3>
+                    </div>
+                  </Dropdown>
+                ) : (
+                  <div className='UserMobileHold' >
+                    <button className='UserLog'>
+                      <NavLink to='/login' style={{ textDecoration: "none", color: "#05446E" }}> Login </NavLink>
+                    </button>
+                    <button className='UserSign'>
+                      <NavLink to='/signup' style={{ textDecoration: "none", color: "#ffff" }}>Sign up</NavLink>
+                    </button>
+                  </div>
+                )}
+              </div>
         <AnimatePresence>
           {Toggle && (
             <motion.div
@@ -193,37 +212,29 @@ const Header = () => {
               exit="closed"
               variants={headerVariants}
               transition={{ duration: 0.3 }}
-              // onClick={handleClose}
             >
               <NavLink to="/" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} onClick={handleClose}>Home</NavLink>
               <NavLink to="/about" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} onClick={handleClose}>About Us</NavLink>
               <NavLink to="/contact" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} onClick={handleClose}>Contact</NavLink>
               <NavLink to="/team" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} onClick={handleClose}>Team</NavLink>
-              <div className="ProfileUser">
-                {user && user.firstName && user.lastName ? (
-                  <Dropdown overlay={menu} >
-                    <div className='UserInitials'>
-                      <h3>{user.firstName.charAt(0)}{user.lastName.charAt(0)}</h3>
-                    </div>
-                  </Dropdown>
-                ) : (
-                  <div>
-                    <button className='UserLog'>
-                      <NavLink to='/login' style={{ textDecoration: "none", color: "#05446E" }}> Login </NavLink>
-                    </button>
-                    <button className='UserSign'>
-                      <NavLink to='/signup' style={{ textDecoration: "none", color: "#ffff" }}> Create Account </NavLink>
-                    </button>
-                  </div>
-                )}
-              </div>
+            
             </motion.div>
           )}
         </AnimatePresence>
       </div>
-
+{/* Logout Confirmation Modal */}
+<Modal
+  title="Logout Confirmation"
+  centered
+  visible={logoutModalVisible}
+  onOk={HandleLogout}
+  onCancel={handleCancelLogout}
+  okText={<span>Yes</span>}
+  cancelText="Cancel"
+>
+  <p>Are you sure you want to logout?</p>
+</Modal>
     </div>
-
   )
 }
 

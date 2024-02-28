@@ -13,10 +13,14 @@ const MySlice = createSlice({
     },
     UserToken: (state,{payload})=>{
         state.userToken = payload
+    },
+    RemoveUser: (state)=>{
+      state.user = {}
+      state.userToken = ''
     }
  
   }
 });
 
-export const { Userdata,UserToken } = MySlice.actions;
+export const { Userdata,UserToken,RemoveUser } = MySlice.actions;
 export default MySlice.reducer;
