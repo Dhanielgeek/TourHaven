@@ -119,15 +119,14 @@
     border: 2px solid #05446E;
 }
 .LoginLink{
-    width: 70%;
-    height: 18%;
+    width: 60%;
+    height: 15%;
     background: #05446E;
     border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     cursor: pointer;
-    font-size: 20px;
     font-family: 'Lora', serif;
     font-weight: 700;
 }
@@ -142,7 +141,7 @@
 }
 .NewMember span{
     color: #05446E;
-    font-size:0.9rem;
+    font-size:0.8rem;
 }
 .FooterBody{
     width: 100%;
@@ -312,7 +311,6 @@
 .ViewAccount span{
     font-family: 'Lora',serif;
     cursor: pointer;
-    color: #05446E;
     font-weight: 600;
 }
 .ViewAccount:hover{
@@ -414,6 +412,21 @@
         justify-content: space-around;
         align-items: center;
         flex-direction: column;
+    }
+    .UserInitials{
+        width: 45px;
+        height: 45px;
+        border: 1px solid #05446E;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 350ms ease-in-out;
+        border-radius: 50%;
+    }
+    .UserInitials h3{
+        font-size: 0.8rem;
+        font-family: 'Lora', serif;
+        color: #05446E;
     }
     .UserLog{
         width: 30%;
@@ -722,4 +735,6 @@
         color: #ffff;
         font-weight: 500;
     }
+    
+   
 }

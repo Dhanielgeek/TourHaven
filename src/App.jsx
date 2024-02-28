@@ -13,6 +13,7 @@ import HotelListing from './Components/HotelListing/HotelListing'
 import HotelDescription from './Components/HotelDescription/HotelDescription'
 import Verify from './Auth/Verify'
 import Bookings from './Components/Bookings/Bookings'
+import User from './Components/UserProfile/User'
 
 
 
@@ -71,6 +72,10 @@ const router = createBrowserRouter([
       {
         path: 'bookings',
         element: <Bookings/>
+      },
+      {
+        path:'user',
+        element: <User/>
       }
       
     ]
