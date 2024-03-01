@@ -1,15 +1,13 @@
-import React from 'react';
-import './AllBest.css';
-import HotelCard from './HotelCard';
+// import React from 'react';
+// import './AllBest.css';
+// import HotelCard from './HotelCard';
 
-const AllHotels = () => {
-  return (
-    <div className="AllHotels">
-      <div className="AllCardHolder">
-        <HotelCard/>
-      </div>
-    </div>
-  );
-};
+// const AllHotels = () => {
+//   return (
+//     <div className="AllHotels">
+//       <
+//     </div>
+//   );
+// };
 
-export default AllHotels;
+// export default AllHotels;

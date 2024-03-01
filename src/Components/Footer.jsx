@@ -13,14 +13,11 @@ const Footer = () => {
         </div>
         <h3>TourHaven</h3>
       </div>
-      <div className="FooterContext">
-        <span>TourHaven  offer our customers complete assistance and support while facilitating a simple and straightforward hotel booking experience.</span>
-      </div>
       {/* <div className="FooterSocial"></div> */}
     </div>
       <div className="FooterLinks">
         <div className="FooterLinksHeader">
-          <h3>Website Link</h3>
+          <h3>Links</h3>
           <h3>Services</h3>
         </div>
         <div className="FooterHold">
@@ -40,7 +37,7 @@ const Footer = () => {
     </div>
       <div className="FooterLastLine">
       <p>Copyright ©2024 All rights reserved | This Page is made with</p>
-      <span>💖</span>
+      {/* <span>💖</span> */}
       </div>
     </div>
   )

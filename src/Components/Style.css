@@ -153,8 +153,9 @@
     width: 100%;
     height: 80%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
+    gap: 2%;
 }
 .FooterLastLine{
     width: 100%;
@@ -174,7 +175,6 @@
     width: 30%;
     height: 90%;
     display: flex;
-    flex-direction: column;
     align-items: center;
 }
 .FooterDetailHeader{
@@ -185,11 +185,13 @@
     align-items: center;
 }
 .FooterDetailImgHold{
-    width: 50%;
+    width: 20%;
     height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
+    background: #ffff;
+    border-radius: 9px;
 }
 .FooterDetailImgHold img{
     width: 100%;
@@ -200,6 +202,7 @@
     font-size: 20px;
     font-family: 'Lora', serif;
     color: white;
+    padding: 20px;
 }
 .FooterContext{
     width: 80%;

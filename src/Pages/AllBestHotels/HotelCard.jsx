@@ -1,15 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import './AllBest.css';
-import { CiLocationOn } from "react-icons/ci";
+import { FaLocationDot } from "react-icons/fa6";
 import { IoMdStar } from 'react-icons/io';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
 
+
+
 const HotelCard = () => {
-    const [hotels, setHotels] = useState([]);
+
+
+    const [Hotels, setHotels] = useState([])
+    console.log(Hotels);
 
     const Url = 'https://tour-haven-application.vercel.app/api/v1/users/get-all-hotels';
-
+    
     useEffect(() => {
         const fetchHotels = async () => {
             try {
@@ -24,40 +29,54 @@ const HotelCard = () => {
         fetchHotels();
     }, []);
 
-    return (
-        <div className="HotelCardHold">
-            {hotels.map((hotel, index) => (
-                <div className="HotelInfo" key={index}>
-                    <div className="HotelImg">
-                        <img src={hotel.profileImage} alt={hotel.name} />
+
+
+    const renderStars = (rating) => {
+        const stars = [];
+        for (let i = 0; i < rating; i++) {
+            stars.push(<IoMdStar key={i} />);
+        }
+        return stars;
+    };
+
+  return (
+    <div className="HotelHold">
+        <div className="HotelContainer">
+            {
+                Hotels.map((item)=>(
+                    <div className="HotelCard">
+                <div className="HotelImg">
+                    <img src={item.profileImage} alt="" />
+                </div>
+                <div className="HotelContext">
+                    <div className="HotelName">
+                        <h4>
+                            {item.name}
+                        </h4>
                     </div>
-                    <div className="HotelInfo">
-                        <div className="HotelName">
-                            <h3>{hotel.name}</h3>
+                    <div className="HotelLocationReviews">
+                        <div className="Hoteloc">
+                        <FaLocationDot />
+                        <span>
+                           {item.city}  
+                        </span>
+                       
                         </div>
-                        <div className="HotelLocation">
-                            <div className="HotelLocationdIcon">
-                                <CiLocationOn className="LocationIcon" />
-                                <h3>{hotel.city}</h3>
-                            </div>
-                            <div className="HotelStarIcon">
-                                {[...Array(hotel.stars)].map((_, i) => (
-                                    <IoMdStar key={i} className="StarIcon" />
-                                ))}
-                            </div>
+                        <div className="HotelReview">
+                        {renderStars(item.stars)}
                         </div>
-                        <div className="HotelBtn">
-                            <button>
-                                <Link to="/hoteldes" style={{ textDecoration: 'none', color: 'white' }}>
-                                    View Hotel
-                                </Link>
-                            </button>
-                        </div>
+                    </div>
+                    <div className="HotelBtn">
+                        <button>View Hotel</button>
                     </div>
                 </div>
-            ))}
+            </div>
+                ))
+            }
+            
         </div>
-    );
-};
+    </div>
+  )
+}
 
-export default HotelCard;
+export default HotelCard
