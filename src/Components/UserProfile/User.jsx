@@ -52,6 +52,9 @@ const User = () => {
                   <h3>{userData.name}</h3>
                 </div>
               </div>
+              <div className="UserSettings">
+                <h3>Settings</h3>
+              </div>
             </div>
             <div className="UserHeader">
               <div className="UserHeaderTitle">

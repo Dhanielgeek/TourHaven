@@ -204,7 +204,7 @@
     font-weight: 500;
 }
 
-@media screen  and (max-width:800px) {
+@media screen  and (max-width:900px) {
     .AboutUs{
         flex-direction: column;
        gap: 2%;
@@ -262,7 +262,7 @@
 
 
 
-@media screen  and (max-width:600px) {
+@media screen  and (max-width:650px) {
     .AboutUs{
         flex-direction: column;
        gap: 7%;
@@ -313,7 +313,7 @@
 
 
 
-@media screen  and (max-width:400px) {
+@media screen  and (max-width:450px) {
     .AboutUs{
         flex-direction: column;
        gap: 7%;

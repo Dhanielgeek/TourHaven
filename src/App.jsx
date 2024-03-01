@@ -66,7 +66,7 @@ const router = createBrowserRouter([
         element: <HotelListing/>
       },
       {
-        path:'hoteldes',
+        path:'hoteldes/:id',
         element: <HotelDescription/>
       },
       {

@@ -6,6 +6,7 @@ import axios from 'axios';
 import { Modal, List, Avatar } from 'antd';
 import './Page.css'
 import Swal from 'sweetalert2';
+import { Link } from 'react-router-dom';
 
 const Search = () => {
   const [selectedDate, setSelectedDate] = useState(new Date());
@@ -119,19 +120,19 @@ const Search = () => {
         onCancel={() => setModalVisible(false)}
         footer={null}
       >
-        <List
-          itemLayout="horizontal"
-          dataSource={searchResults}
-          renderItem={(item) => (
-            <List.Item>
-              <List.Item.Meta
-                avatar={<Avatar src={item.profileImage} />}
-                title={<a href={item.profileImage}>{item.name}</a>}
-                description={item.description}
-              />
-            </List.Item>
-          )}
-        />
+       <List
+  itemLayout="horizontal"
+  dataSource={searchResults}
+  renderItem={(item) => (
+    <List.Item>
+      <List.Item.Meta
+        avatar={<Avatar src={item.profileImage} />}
+        title={<Link to={`/hoteldes/${item.id}`}>{item.name}</Link>} 
+        description={item.description}
+      />
+    </List.Item>
+  )}
+/>
       </Modal>
     </div>
   );

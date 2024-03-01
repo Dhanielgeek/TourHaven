@@ -10,7 +10,6 @@
 .UserMenu{
     width: 15%;
     height: 100%;
-    border: 2px solid black;
 }
 .UserMenuHeader{
     width: 100%;
@@ -19,6 +18,18 @@
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
+}
+.UserSettings{
+    width: 100%;
+    height: 23%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.UserSettings h3{
+    font-family: 'Lora',serif;
+    font-size: 1.4rem;
+    color: #05446E;
 }
 .UserProfileImage{
     width: 70px;
@@ -41,7 +52,7 @@
 .UserHeader{
     width: 85%;
     height: 20%;
-    background: pink;
+    border-bottom: 2px solid #d9d9d9;
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -62,8 +73,242 @@
 .UserActiveContiner{
     width: 50%;
     height: 100%;
-    border: 2px solid black;
     display: flex;
     justify-content: space-around;
     align-items: center;
+}
+.AllBtn{
+    color: #05446E;
+    width: 13%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    cursor: pointer;
+    transition: all 350ms ease-in-out;
+}
+.AllBtn:hover{
+    background: #05446E;
+    color: #ffff;
+}
+.ActiveBtn{
+    color: #2e8ece;
+    width: 13%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    cursor: pointer;
+     transition: all 350ms ease-in-out;
+}
+.ActiveBtn:hover{
+    background: #2e8ece;
+    color: #ffff;
+}
+.AcceptedBtn{
+    color: #7ae582;
+    width: 16%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    cursor: pointer;
+     transition: all 350ms ease-in-out;
+}
+.AcceptedBtn:hover{
+    background: #7ae582;
+    color: #ffff;
+}
+.DeclinedBtn{
+    color: #c1121f;
+    width: 16%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 9px;
+    cursor: pointer;
+     transition: all 350ms ease-in-out;
+}
+.DeclinedBtn:hover{
+    background: #c1121f;
+    color: #ffff;
+}
+@media screen and (max-width:920px) {
+    .UserContainerHold{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .UserMenu{
+        height: 50%;
+        width: 90%;
+    }
+    .UserMenuHeader{
+    
+        height: 60%;
+    }
+    .UserHeader{
+        
+        flex-direction: column;
+        width: 100%;
+    }
+    .UserActiveContiner{
+        width: 100%;
+    }
+    .ActiveBtn{
+        font-size: 0.9rem;
+        height: 80%;
+        width: 20%;
+    }
+    .AcceptedBtn{
+        font-size: 0.7rem;
+        height: 80%;
+        width: 20%;
+    }
+    .DeclinedBtn{
+        font-size: 0.7rem;
+        height: 80%;
+        width: 20%;
+    }
+    .AllBtn{
+        font-size: 0.8rem;
+        height: 80%;
+        width: 15%;
+    }
+}
+
+@media screen and (max-width:670px) {
+    .UserContainerHold{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .UserMenu{
+        height: 50%;
+        width: 90%;
+    }
+    .UserMenuHeader{
+    
+        height: 60%;
+    }
+    .UserHeader{
+        
+        flex-direction: column;
+        width: 100%;
+    }
+    .UserActiveContiner{
+        width: 100%;
+    }
+    .ActiveBtn{
+        font-size: 0.9rem;
+        height: 80%;
+        width: 20%;
+    }
+    .AcceptedBtn{
+        font-size: 0.7rem;
+        height: 80%;
+        width: 20%;
+    }
+    .DeclinedBtn{
+        font-size: 0.7rem;
+        height: 80%;
+        width: 20%;
+    }
+    .AllBtn{
+        font-size: 0.8rem;
+        height: 80%;
+        width: 15%;
+    }
+}
+
+@media screen and (max-width:450px) {
+    .UserContainerHold{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .UserMenu{
+        height: 50%;
+        width: 90%;
+    }
+    .UserMenuHeader{
+    
+        height: 60%;
+    }
+    .UserHeader{
+        
+        flex-direction: column;
+        width: 100%;
+    }
+    .UserActiveContiner{
+        width: 100%;
+    }
+    .ActiveBtn{
+        font-size: 0.9rem;
+        height: 80%;
+        width: 20%;
+    }
+    .AcceptedBtn{
+        font-size: 0.7rem;
+        height: 80%;
+        width: 20%;
+    }
+    .DeclinedBtn{
+        font-size: 0.7rem;
+        height: 80%;
+        width: 20%;
+    }
+    .AllBtn{
+        font-size: 0.8rem;
+        height: 80%;
+        width: 15%;
+    }
+}
+
+@media screen and (max-width:320px) {
+    .UserContainerHold{
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .UserMenu{
+        height: 50%;
+        width: 90%;
+    }
+    .UserMenuHeader{
+    
+        height: 60%;
+    }
+    .UserHeader{
+        
+        flex-direction: column;
+        width: 100%;
+    }
+    .UserActiveContiner{
+        width: 100%;
+    }
+    .ActiveBtn{
+        font-size: 0.9rem;
+        height: 80%;
+        width: 20%;
+    }
+    .AcceptedBtn{
+        font-size: 0.7rem;
+        height: 80%;
+        width: 20%;
+    }
+    .DeclinedBtn{
+        font-size: 0.7rem;
+        height: 80%;
+        width: 20%;
+    }
+    .AllBtn{
+        font-size: 0.8rem;
+        height: 80%;
+        width: 15%;
+    }
 }

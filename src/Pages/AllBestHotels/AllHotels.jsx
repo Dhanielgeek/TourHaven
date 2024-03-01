@@ -7,8 +7,6 @@ const AllHotels = () => {
     <div className="AllHotels">
       <div className="AllCardHolder">
         <HotelCard/>
-        <HotelCard/>
-        <HotelCard/>
       </div>
     </div>
   );
