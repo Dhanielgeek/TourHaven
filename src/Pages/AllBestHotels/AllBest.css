@@ -9,15 +9,14 @@
 .AllCardHolder{
     width: 70%;
     height: 96%;
-    /* border: 2px solid black; */
+    border: 2px solid black;
     display: flex;
     justify-content: space-around;
-    flex-wrap: wrap;
-    padding: 20px 30px;
+    align-items: center;
 }
 .HotelCardHold{
     width: 27.5%;
-    height: 46.7%;
+    height: 80%;
     background: #fdfdf7;
     margin: 10px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;

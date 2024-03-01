@@ -1,0 +1,69 @@
+.UserBody{
+    width: 100%;
+    height: 100vh;
+}
+.UserContainerHold{
+    width: 100%;
+    height: 100%;
+    display: flex;
+}
+.UserMenu{
+    width: 15%;
+    height: 100%;
+    border: 2px solid black;
+}
+.UserMenuHeader{
+    width: 100%;
+    height: 23%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.UserProfileImage{
+    width: 70px;
+    height: 70px;
+    background: purple;
+    border-radius: 50%;
+}
+.NameofUserHold{
+    width: 90%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.NameofUserHold h3{
+    font-family: 'Lora',serif;
+    font-weight: 600;
+    color: #05446E;
+}
+.UserHeader{
+    width: 85%;
+    height: 20%;
+    background: pink;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.UserHeaderTitle{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.UserHeaderTitle h4{
+    font-family: 'Lora',serif;
+    font-weight: 600;
+    color: #05446E;
+    font-size: 1.4rem;
+}
+.UserActiveContiner{
+    width: 50%;
+    height: 100%;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}

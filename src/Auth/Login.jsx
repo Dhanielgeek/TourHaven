@@ -74,10 +74,12 @@ const HandleLogs = async (e)=>{
       console.log(res.message);
 }
   catch(error){
+    setIsloading(false);
+    const errorMessage = error.response ? error.response.data.error : 'An error occurred';
     Swal.fire({
       icon: "error",
       title: "Oops...",
-      text: `${error}`,
+      text: errorMessage,
       // footer: '<a href="#">Why do I have this issue?</a>'
     });
     console.log(error.response.error);

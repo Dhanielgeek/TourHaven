@@ -1,7 +1,6 @@
-import React from 'react'
-import './AllBest.css'
-import HotelCard from './HotelCard'
-
+import React from 'react';
+import './AllBest.css';
+import HotelCard from './HotelCard';
 
 const AllHotels = () => {
   return (
@@ -10,12 +9,9 @@ const AllHotels = () => {
         <HotelCard/>
         <HotelCard/>
         <HotelCard/>
-        <HotelCard/>
-        <HotelCard/>
-        <HotelCard/>
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default AllHotels
+export default AllHotels;

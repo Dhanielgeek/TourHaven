@@ -231,6 +231,7 @@ const Header = () => {
   onCancel={handleCancelLogout}
   okText={<span>Yes</span>}
   cancelText="Cancel"
+  style={{backgroundColor:'#05446E',color:'red'}}
 >
   <p>Are you sure you want to logout?</p>
 </Modal>
