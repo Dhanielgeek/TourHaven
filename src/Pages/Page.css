@@ -84,10 +84,10 @@
     align-items: center;
   }
   .SearchBtn button{
-    width: 90%;
+    width: 70%;
     height: 90%;
     background: #05446E;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
     font-family: 'Lora',serif;
     font-weight: 600;
     border: none;

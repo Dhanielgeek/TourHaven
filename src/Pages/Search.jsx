@@ -30,8 +30,8 @@ const Search = () => {
   const Urlhotels = `https://tour-haven-application.vercel.app/api/v1/users/search-hotels/${selectedDestination}`;
   const UrlLoc = `https://tour-haven-application.vercel.app/api/v1/users/search-location/${selectedDestination}`;
   const data =  {search:selectedDestination}
-
   
+
   const handleSearchFunction = async () => {
     if (selectedDestination === '') {
       alert('Please enter a destination');
@@ -44,12 +44,8 @@ const Search = () => {
       const hotelRes = await axios.get(Urlhotels, { params: data });
       console.log('Hotels:', hotelRes.data);
   
-      // Make request to fetch locations
-      const locRes = await axios.get(UrlLoc, { params: data });
-      console.log('Locations:', locRes.data);
-  
       // Set the search results in the state
-      setSearchResults([...hotelRes.data.data, ...locRes.data.data]);
+      setSearchResults(hotelRes.data.data);
   
       // Open the modal
       setModalVisible(true);
@@ -66,6 +62,20 @@ const Search = () => {
       setIsLoading(false);
     }
   };
+  
+  // When clicking on a hotel link, fetch the details of that hotel
+  const handleHotelClick = async (hotelId) => {
+    try {
+      // Make request to fetch hotel details by ID
+      const hotelDetailsRes = await axios.get(`https://tour-haven-application.vercel.app/api/search-hotels/${hotelId}`);
+      console.log('Hotel Details:', hotelDetailsRes.data);
+      // Handle the response and navigation to the hotel details page
+    } catch (error) {
+      console.error('Error:', error);
+      // Handle error
+    }
+  };
+  
   
   
 
@@ -120,19 +130,20 @@ const Search = () => {
         onCancel={() => setModalVisible(false)}
         footer={null}
       >
-       <List
+    <List
   itemLayout="horizontal"
   dataSource={searchResults}
   renderItem={(item) => (
-    <List.Item>
+    <List.Item onClick={() => handleHotelClick(item.hotelId)}>
       <List.Item.Meta
         avatar={<Avatar src={item.profileImage} />}
-        title={<Link to={`/hoteldes/${item.id}`}>{item.name}</Link>} 
+        title={<Link to={`/hoteldes/${item.hotelId}`}>{item.name}</Link>} 
         description={item.description}
       />
     </List.Item>
   )}
 />
+
       </Modal>
     </div>
   );

@@ -102,13 +102,14 @@ const Signup = () => {
       console.log(res.data);
       // Redirect to success page or handle success as needed
     } catch (error) {
+      const errorMessage = error.response ? error.response.data.error : 'An error occurred';
       Swal.fire({
         icon: "error",
         title: "Oops...",
-        text: `${error.error}`,
+        text: errorMessage,
         // footer: '<a href="#">Why do I have this issue?</a>'
       });
-      console.log(error.error);
+      console.log(errorMessage);
     } finally {
       setIsLoading(false);
     }
