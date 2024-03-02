@@ -148,15 +148,183 @@
     height: 40vh;
     background: #05446E;
     margin-top: 10%;
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
 }
 .FooterContainer{
     width: 100%;
     height: 80%;
     display: flex;
+    /* background-color: #fb8500; */
+    padding-top: 2%;
+    display: flex;
     justify-content: center;
     align-items: center;
-    gap: 2%;
 }
+
+
+.FooterImage{
+    width:20%;
+    height: 100%;
+    /* background-color: aqua; */
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+.FooterHold{
+    width: 2%;
+    height: 15%;
+    /* background-color: red; */
+
+}
+
+
+.FooterHold h3{
+    color: #fdfdf7;
+}
+
+.FooterIcon{
+    width: 100%;
+    height: 100%;
+}
+
+.FooterHolder{
+    width: 35%;
+    height: 65%;
+    background-color: #fdfdf7;
+}
+
+.Link{
+    width:18%;
+    height: 100%;
+    /* background-color: red; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    justify-content: space-between;
+
+}
+
+.Ink{
+    font-size: 20px;
+    font-family: 'Lora',serif;
+    font-weight: 300;
+    color: #fdfdf7;
+}
+
+.Home{
+    font-size: 15px;
+    font-family: 'Lora',serif;
+    color: #d9d9d9;
+}
+
+.Services{
+    width:18%;
+    height: 100%;
+    /* background-color: green; */
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+}
+
+.Service{
+    font-size: 20px;
+    font-family: 'Lora',serif;
+    font-weight: 300;
+    color: #fdfdf7;
+    
+}
+
+.Travel{
+    font-size: 15px;
+    font-family: 'Lora',serif;
+    color: #d9d9d9;
+}
+
+.English{
+    width: 30%;
+    height: 18%;
+    background-color: #fdfdf7;
+    border-radius: 2px;
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.English h5{
+   font-size: 15px;
+   font-family: 'Lora',serif;
+   color: #05446E;
+}
+
+.Language{
+    width:18%;
+    height: 100%;
+    /* background-color: yellow; */
+    display: flex;
+    flex-direction: column;
+    gap: 10%;
+}
+
+.Language h3{
+    font-size: 20px;
+    font-family: 'Lora',serif;
+    color: #fdfdf7;
+    font-weight: 300;
+}
+
+.Language h5{
+    font-size: 15px;
+    font-family: 'Lora',serif;
+    font-weight: 300;
+    color: #d9d9d9;
+}
+
+
+
+.Contact{
+    width:18%;
+    height: 100%;
+    /* background-color: blue; */
+    display: flex;
+    flex-direction: column;
+    gap:10%;
+}
+
+.Contact h3{
+    font-size: 20px;
+    font-family:'Lora',serif;
+    font-weight: 300;
+    color: #fdfdf7;
+}
+
+.ContactIcon{
+    width: 70%;
+    height: 30%;
+    display: flex;
+    gap: 2%;
+    /* background-color: aqua; */
+}
+
+.Fb{
+    font-size: 2rem;
+    color: #fdfdf7;
+}
+
+.Linkedin{
+    font-size: 2rem;
+    color: #fdfdf7;
+}
+
+.Instagram{
+    font-size: 2rem;
+    color: #fdfdf7;
+}
+
 .FooterLastLine{
     width: 100%;
     height: 20%;

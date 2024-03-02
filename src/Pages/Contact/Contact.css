@@ -4,7 +4,8 @@
     display:flex;
     justify-content:center;
     align-items:center;
-    background: linear-gradient(#05446E,#FDFDF7);
+    background: rgba(1, 19, 52, 0.705);
+    /* background-color: rgba(1, 19, 52, 1); */
 }
 .HeroLeft{
     width: 50%;
@@ -24,6 +25,8 @@
     display:flex;
     justify-content:center;
     align-items:center;
+   
+   
 }
 .HeroRight{
     font-size:2rem;
@@ -59,7 +62,7 @@
 .Suggestion p{
     font-family: 'Lora',serif;
     font-size: 0.9rem; 
-    color: #D9D9D9;
+    color: #05446E;
 }
 .IconHold{
     width: 50%;
@@ -174,6 +177,12 @@
     border: 2px solid #828282;
     padding: 10px 5px;
     background: transparent;
+}
+
+.contact{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 .ContactBtn{
     width: 100%;

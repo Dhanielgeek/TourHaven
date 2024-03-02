@@ -4,7 +4,7 @@ const ContactUs = () => {
   return (
    <div className='ContactHero'>
     <div className="HeroLeft">
-    <img src="./src/assets/us.png" alt="" className='Contact'/>
+    <img src="./src/assets/CONTACT US.svg" alt="" className='contact'/>
     </div>
     <div className="HeroRight">
       <h1>Contact Us</h1>
