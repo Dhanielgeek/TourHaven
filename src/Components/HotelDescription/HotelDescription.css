@@ -1,8 +1,469 @@
+.HotelDesBody{
+    width: 100%;
+    height: 95rem;
+}
 .HotelHero{
     width: 100%;
-    height: 25rem;
-    background: #000;
-    background-image: url('../../assets/HotelDescription.svg');
-    background-position: center;
-    background-size: cover;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.LoaderContainer{
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+.HotelHero img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.HotelTitleandPrice{
+    width: 100%;
+    height: 6%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.NameOfHotel{
+    width: 30%;
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-inline: 3%;
+}
+.NameOfHotel h3{
+    font-family: 'Lora',serif;
+    font-size: 1.5rem;
+    color: #05446E;
+    font-weight: 800;
+}
+.LocationHotel{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.LocationNameIcon{
+    width: 40%;
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.LocationNameIcon span{
+    font-family: 'Lora',serif;
+    font-size: 1.1rem;
+    color: #FFA500;
+    font-weight: 800;
+}
+.HotelStarRate{
+    width: 30%;
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: #FFA500;
+}
+
+.HotelDescription{
+    width: 40%;
+    height: 15%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.Hotelcontext{
+    width: 70%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.Hotelcontext span{
+    color: #505050;
+    font-family: 'Lora',serif;
+    font-style: italic;
+    font-weight: 600;
+}
+.HoteldesTitle{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.HoteldesTitle h3{
+    font-family: 'Lora',serif;
+    font-size: 1.5rem;
+    color: #d9d9d9;
+    font-weight: 600;
+}
+.HotelPriceandBookBtn{
+    width: 100%;
+    height: 7%;
+    background: peru;
+}
+.HotelFeatures{
+    width: 100%;
+    height: 13%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.FeaturesTitle{
+    width: 100%;
+    height: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.FeaturesTitle h3{
+    font-family: 'Lora',serif;
+    font-size: 1.5rem;
+    color: #05446E;
+    font-weight: 600;
+}
+.Featurecontent{
+    width: 50%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.feat{
+    width: 90%;
+    height: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.feat span{
+    font-size: 1.2rem;
+    font-family: 'Lora',serif;
+    font-weight: 700;
+}
+.HotelAvailableRooms{
+    width: 100%;
+    height: 45%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.AvailbleTitle{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.AvailbleTitle h3{
+    font-family: 'Lora',serif;
+    font-size: 1.5rem;
+    color: #05446E;
+}
+.Availblecontent{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.AvailDiv{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.AvailImg{
+    width: 25%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.AvailImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.AvailRoomInfo{
+    width: 30%;
+    height: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+}
+.AvailRoomInfo h4{
+    font-family: 'Lora',serif;
+    font-size: 1.2rem;
+    font-weight: 600;
+}
+.AvailRoomPriceBookBtn{
+    width: 10%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.AvailRoomPriceBookBtn button{
+    width: 90%;
+    height: 70%;
+    cursor: pointer;
+    background: #FFA500;
+    color: #fdfdf7;
+    border: none;
+    font-family: 'Lora',serif;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 1rem;
+}
+@media screen and (max-width: 900px) {
+    .HotelTitleandPrice{
+        width: 100%;
+    }
+    .NameOfHotel{
+        width: 50%;
+    }
+    .NameOfHotel h3{
+        font-size: 0.9rem;
+    }
+    .LocationHotel{
+        width: 50%;
+    }
+    .LocationNameIcon span{
+        font-size: 0.9rem;
+    }
+    .HotelDescription{
+        width: 100%;
+    }
+    .Featurecontent{
+        width: 100%;
+    }
+    .feat{
+        width: 100%;
+    }
+    .feat span{
+        font-size: 0.7rem;
+    }
+   .HotelAvailableRooms{
+    height: 35rem;
+   }
+   .Availblecontent{
+    height: 90%;
+    width: 100%;
+   }
+  
+   .AvailImg{
+    height: 70%;
+    width: 30%;
+   }
+  
+   .AvailRoomInfo h4{
+    font-size: 0.9rem;
+    
+   }
+   .AvailRoomInfo p{
+    font-size: 0.8rem;
+   }
+   .AvailRoomPriceBookBtn {
+    width: 30%;
+   }
+   .AvailRoomPriceBookBtn button{
+    height: 80%;
+    font-size: 1rem;
+    width: 60%;
+   }
+   
+}
+
+@media screen and (max-width: 650px) {
+    .HotelTitleandPrice{
+        width: 100%;
+    }
+    .NameOfHotel{
+        width: 50%;
+    }
+    .NameOfHotel h3{
+        font-size: 0.9rem;
+    }
+    .LocationHotel{
+        width: 50%;
+    }
+    .LocationNameIcon span{
+        font-size: 0.9rem;
+    }
+    .HotelDescription{
+        width: 100%;
+    }
+    .Featurecontent{
+        width: 100%;
+    }
+    .feat{
+        width: 100%;
+    }
+    .feat span{
+        font-size: 0.7rem;
+    }
+   .HotelAvailableRooms{
+    height: 35rem;
+   }
+   .Availblecontent{
+    height: 90%;
+    width: 100%;
+   }
+  
+   .AvailImg{
+    height: 70%;
+    width: 30%;
+   }
+  
+   .AvailRoomInfo h4{
+    font-size: 0.9rem;
+    
+   }
+   .AvailRoomInfo p{
+    font-size: 0.8rem;
+   }
+   .AvailRoomPriceBookBtn {
+    width: 30%;
+   }
+   .AvailRoomPriceBookBtn button{
+    height: 50%;
+    font-size: 0.9rem;
+    width: 80%;
+   }
+   
+   
+}
+
+@media screen and (max-width: 450px) {
+    .HotelTitleandPrice{
+        width: 100%;
+    }
+    .NameOfHotel{
+        width: 50%;
+    }
+    .NameOfHotel h3{
+        font-size: 0.9rem;
+    }
+    .LocationHotel{
+        width: 50%;
+    }
+    .LocationNameIcon span{
+        font-size: 0.9rem;
+    }
+    .HotelDescription{
+        width: 100%;
+    }
+    .Featurecontent{
+        width: 100%;
+    }
+    .feat{
+        width: 100%;
+    }
+    .feat span{
+        font-size: 0.7rem;
+    }
+   .HotelAvailableRooms{
+    height: 35rem;
+   }
+   .Availblecontent{
+    height: 90%;
+    width: 100%;
+   }
+  
+   .AvailImg{
+    height: 70%;
+    width: 30%;
+   }
+  
+   .AvailRoomInfo h4{
+    font-size: 0.9rem;
+    
+   }
+   .AvailRoomInfo p{
+    font-size: 0.8rem;
+   }
+   .AvailRoomPriceBookBtn {
+    width: 30%;
+   }
+   .AvailRoomPriceBookBtn button{
+    height: 50%;
+    font-size: 0.9rem;
+    width: 80%;
+   }
+   
+   
+}
+
+@media screen and (max-width: 320px) {
+    .HotelTitleandPrice{
+        width: 100%;
+    }
+    .NameOfHotel{
+        width: 50%;
+    }
+    .NameOfHotel h3{
+        font-size: 0.9rem;
+    }
+    .LocationHotel{
+        width: 50%;
+    }
+    .LocationNameIcon span{
+        font-size: 0.9rem;
+    }
+    .HotelDescription{
+        width: 100%;
+    }
+    .Featurecontent{
+        width: 100%;
+    }
+    .feat{
+        width: 100%;
+    }
+    .feat span{
+        font-size: 0.7rem;
+    }
+   .HotelAvailableRooms{
+    height: 35rem;
+   }
+   .Availblecontent{
+    height: 90%;
+    width: 100%;
+   }
+  
+   .AvailImg{
+    height: 70%;
+    width: 30%;
+   }
+  
+   .AvailRoomInfo h4{
+    font-size: 0.9rem;
+    
+   }
+   .AvailRoomInfo p{
+    font-size: 0.8rem;
+   }
+   .AvailRoomPriceBookBtn {
+    width: 30%;
+   }
+   .AvailRoomPriceBookBtn button{
+    height: 50%;
+    font-size: 0.9rem;
+    width: 80%;
+   }
+   
+   
 }

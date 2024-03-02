@@ -14,11 +14,11 @@
     flex-wrap: wrap;
 }
 .HotelCard{
-    width: 26%;
-    height: 50%;
+    width: 24%;
+    height: 40%;
     background: #fdfdf7;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
-    margin: 1% 1%;
+    margin: 1%;
 }
 .HotelImg{
     width: 100%;
@@ -61,8 +61,10 @@
     width: 40%;
     height: 100%;
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
+    padding-inline: 10px;
+    gap: 5%;
 }
 .Hoteloc span{
     font-family: 'Lora',serif;
@@ -91,157 +93,78 @@
     background: #fb8500;
     border: none;
     color: #fdfdf7;
-    border-radius: 6px;
+    border-radius: 5px;
     cursor: pointer;
+    font-family: 'Lora',serif;
 
 }
-
-
-@media screen and (max-width: 800px) {
-    .AllHotels{
-        /* background: #000; */
-        width: 100%;
-        height: 75rem;
+@media screen and (max-width: 900px) {
+    .HotelHold{
+        height: 46rem;
     }
-    .AllCardHolder{
-        width: 100%;
-        height: 100%;
-        /* background: red; */
-    }
-    .HotelCardHold{
-        width: 38%;
-        height: 30%;
-        /* background: green; */
-    }
-    .HotelName h3{
-        font-size: 3rem;
-    }
-    .AllCardHolder h3{
-        font-size: 1.3rem;
-    }
-    .LocationIcon{
-        font-size: 1.2rem;
-    }
-    .HotelStarIcon .StarIcon{
-        font-size: 0.9rem;
-    }
-   .HotelStarIcon .StarIconLast{
-        font-size: 0.9rem;
-    }
-    .HotelBtn button{
-        height: 60%;
+    .HotelContainer{
         width: 70%;
-    }
-   
-
-}
-@media screen and (max-width: 600px) {
-    .AllHotels{
-        /* background: #000; */
-        width: 100%;
-        height: 55rem;
-    }
-    .AllCardHolder{
-        width: 100%;
         height: 100%;
-        /* background: red; */
     }
-    .HotelCardHold{
-        width: 44.5%;
+    .HotelCard{
+        width: 40%;
         height: 30%;
-        /* background: green; */
     }
-    .HotelName h3{
-        font-size: 1.2rem;
     }
-    .AllCardHolder h3{
+
+@media screen and (max-width: 650px) {
+    .HotelHold{
+        height: 95rem;
+    }
+    .HotelContainer{
+        width: 90%;
+        height: 100%;
+    }
+    .HotelCard{
+        width: 60%;
+        height: 15%;
+    }
+    .HotelName h4{
+        font-size: 0.8rem;
+    }
+
+    }
+
+@media screen and (max-width: 450px) {
+    .HotelHold{
+        height: 95rem;
+    }
+    .HotelContainer{
+        width: 90%;
+        height: 100%;
+    }
+    .HotelCard{
+        width: 60%;
+        height: 15%;
+    }
+    .HotelName h4{
+        font-size: 0.8rem;
+    }
+    .Hoteloc span{
+   
         font-size: 0.7rem;
     }
-    .LocationIcon{
-        font-size: 0.6rem;
-    }
-    .HotelStarIcon .StarIcon{
-        font-size: 0.9rem;
-    }
-   .HotelStarIcon .StarIconLast{
-        font-size: 0.9rem;
-    }
-    .HotelBtn button{
-        height: 60%;
-        width: 70%;
-    }
-   
 
-}
-
-@media screen and (max-width: 400px) {
-    .AllHotels{
-        /* background: #000; */
-        width: 100%;
-        height: auto;
     }
-    .AllCardHolder{
-        width: 100%;
-        height: 100rem;
-    }
-    .HotelCardHold{
-        width: 90%;
-        height: 15.8%;
-    }
-    .HotelName h3{
-        font-size: 1rem;
-    }
-    .AllCardHolder h3{
-        font-size: 0.9rem;
-    }
-    .LocationIcon{
-        font-size: 0.9rem;
-    }
-    .HotelStarIcon .StarIcon{
-        font-size: 0.9rem;
-    }
-   .HotelStarIcon .StarIconLast{
-        font-size: 0.9rem;
-    }
-    .HotelBtn button{
-        height: 75%;
-    }
-   
-
-}
 
 @media screen and (max-width: 320px) {
-    .AllHotels{
-        /* background: #000; */
-        width: 100%;
-        height: auto;
-    }
-    .AllCardHolder{
-        width: 100%;
-        height: 100rem;
-    }
-    .HotelCardHold{
-        width: 90%;
-        height: 15.8%;
-    }
-    .HotelName h3{
-        font-size: 1rem;
-    }
-    .AllCardHolder h3{
-        font-size: 0.9rem;
-    }
-    .LocationIcon{
-        font-size: 0.9rem;
-    }
-    .HotelStarIcon .StarIcon{
-        font-size: 0.9rem;
-    }
-   .HotelStarIcon .StarIconLast{
-        font-size: 0.9rem;
-    }
-    .HotelBtn button{
-        height: 75%;
-    }
-   
-
+.HotelHold{
+    height: 95rem;
+}
+.HotelContainer{
+    width: 90%;
+    height: 100%;
+}
+.HotelCard{
+    width: 80%;
+    height: 16%;
+}
+.HotelName h4{
+    font-size: 0.8rem;
+}
 }
