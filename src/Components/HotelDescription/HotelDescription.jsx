@@ -5,13 +5,16 @@ import { ThreeDots } from 'react-loader-spinner';
 import { FaLocationDot } from "react-icons/fa6";
 import { IoMdStar } from 'react-icons/io';
 import { useParams } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 
 const HotelDescription = () => {
 
   const [HotelDes, setHotelDes] = useState({})
   const [Isloading, setIsloading] = useState(false)
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
+  const [isLoggedIn, setIsLoggedIn] = useState(false); 
   const { id } = useParams()
+  const Navigate = useNavigate()
   console.log(id);
 
   const HotelDesUrl = `https://tour-haven-application.vercel.app/api/v1/users/search-hotels/${id}`
@@ -47,6 +50,35 @@ const HotelDescription = () => {
       return () => clearInterval(interval);
     }
   }, [HotelDes.hotelImages]);
+
+
+
+  const handleBookRoom = () => {
+    if (isLoggedIn) {
+      // Proceed with booking
+      // Add your booking logic here
+    } else {
+      Modal.warning({
+        title: 'Dear user',
+        content: (
+          <div>
+            <p>You have to Log In to book a room</p>
+            <div className="modal-buttons">
+              <Button onClick={() => { 
+                Navigate('/login')
+                console.log("Redirecting user to login page");
+              }}>Login</Button>
+              <Button onClick={() => {
+                console.log("Continue viewing");
+              }}>Continue Viewing</Button>
+            </div>
+          </div>
+        ),
+      });
+    }
+  };
+
+
 
 
   return (
@@ -133,7 +165,7 @@ const HotelDescription = () => {
                       <p>Number: {room.Number}</p>
                     </div>
                     <div className="AvailRoomPriceBookBtn">
-                      <button>Book Now</button>
+                      <button onClick={handleBookRoom}>Book Now</button>
                     </div>
                   </div>
                 ))
