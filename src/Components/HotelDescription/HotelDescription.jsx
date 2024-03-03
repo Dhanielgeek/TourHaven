@@ -88,9 +88,6 @@ const HotelDescription = () => {
         </div>
       ) : (
         <>
-          <div className="HotelAddress">
-            <span>{HotelDes.address}</span>
-          </div>
           <div className="HotelHero">
             <div className="HotelHeroHold">
               <div className="HotelHoldone">
@@ -116,10 +113,13 @@ const HotelDescription = () => {
               <h3>
                 {HotelDes.name}
               </h3>
+              <div className="HotelAddress">
+            <span>{HotelDes.address}</span>
+          </div>
             </div>
             <div className="LocationHotel">
               <div className="LocationNameIcon">
-                <FaLocationDot style={{ color: "#05446E" }} /><span>{HotelDes.city}</span>
+                <FaLocationDot style={{ color: "#ea4335" }} /><span>{HotelDes.city}</span>
               </div>
               <div className="HotelStarRate">
                 {Array.from({ length: HotelDes.stars }, (_, index) => (
@@ -198,7 +198,6 @@ const HotelDescription = () => {
 
           {/* Booking Modal */}
           <Modal
-            title="Hotel Booking"
             visible={isBookingModalVisible}
             onCancel={handleBookingModalVisibility}
             footer={null}

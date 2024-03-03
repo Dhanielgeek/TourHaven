@@ -8,7 +8,6 @@
     display: flex;
     justify-content: flex-start;
     align-items: center;
-    padding-inline: 20px;
 }
 .HotelAddress span{
     font-family: 'Lora',serif;
@@ -95,12 +94,13 @@
     align-items: center;
 }
 .NameOfHotel{
-    width: 30%;
+    width: 35%;
     height: 100%;
     display: flex;
-    justify-content: flex-start;
-    align-items: center;
-    padding-inline: 3%;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 19%;
 }
 .NameOfHotel h3{
     font-family: 'Lora',serif;
@@ -319,9 +319,10 @@
     }
     .NameOfHotel{
         width: 50%;
+        padding-inline: 10px;
     }
     .NameOfHotel h3{
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
     .LocationHotel{
         width: 50%;
@@ -458,9 +459,10 @@
     }
     .NameOfHotel{
         width: 50%;
+        padding-inline: 10px;
     }
     .NameOfHotel h3{
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
     .LocationHotel{
         width: 50%;
@@ -531,10 +533,12 @@
     }
     .NameOfHotel{
         width: 50%;
+        padding-inline: 10px;
     }
     .NameOfHotel h3{
-        font-size: 0.9rem;
+        font-size: 1rem;
     }
+
     .LocationHotel{
         width: 50%;
     }

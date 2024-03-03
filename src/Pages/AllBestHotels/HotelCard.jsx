@@ -70,7 +70,7 @@ const HotelCard = () => {
                                 </div>
                                 <div className="HotelLocationReviews">
                                     <div className="Hoteloc">
-                                        <FaLocationDot style={{color:"#780000"}} />
+                                        <FaLocationDot style={{color:"#ea4335"}} />
                                         <span>{item.city}</span>
                                     </div>
                                     <div className="HotelReview">
@@ -78,7 +78,7 @@ const HotelCard = () => {
                                     </div>
                                 </div>
                                 <div className="HotelBtn">
-                                    <button onClick={() => viewHotel(item.id)}>View Hotel</button>
+                                    <button onClick={() => viewHotel(item.id)}>View</button>
                                 </div>
                             </div>
                         </div>

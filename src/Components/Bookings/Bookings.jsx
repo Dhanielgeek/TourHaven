@@ -18,12 +18,12 @@ const Bookings = () => {
     <div className="BookingBody">
       <div className="BookingContainer">
         <div className="BookingHeader">
-          <h3>Hotel Booking Form</h3>
+          <h3>Checkout Form</h3>
         </div>
         <div className="BookingForm">
           <div className="BookingName">
             <label htmlFor="">FullName <span className="red-asterisk">*</span></label>
-            <input type="text" placeholder='first and last name' />
+            <input type="text" />
           </div>
           <div className="BookingEmail">
             <label htmlFor="">Email <span className="red-asterisk">*</span></label>
@@ -55,7 +55,7 @@ const Bookings = () => {
             <label htmlFor="">Selected Room</label>
           </div>
           <div className="BookingBtnToPayment">
-            <button>Book</button>
+            <button>Confirm</button>
           </div>
         </div>
       </div>
