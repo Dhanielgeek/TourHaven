@@ -82,7 +82,7 @@ const Search = () => {
           <IoBed style={{ fontSize: '1.8rem', color: 'grey' }} />
           <input
             type="text"
-            placeholder="Where are you going?"
+            placeholder="City or Particular Hotel"
             onChange={handleSelectedDestination}
           />
         </div>

@@ -6,7 +6,7 @@ const OurMission = () => {
     <div className='MissionPage'>
       <div className="OurMission">
         <div className="LeftOurMission">
-        <img src="./src/assets/PinkHotel.jpg" alt="" className='IMG'/> 
+        <img src="https://images.pexels.com/photos/208701/pexels-photo-208701.jpeg?auto=compress&cs=tinysrgb&w=600" alt="" className='IMG'/> 
         </div>
         <div className="RightOurMission">
         <div className="OurMissionHeader">
