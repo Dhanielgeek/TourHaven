@@ -11,8 +11,8 @@ const HotelDescription = () => {
 
   const [HotelDes, setHotelDes] = useState({})
   const [Isloading, setIsloading] = useState(false)
-  const [currentImageIndex, setCurrentImageIndex] = useState(0);
   const [isLoggedIn, setIsLoggedIn] = useState(false); 
+  const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const { id } = useParams()
   const Navigate = useNavigate()
   console.log(id);
@@ -39,17 +39,13 @@ const HotelDescription = () => {
   },[id])
 
 
+  const HandleNextBtn = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % HotelDes.hotelImages.length);
+  };
 
 
- useEffect(() => {
-    if (HotelDes.hotelImages && HotelDes.hotelImages.length > 0) {
-      const interval = setInterval(() => {
-        setCurrentImageIndex((prevIndex) => (prevIndex + 1) % HotelDes.hotelImages.length);
-      }, 3000);
 
-      return () => clearInterval(interval);
-    }
-  }, [HotelDes.hotelImages]);
+
 
 
 
@@ -100,11 +96,29 @@ const HotelDescription = () => {
                 ) 
                      ) : (
         <>
+        <div className="HotelAddress">
+          <span>{HotelDes.address}</span>
+        </div>
           <div className="HotelHero">
-          {HotelDes.hotelImages && HotelDes.hotelImages.length > 0 && (
-              <img src={HotelDes.hotelImages[currentImageIndex]} alt="" />
-            )}
+            <div className="HotelHeroHold">
+              <div className="HotelHoldone">
+              {HotelDes.hotelImages && (
+                  <img src={HotelDes.hotelImages[currentImageIndex]} alt="" />
+                )}
+              </div>
+              <div className="HotelHoldtwo">
+              {HotelDes.hotelImages && (
+                  <img src={HotelDes.hotelImages[(currentImageIndex + 1) % HotelDes.hotelImages.length]} alt="" />
+                )}
+              </div>
+            </div>
+           <div className="NumNext">
+            <span onClick={HandleNextBtn}></span>
+            <span onClick={HandleNextBtn}></span>
+            <span onClick={HandleNextBtn}></span>
           </div>
+</div>
+          
           <div className="HotelTitleandPrice">
             <div className="NameOfHotel">
               <h3>
@@ -161,10 +175,10 @@ const HotelDescription = () => {
                     </div>
                     <div className="AvailRoomInfo">
                       <h4>{room.Type}</h4>
-                      <p>Price: ${room.price}</p>
-                      <p>Number: {room.Number}</p>
+                      <p>RoomNumber: {room.Number}</p>
                     </div>
                     <div className="AvailRoomPriceBookBtn">
+                    <p>₦{room.price}/night</p>
                       <button onClick={handleBookRoom}>Book Now</button>
                     </div>
                   </div>

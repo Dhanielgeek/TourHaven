@@ -96,7 +96,10 @@
     border-radius: 5px;
     cursor: pointer;
     font-family: 'Lora',serif;
-
+    transition: all 350ms ease-in-out;
+}
+.HotelBtn button:hover{
+    background: #05446E;
 }
 @media screen and (max-width: 900px) {
     .HotelHold{

@@ -2,13 +2,79 @@
     width: 100%;
     height: 95rem;
 }
+.HotelAddress{
+    width: 100%;
+    height: 4%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-inline: 20px;
+}
+.HotelAddress span{
+    font-family: 'Lora',serif;
+    font-size: 1.2rem;
+    color: #05446E;
+}
 .HotelHero{
     width: 100%;
-    height: 30%;
+    height: 23%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.HotelHeroHold{
+    width: 100%;
+    height: 90%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.HotelHoldone{
+    width: 49.5%;
+    height: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
 }
+.HotelHoldone img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.HotelHoldtwo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.HotelHoldtwo{
+    width: 49.5%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.HotelHoldtwo img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.NumNext{
+    width: 100%;
+    height: 9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3%;
+}
+.NumNext span{
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #d9d9d9;
+    cursor: pointer;
+}
+
 .LoaderContainer{
     display: flex;
     width: 100%;
@@ -211,15 +277,20 @@
     font-weight: 600;
 }
 .AvailRoomPriceBookBtn{
-    width: 10%;
+    width: 25%;
     height: 40%;
     display: flex;
-    justify-content: center;
+    justify-content: space-around;
     align-items: center;
 }
+.AvailRoomPriceBookBtn p{
+    font-size: 1rem;
+    font-family: 'Lora',serif;
+    font-weight: 600;
+}
 .AvailRoomPriceBookBtn button{
-    width: 90%;
-    height: 70%;
+    width: 30%;
+    height: 60%;
     cursor: pointer;
     background: #FFA500;
     color: #fdfdf7;
@@ -227,7 +298,7 @@
     font-family: 'Lora',serif;
     border-radius: 8px;
     font-weight: 600;
-    font-size: 1rem;
+    font-size: 0.9rem;
 }
 @media screen and (max-width: 900px) {
     .HotelTitleandPrice{
@@ -285,7 +356,14 @@
     font-size: 1rem;
     width: 60%;
    }
-   
+   .HotelAddress span{
+    font-size: 0.9rem;
+   }
+   .AvailRoomPriceBookBtn {
+    width: 30%;
+    flex-direction: column;
+    gap: 5%;
+   }
 }
 
 @media screen and (max-width: 650px) {
@@ -338,11 +416,24 @@
    }
    .AvailRoomPriceBookBtn {
     width: 30%;
+    flex-direction: column;
    }
    .AvailRoomPriceBookBtn button{
     height: 50%;
     font-size: 0.9rem;
     width: 80%;
+   }
+   .AvailRoomPriceBookBtn p{
+    font-size: 0.7rem;
+   }
+   .HotelAddress span{
+    font-size: 0.9rem;
+   }
+   .HotelHoldtwo{
+    display: none;
+   }
+   .HotelHoldone{
+    width: 90%;
    }
    
    
@@ -398,11 +489,24 @@
    }
    .AvailRoomPriceBookBtn {
     width: 30%;
+    flex-direction: column;
    }
    .AvailRoomPriceBookBtn button{
     height: 50%;
     font-size: 0.9rem;
     width: 80%;
+   }
+   .AvailRoomPriceBookBtn p{
+    font-size: 0.7rem;
+   }
+   .HotelAddress span{
+    font-size: 0.9rem;
+   }
+   .HotelHoldtwo{
+    display: none;
+   }
+   .HotelHoldone{
+    width: 90%;
    }
    
    
@@ -458,12 +562,24 @@
    }
    .AvailRoomPriceBookBtn {
     width: 30%;
+    flex-direction: column;
    }
    .AvailRoomPriceBookBtn button{
     height: 50%;
     font-size: 0.9rem;
     width: 80%;
    }
-   
+   .AvailRoomPriceBookBtn p{
+    font-size: 0.7rem;
+   }
+   .HotelAddress span{
+    font-size: 0.9rem;
+   }
+   .HotelHoldtwo{
+    display: none;
+   }
+   .HotelHoldone{
+    width: 90%;
+   }
    
 }
