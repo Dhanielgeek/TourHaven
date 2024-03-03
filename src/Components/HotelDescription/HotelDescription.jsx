@@ -6,6 +6,8 @@ import { FaLocationDot } from "react-icons/fa6";
 import { IoMdStar } from 'react-icons/io';
 import { useParams } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import { Modal , Button } from 'antd';
 
 const HotelDescription = () => {
 
@@ -15,6 +17,7 @@ const HotelDescription = () => {
   const [currentImageIndex, setCurrentImageIndex] = useState(0)
   const { id } = useParams()
   const Navigate = useNavigate()
+  const userToken = useSelector((state)=> state.mySlice.userToken)
   console.log(id);
 
   const HotelDesUrl = `https://tour-haven-application.vercel.app/api/v1/users/search-hotels/${id}`
@@ -48,22 +51,18 @@ const HotelDescription = () => {
 
 
 
-
   const handleBookRoom = () => {
-    if (isLoggedIn) {
-      // Proceed with booking
-      // Add your booking logic here
-    } else {
+    if (!userToken) {
       Modal.warning({
         title: 'Dear user',
         content: (
-          <div>
+          <div className='ModalHold' >
             <p>You have to Log In to book a room</p>
-            <div className="modal-buttons">
+            <div className="modal-buttons"style={{margin:'20px'}}>
               <Button onClick={() => { 
                 Navigate('/login')
                 console.log("Redirecting user to login page");
-              }}>Login</Button>
+              }} style={{margin: '0 10px'}} >Login</Button>
               <Button onClick={() => {
                 console.log("Continue viewing");
               }}>Continue Viewing</Button>
@@ -71,9 +70,10 @@ const HotelDescription = () => {
           </div>
         ),
       });
+    } else {
+      // Proceed with booking logic
     }
   };
-
 
 
 
