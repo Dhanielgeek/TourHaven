@@ -70,7 +70,7 @@ const HotelCard = () => {
                                 </div>
                                 <div className="HotelLocationReviews">
                                     <div className="Hoteloc">
-                                        <FaLocationDot style={{color:"#274E27"}} />
+                                        <FaLocationDot style={{color:"#780000"}} />
                                         <span>{item.city}</span>
                                     </div>
                                     <div className="HotelReview">

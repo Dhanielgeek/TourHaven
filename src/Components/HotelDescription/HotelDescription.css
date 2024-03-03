@@ -175,7 +175,6 @@
 .HotelPriceandBookBtn{
     width: 100%;
     height: 7%;
-    background: peru;
 }
 .HotelFeatures{
     width: 100%;
@@ -208,6 +207,20 @@
 .feat{
     width: 90%;
     height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.FeatureIcons{
+    width: 95%;
+    height: 25%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.FeatureNames{
+    width: 87%;
     display: flex;
     justify-content: space-around;
     align-items: center;

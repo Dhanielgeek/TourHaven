@@ -586,24 +586,22 @@
     }
     .BestBody{
       width: 100%;
-      height: 25vh;
-      /* background: #000; */
+      height: 20vh;
+      justify-content: center;
     }
     .BestTitle{
       width: 90%;
-      height: 50%;
-      /* border: 2px solid white; */
+      height: 20%;
     }
     .BestTitle h1{
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
     .BestSubTitle{
       width: 90%;
-      height: 50%;
-      /* border: 2px solid white; */
+      height: 35%;
     }
     .BestSubTitle span{
-      font-size: 0.9rem;
+      font-size: 0.7rem;
     }
     .TotalEverything{
       width: 100%;
@@ -745,24 +743,22 @@
     }
     .BestBody{
       width: 100%;
-      height: 25vh;
-      /* background: #000; */
+      height: 20vh;
+      justify-content: center;
     }
     .BestTitle{
       width: 90%;
-      height: 50%;
-      /* border: 2px solid white; */
+      height: 20%;
     }
     .BestTitle h1{
-      font-size: 1.2rem;
+      font-size: 1rem;
     }
     .BestSubTitle{
       width: 90%;
-      height: 50%;
-      /* border: 2px solid white; */
+      height: 35%;
     }
     .BestSubTitle span{
-      font-size: 0.9rem;
+      font-size: 0.7rem;
     }
     .TotalEverything{
       width: 100%;
@@ -906,24 +902,22 @@
   }
   .BestBody{
     width: 100%;
-    height: 25vh;
-    /* background: #000; */
+    height: 20vh;
+    justify-content: center;
   }
   .BestTitle{
     width: 90%;
-    height: 50%;
-    /* border: 2px solid white; */
+    height: 20%;
   }
   .BestTitle h1{
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
   .BestSubTitle{
     width: 90%;
-    height: 50%;
-    /* border: 2px solid white; */
+    height: 35%;
   }
   .BestSubTitle span{
-    font-size: 0.9rem;
+    font-size: 0.7rem;
   }
   .TotalEverything{
     width: 100%;
