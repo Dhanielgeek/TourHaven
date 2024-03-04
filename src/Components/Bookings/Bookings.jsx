@@ -1,9 +1,14 @@
 import React, { useState } from 'react';
 import './Booking.css';
 import { format } from 'date-fns';
+import { useParams } from 'react-router-dom';
+import { useSelector } from 'react-redux';
+import axios from 'axios';
 
-const Bookings = ({ bookingData, setBookingData, handleConfirmBooking }) => {
+const Bookings = ({ bookingData, setBookingData }) => {
   const { guestName, NoOfGuest,email, checkIn, checkOut, checkInTime, checkOutTime } = bookingData;
+ 
+  const userToken = useSelector((state) => state.mySlice.userToken);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -52,6 +57,23 @@ const Bookings = ({ bookingData, setBookingData, handleConfirmBooking }) => {
     }));
   };
 
+  const headers = {
+    Authorization : `Bearer ${userToken}`
+  }
+
+  const handleConfirmBooking = async () => {
+    const BookingUrl = `https://tour-haven-application.vercel.app/api/v1/users/bookings/${bookingData.roomId}`
+    const Bookdata = bookingData;
+   
+    try {
+      const response = await axios.post(BookingUrl, Bookdata,{headers});
+      console.log(response.data);
+    } catch (error) {
+      const errorMessage = error.response ? error.response.data.error : 'An error occurred';
+      console.log(errorMessage);
+    }
+  }
+
   return (
     <div className="BookingBody">
       <div className="BookingContainer">
@@ -68,9 +90,9 @@ const Bookings = ({ bookingData, setBookingData, handleConfirmBooking }) => {
             <input type="email" name="email" value={email} onChange={handleInputChange} />
           </div>
           <div className="BookingNo">
-            <label htmlFor="">Number of Guest <span className="red-asterisk">*</span> </label>
-            <input type="number" name="number" value={NoOfGuest} onChange={handleInputChange} />
-          </div>
+  <label htmlFor="">Number of Guest <span className="red-asterisk">*</span> </label>
+  <input type="number" name="NoOfGuest" value={NoOfGuest} onChange={handleInputChange} />
+</div>
           <div className="BookingCheckinDate">
             <label htmlFor="">Check-in date <span className="red-asterisk">*</span></label>
             <input

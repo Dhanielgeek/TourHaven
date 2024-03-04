@@ -71,7 +71,7 @@ const HandleLogs = async (e)=>{
             Navigate('/');
         }
       });
-      console.log(res.message);
+      console.log(res.data.message);
 }
   catch(error){
     setIsloading(false);

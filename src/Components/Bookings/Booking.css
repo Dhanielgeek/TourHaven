@@ -141,7 +141,7 @@
     padding-inline: 10px;
 }
 .BookingBtnToPayment button{
-    width: 30%;
+    width: 40%;
     height: 50%;
     border: none;
     outline: none;
@@ -150,7 +150,7 @@
     transition: all 350ms ease-in-out;
     color: #fff;
     background: #FFA500;
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-family: 'Lora',serif;
 }
 .BookingBtnToPayment button:hover{

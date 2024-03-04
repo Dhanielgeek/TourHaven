@@ -21,42 +21,42 @@ const Header = () => {
   const [logoutModalVisible, setLogoutModalVisible] = useState(false);
   const Navigate = useNavigate();
   const Dispatch = useDispatch();
-  const [sessionTimeout, setSessionTimeout] = useState(null);
+  // const [sessionTimeout, setSessionTimeout] = useState(null);
 
-  useEffect(() => {
-    const resetSessionTimeout = () => {
-      if (sessionTimeout) {
-        clearTimeout(sessionTimeout);
-      }
+  // useEffect(() => {
+  //   const resetSessionTimeout = () => {
+  //     if (sessionTimeout) {
+  //       clearTimeout(sessionTimeout);
+  //     }
 
-      // Set new timeout
-      const timeout = setTimeout(logoutUser, 600000);
-      setSessionTimeout(timeout);
-    };
+  //     // Set new timeout
+  //     const timeout = setTimeout(logoutUser, 600000);
+  //     setSessionTimeout(timeout);
+  //   };
 
-    const logoutUser = () => {
-      console.log('Session timed out. Logging out user.');
-      showLogoutModal();
-    };
+  //   const logoutUser = () => {
+  //     console.log('Session timed out. Logging out user.');
+  //     showLogoutModal();
+  //   };
 
-    // Reset session timeout on user activity
-    const handleUserActivity = () => {
-      resetSessionTimeout();
-    };
-
-   
-    document.addEventListener('mousemove', handleUserActivity);
-    document.addEventListener('keydown', handleUserActivity);
-
-    // Initialize session timeout
-    resetSessionTimeout();
+  //   // Reset session timeout on user activity
+  //   const handleUserActivity = () => {
+  //     resetSessionTimeout();
+  //   };
 
    
-    return () => {
-      document.removeEventListener('mousemove', handleUserActivity);
-      document.removeEventListener('keydown', handleUserActivity);
-    };
-  }, [sessionTimeout]);
+  //   document.addEventListener('mousemove', handleUserActivity);
+  //   document.addEventListener('keydown', handleUserActivity);
+
+  //   // Initialize session timeout
+  //   resetSessionTimeout();
+
+   
+  //   return () => {
+  //     document.removeEventListener('mousemove', handleUserActivity);
+  //     document.removeEventListener('keydown', handleUserActivity);
+  //   };
+  // }, [sessionTimeout]);
 
   const handleToggle = () => {
     setToggle(!Toggle);
@@ -95,21 +95,15 @@ const Header = () => {
   const HandleLogout = async () => {
     try {
       const response = await axios.post(Url, null, { headers });
-
-      // Check if the logout request was successful
       if (response.status === 200) {
-        // Show a success message
         Swal.fire({
           title: 'Logged out successfully',
           icon: 'success',
         });
-
-        // Redirect the user to the home page after successful logout
         Navigate('/');
         Dispatch(RemoveUser());
         setLogoutModalVisible(false);
       } else {
-        // Show an error message if the logout request was not successful
         Swal.fire({
           title: 'Logout Failed',
           text: 'Failed to logout. Please try again later.',
@@ -117,7 +111,6 @@ const Header = () => {
         });
       }
     } catch (error) {
-      // Handle any errors that occur during the logout process
       console.error('Logout error:', error);
       Swal.fire({
         title: 'Logout Failed',

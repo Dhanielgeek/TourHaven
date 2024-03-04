@@ -18,7 +18,7 @@ const HotelDescription = () => {
   const [HotelDes, setHotelDes] = useState({});
   const [Isloading, setIsloading] = useState(false);
   const [currentImageIndex, setCurrentImageIndex] = useState(0);
-  const { id } = useParams();
+  const { id} = useParams();
   const Navigate = useNavigate();
   const userToken = useSelector((state) => state.mySlice.userToken);
   const [isBookingModalVisible, setIsBookingModalVisible] = useState(false);
@@ -32,30 +32,7 @@ const HotelDescription = () => {
     NoOfGuest:1 
   });
 
-  const HotelDesUrl = `https://tour-haven-application.vercel.app/api/v1/users/search-hotels/${id}`;
-  const BookingUrl = `https://tour-haven-application.vercel.app/api/v1/users/bookings/${id}`
-  const Bookdata = bookingData;
 
-  useEffect(() => {
-    const GetHotelsDes = async () => {
-      setIsloading(true);
-      try {
-        const res = await axios.get(HotelDesUrl);
-        setHotelDes(res.data.data);
-        console.log(res.data);
-      } catch (error) {
-        const errorMessage = error.response ? error.response.data.error : 'Error getting details';
-        console.log(errorMessage); // Log the error message
-      } finally {
-        setIsloading(false);
-      }
-    };
-    GetHotelsDes();
-  }, [id]);
-
-  const HandleNextBtn = () => {
-    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % HotelDes.hotelImages.length);
-  };
 
   const handleBookRoom = async (roomId) => {
     console.log(roomId);
@@ -74,27 +51,40 @@ const HotelDescription = () => {
         ),
       });
     } else {
-      
-      setBookingData({
-        ...bookingData,
-        roomId: roomId 
-      });
+      setBookingData(prevData => ({
+        ...prevData,
+        roomId: roomId
+      }));
       setIsBookingModalVisible(true);
+     
     }
-  }
-  const headers = {
-    Authorization : `Bearer ${userToken}`
-  }
+  };
+  
 
-  const handleConfirmBooking = async () => {
-    try {
-      const response = await axios.post(BookingUrl, Bookdata,{headers});
-      console.log(response.data);
-    } catch (error) {
-      const errorMessage = error.response ? error.response.data.error : 'An error occurred';
-      console.log(errorMessage);
-    }
-  }
+  const HotelDesUrl = `https://tour-haven-application.vercel.app/api/v1/users/search-hotels/${id}`;
+ 
+
+  useEffect(() => {
+    const GetHotelsDes = async () => {
+      setIsloading(true);
+      try {
+        const res = await axios.get(HotelDesUrl);
+        setHotelDes(res.data.data);
+        console.log(res.data);
+      } catch (error) {
+        const errorMessage = error.response ? error.response.data.error : 'Error getting details';
+        console.log(errorMessage);
+      } finally {
+        setIsloading(false);
+      }
+    };
+    GetHotelsDes();
+  }, [id]);
+
+  const HandleNextBtn = () => {
+    setCurrentImageIndex((prevIndex) => (prevIndex + 1) % HotelDes.hotelImages.length);
+  };
+
 
   const handleBookingModalVisibility = () => {
     setIsBookingModalVisible(!isBookingModalVisible);
@@ -234,7 +224,6 @@ const HotelDescription = () => {
             <Bookings
               bookingData={bookingData}
               setBookingData={setBookingData}
-              handleConfirmBooking={handleConfirmBooking}
             />
           </Modal>
 
