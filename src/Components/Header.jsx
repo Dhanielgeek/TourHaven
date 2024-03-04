@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Style.css';
 import HeaderLogo from '../assets/TourHavenLo.png';
 import { NavLink } from 'react-router-dom';
@@ -11,17 +11,52 @@ import { useSelector, useDispatch } from 'react-redux';
 import axios from 'axios';
 import Swal from 'sweetalert2';
 import { Dropdown, Menu, Modal } from 'antd';
-import { UserToken,RemoveUser} from '../Functions/Features';
-
+import { RemoveUser } from '../Functions/Features';
 
 const { SubMenu } = Menu;
 
 const Header = () => {
   const [Toggle, setToggle] = useState(false);
   const [Open, setOpen] = useState(false);
-  const [logoutModalVisible, setLogoutModalVisible] = useState(false); 
-  const Navigate = useNavigate(); 
-  const Dispatch = useDispatch()
+  const [logoutModalVisible, setLogoutModalVisible] = useState(false);
+  const Navigate = useNavigate();
+  const Dispatch = useDispatch();
+  const [sessionTimeout, setSessionTimeout] = useState(null);
+
+  useEffect(() => {
+    const resetSessionTimeout = () => {
+      if (sessionTimeout) {
+        clearTimeout(sessionTimeout);
+      }
+
+      // Set new timeout
+      const timeout = setTimeout(logoutUser, 600000);
+      setSessionTimeout(timeout);
+    };
+
+    const logoutUser = () => {
+      console.log('Session timed out. Logging out user.');
+      showLogoutModal();
+    };
+
+    // Reset session timeout on user activity
+    const handleUserActivity = () => {
+      resetSessionTimeout();
+    };
+
+   
+    document.addEventListener('mousemove', handleUserActivity);
+    document.addEventListener('keydown', handleUserActivity);
+
+    // Initialize session timeout
+    resetSessionTimeout();
+
+   
+    return () => {
+      document.removeEventListener('mousemove', handleUserActivity);
+      document.removeEventListener('keydown', handleUserActivity);
+    };
+  }, [sessionTimeout]);
 
   const handleToggle = () => {
     setToggle(!Toggle);
@@ -41,26 +76,26 @@ const Header = () => {
     closed: { opacity: 0, x: '100%' },
   };
 
-  // Handle the selector from redux 
+  // Handle the selector from redux
   const user = useSelector((state) => state.mySlice.user);
-  const userToken = useSelector((state)=> state.mySlice.userToken)
+  const userToken = useSelector((state) => state.mySlice.userToken);
 
   // Function to show logout confirmation modal
   const showLogoutModal = () => {
     setLogoutModalVisible(true);
   };
 
-  // Handle Function for the Logout 
+  // Handle Function for the Logout
 
   const headers = {
-    Authorization : `Bearer ${userToken}`
-  }
-  const Url = 'https://tour-haven-application.vercel.app/api/v1/users/logout'
+    Authorization: `Bearer ${userToken}`,
+  };
+  const Url = 'https://tour-haven-application.vercel.app/api/v1/users/logout';
 
-  const HandleLogout = async() => {
+  const HandleLogout = async () => {
     try {
-      const response = await axios.post(Url,null,{headers});
-  
+      const response = await axios.post(Url, null, { headers });
+
       // Check if the logout request was successful
       if (response.status === 200) {
         // Show a success message
@@ -68,11 +103,11 @@ const Header = () => {
           title: 'Logged out successfully',
           icon: 'success',
         });
-  
+
         // Redirect the user to the home page after successful logout
         Navigate('/');
-        Dispatch(RemoveUser())
-        setLogoutModalVisible(false)
+        Dispatch(RemoveUser());
+        setLogoutModalVisible(false);
       } else {
         // Show an error message if the logout request was not successful
         Swal.fire({
@@ -91,7 +126,6 @@ const Header = () => {
       });
     }
   };
-  
 
   // Function to handle canceling logout
   const handleCancelLogout = () => {
@@ -100,12 +134,28 @@ const Header = () => {
 
   // flexDirection: 'column', justifyContent: 'space-around', alignItems: 'center'display: 'flex',
   const menu = (
-    <Menu onClick={handleClose} style={{ width: '10rem', height: '7rem', }}>
+    <Menu onClick={handleClose} style={{ width: '10rem', height: '7rem' }}>
       <Menu.Item>
-        <Link to="/user" style={{ fontFamily: 'Lora', color: '#fb8500' }}>Account</Link>
+        <Link to="/user" style={{ fontFamily: 'Lora', color: '#fb8500' }}>
+          Account
+        </Link>
       </Menu.Item>
       <Menu.Item>
-        <button onClick={showLogoutModal} style={{ paddingLeft: '40px', paddingRight: '40px', paddingBottom: '10px', paddingTop: '10px', border: '1px solid #05446E', background: 'none', fontFamily: 'Lora', borderRadius: '7px' }}>Logout</button>
+        <button
+          onClick={showLogoutModal}
+          style={{
+            paddingLeft: '40px',
+            paddingRight: '40px',
+            paddingBottom: '10px',
+            paddingTop: '10px',
+            border: '1px solid #05446E',
+            background: 'none',
+            fontFamily: 'Lora',
+            borderRadius: '7px',
+          }}
+        >
+          Logout
+        </button>
       </Menu.Item>
     </Menu>
   );
@@ -117,10 +167,22 @@ const Header = () => {
         <img src={HeaderLogo} alt="" />
       </div>
       <div className="HeaderLink">
-        <NavLink to="/" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} > Home</NavLink>
-        <NavLink to="/about" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} >About Us</NavLink>
-        <NavLink to="/contact" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} >Contact</NavLink>
-        <NavLink to="/team" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} >Team</NavLink>
+        <NavLink to="/" className={({ isActive }) => (isActive ? 'Active' : 'Inactive')}>
+          {' '}
+          Home
+        </NavLink>
+        <NavLink to="/about" className={({ isActive }) => (isActive ? 'Active' : 'Inactive')}>
+          {' '}
+          About Us
+        </NavLink>
+        <NavLink to="/contact" className={({ isActive }) => (isActive ? 'Active' : 'Inactive')}>
+          {' '}
+          Contact
+        </NavLink>
+        <NavLink to="/team" className={({ isActive }) => (isActive ? 'Active' : 'Inactive')}>
+          {' '}
+          Team
+        </NavLink>
       </div>
       <div className="HeaderProfile">
         <div className="ProfileLogo" onClick={handleOpen}>
@@ -149,7 +211,9 @@ const Header = () => {
                 <div className="UserHoldall">
                   <div className="ViewAccount">
                     <span>
-                      <Link to='/user' style={{ textDecoration: 'none', color: "#05446E" }}>Account</Link>
+                      <Link to="/user" style={{ textDecoration: 'none', color: '#05446E' }}>
+                        Account
+                      </Link>
                     </span>
                   </div>
                   <div className="LineSign"></div>
@@ -164,10 +228,18 @@ const Header = () => {
                     <div className="LineSign"></div>
                   </div>
                   <div className="LoginLink">
-                    <Link to="/login" style={{ textDecoration: 'none', color: '#EC8B05', fontSize: '0.9rem' }}>Login</Link>
+                    <Link to="/login" style={{ textDecoration: 'none', color: '#EC8B05', fontSize: '0.9rem' }}>
+                      Login
+                    </Link>
                   </div>
                   <div className="NewMember">
-                    <span>New member ? </span> &nbsp; <Link to="/signup" style={{ textDecoration: 'none', color: '#EC8B05', fontWeight: '700', fontSize: '1rem' }}>Sign Up</Link>
+                    <span>New member ? </span> &nbsp;{' '}
+                    <Link
+                      to="/signup"
+                      style={{ textDecoration: 'none', color: '#EC8B05', fontWeight: '700', fontSize: '1rem' }}
+                    >
+                      Sign Up
+                    </Link>
                   </div>
                 </div>
               )}
@@ -184,24 +256,32 @@ const Header = () => {
         ) : (
           <RxHamburgerMenu className="MenuHold" onClick={handleToggle} />
         )}
-           <div className="ProfileUser">
-                {user && user.firstName && user.lastName ? (
-                  <Dropdown overlay={menu}>
-                    <div className='UserInitials'>
-                      <h3>{user.firstName.charAt(0)}{user.lastName.charAt(0)}</h3>
-                    </div>
-                  </Dropdown>
-                ) : (
-                  <div className='UserMobileHold' >
-                    <button className='UserLog'>
-                      <NavLink to='/login' style={{ textDecoration: "none", color: "#05446E" }}> Login </NavLink>
-                    </button>
-                    <button className='UserSign'>
-                      <NavLink to='/signup' style={{ textDecoration: "none", color: "#ffff" }}>Sign up</NavLink>
-                    </button>
-                  </div>
-                )}
+        <div className="ProfileUser">
+          {user && user.firstName && user.lastName ? (
+            <Dropdown overlay={menu}>
+              <div className="UserInitials">
+                <h3>
+                  {user.firstName.charAt(0)}
+                  {user.lastName.charAt(0)}
+                </h3>
               </div>
+            </Dropdown>
+          ) : (
+            <div className="UserMobileHold">
+              <button className="UserLog">
+                <NavLink to="/login" style={{ textDecoration: 'none', color: '#05446E' }}>
+                  {' '}
+                  Login{' '}
+                </NavLink>
+              </button>
+              <button className="UserSign">
+                <NavLink to="/signup" style={{ textDecoration: 'none', color: '#ffff' }}>
+                  Sign up
+                </NavLink>
+              </button>
+            </div>
+          )}
+        </div>
         <AnimatePresence>
           {Toggle && (
             <motion.div
@@ -212,30 +292,45 @@ const Header = () => {
               variants={headerVariants}
               transition={{ duration: 0.3 }}
             >
-              <NavLink to="/" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} onClick={handleClose}>Home</NavLink>
-              <NavLink to="/about" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} onClick={handleClose}>About Us</NavLink>
-              <NavLink to="/contact" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} onClick={handleClose}>Contact</NavLink>
-              <NavLink to="/team" className={({ isActive }) => isActive ? 'Active' : 'Inactive'} onClick={handleClose}>Team</NavLink>
-            
+              <NavLink to="/" className={({ isActive }) => (isActive ? 'Active' : 'Inactive')} onClick={handleClose}>
+                Home
+              </NavLink>
+              <NavLink
+                to="/about"
+                className={({ isActive }) => (isActive ? 'Active' : 'Inactive')}
+                onClick={handleClose}
+              >
+                About Us
+              </NavLink>
+              <NavLink
+                to="/contact"
+                className={({ isActive }) => (isActive ? 'Active' : 'Inactive')}
+                onClick={handleClose}
+              >
+                Contact
+              </NavLink>
+              <NavLink to="/team" className={({ isActive }) => (isActive ? 'Active' : 'Inactive')} onClick={handleClose}>
+                Team
+              </NavLink>
             </motion.div>
           )}
         </AnimatePresence>
       </div>
-{/* Logout Confirmation Modal */}
-<Modal
-  title="Logout Confirmation"
-  centered
-  visible={logoutModalVisible}
-  onOk={HandleLogout}
-  onCancel={handleCancelLogout}
-  okText={<span>Yes</span>}
-  cancelText="Cancel"
-  style={{backgroundColor:'#05446E',color:'red'}}
->
-  <p>Are you sure you want to logout?</p>
-</Modal>
+      {/* Logout Confirmation Modal */}
+      <Modal
+        title="Logout Confirmation"
+        centered
+        visible={logoutModalVisible}
+        onOk={HandleLogout}
+        onCancel={handleCancelLogout}
+        okText={<span>Yes</span>}
+        cancelText="Cancel"
+        style={{ backgroundColor: '#05446E', color: 'red' }}
+      >
+        <p>Are you sure you want to logout?</p>
+      </Modal>
     </div>
-  )
-}
+  );
+};
 
 export default Header;
