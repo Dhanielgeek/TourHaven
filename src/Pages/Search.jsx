@@ -132,7 +132,8 @@ const Search = () => {
               <List.Item.Meta
                 avatar={<Avatar src={item.profileImage} />}
                 title={<Link to={`/hoteldes/${item.id}`}>{item.name}</Link>}
-                description={item.description}
+                description={item.city}
+                rating= {item.stars}
               />
             </List.Item>
           )}

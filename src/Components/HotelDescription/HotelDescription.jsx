@@ -22,8 +22,19 @@ const HotelDescription = () => {
   const Navigate = useNavigate();
   const userToken = useSelector((state) => state.mySlice.userToken);
   const [isBookingModalVisible, setIsBookingModalVisible] = useState(false);
+  const [bookingData, setBookingData] = useState({
+    guestName: '',
+    email: '',
+    checkIn: '',
+    checkOut: '',
+    checkInTime: '',
+    checkOutTime: '',
+    NoOfGuest:1 
+  });
 
   const HotelDesUrl = `https://tour-haven-application.vercel.app/api/v1/users/search-hotels/${id}`;
+  const BookingUrl = `https://tour-haven-application.vercel.app/api/v1/users/bookings/${id}`
+  const Bookdata = bookingData;
 
   useEffect(() => {
     const GetHotelsDes = async () => {
@@ -34,7 +45,7 @@ const HotelDescription = () => {
         console.log(res.data);
       } catch (error) {
         const errorMessage = error.response ? error.response.data.error : 'Error getting details';
-        errorMessage;
+        console.log(errorMessage); // Log the error message
       } finally {
         setIsloading(false);
       }
@@ -46,7 +57,8 @@ const HotelDescription = () => {
     setCurrentImageIndex((prevIndex) => (prevIndex + 1) % HotelDes.hotelImages.length);
   };
 
-  const handleBookRoom = () => {
+  const handleBookRoom = async (roomId) => {
+    console.log(roomId);
     if (!userToken) {
       Modal.warning({
         title: 'Dear user',
@@ -54,7 +66,7 @@ const HotelDescription = () => {
           <div className='ModalHold' >
             <p>You have to Log In to book a room</p>
             <div className="modal-buttons" style={{ margin: '30px', width: "70%" }}>
-              <Button onClick={() => { 
+              <Button onClick={() => {
                 Navigate('/login');
               }} style={{ margin: '0 10px', width: '90%', height: '60%' }} >Login</Button>
             </div>
@@ -62,8 +74,25 @@ const HotelDescription = () => {
         ),
       });
     } else {
-    
+      
+      setBookingData({
+        ...bookingData,
+        roomId: roomId 
+      });
       setIsBookingModalVisible(true);
+    }
+  }
+  const headers = {
+    Authorization : `Bearer ${userToken}`
+  }
+
+  const handleConfirmBooking = async () => {
+    try {
+      const response = await axios.post(BookingUrl, Bookdata,{headers});
+      console.log(response.data);
+    } catch (error) {
+      const errorMessage = error.response ? error.response.data.error : 'An error occurred';
+      console.log(errorMessage);
     }
   }
 
@@ -114,8 +143,8 @@ const HotelDescription = () => {
                 {HotelDes.name}
               </h3>
               <div className="HotelAddress">
-            <span>{HotelDes.address}</span>
-          </div>
+                <span>{HotelDes.address}</span>
+              </div>
             </div>
             <div className="LocationHotel">
               <div className="LocationNameIcon">
@@ -186,7 +215,7 @@ const HotelDescription = () => {
                     </div>
                     <div className="AvailRoomPriceBookBtn">
                       <p>₦{room.price}/night</p>
-                      <button onClick={handleBookRoom}>Book Now</button>
+                      <button onClick={() => handleBookRoom(room.id)}>Book Now</button>
                     </div>
                   </div>
                 ))
@@ -202,7 +231,11 @@ const HotelDescription = () => {
             onCancel={handleBookingModalVisibility}
             footer={null}
           >
-            <Bookings />
+            <Bookings
+              bookingData={bookingData}
+              setBookingData={setBookingData}
+              handleConfirmBooking={handleConfirmBooking}
+            />
           </Modal>
 
         </>

@@ -7,7 +7,7 @@
 }
 .BookingContainer{
     width: 90%;
-    height: 90%;
+    height: 85%;
     background: #fdfdf7;
     box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
 }
@@ -72,7 +72,7 @@
     border: none;
     border: 1px solid #d9d9d9;
 }
-.BookingNumber{
+.BookingNo{
     width: 100%;
     height: 12%;
     display: flex;
@@ -82,7 +82,7 @@
     padding-inline: 10px;
     gap: 4%;
 }
-.BookingNumber input{
+.BookingNo input{
     width: 95%;
     height: 45%;
     border-radius: 3px;
@@ -131,11 +131,7 @@
     font-family: 'Lora',serif;
     border: 1px solid #d9d9d9;
 }
-.BookingSelectedRoom{
-    width: 95%;
-    height: 28%;
-    background: plum;
-}
+
 .BookingBtnToPayment{
     width: 100%;
     height: 10%;
@@ -164,7 +160,9 @@
 .BookingCheckoutDate,
 .BookingEmail,
 .BookingName,
-.BookingNumber label{
+.BookingNo,
+.rightTime,
+.leftTime label{
     font-size: 0.9rem;
     font-family: 'Lora',serif;
     color: #05446E;
@@ -172,5 +170,49 @@
 }
 .red-asterisk {
     color: red;
+  }
+  .BookingCheckinTime{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .rightTime{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-inline: 10px;
+    gap: 4%;
+  }
+  .rightTime input{
+    width: 95%;
+    height: 45%;
+    border-radius: 3px;
+    outline: none;
+    padding: 6px;
+    font-family: 'Lora',serif;
+    border: 1px solid #d9d9d9;
+  }
+  .leftTime{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-inline: 10px;
+    gap: 4%;
+  }
+  .leftTime input{
+    width: 95%;
+    height: 45%;
+    border-radius: 3px;
+    outline: none;
+    padding: 6px;
+    font-family: 'Lora',serif;
+    border: 1px solid #d9d9d9;
   }
   
