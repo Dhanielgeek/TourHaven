@@ -123,16 +123,16 @@
 .MeetUsPage{
     width: 100%;
     height: 100vh;
-    /* background: pink; */
 }
 .MeetTeamHeader{
     width: 100%;
-    height: 13%;
+    height: 30%;
     display: flex;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
-    gap: 5%;
+    /* gap: 5%;
+    background: #000; */
 }
 .MeetTeamHeader p{
     text-align: center;
@@ -140,6 +140,7 @@
     font-family: 'Lora',serif;
     font-weight: 600;
     color: #05446E;
+    /* background: red; */
 }
 .MeetTeamHeader h1{
     font-family: 'Lora',serif;
@@ -148,7 +149,7 @@
 }
 .ImageHolderPage{
     width: 100%;
-    height: 90%;
+    height: 70%;
     /* background: purple; */
     display: flex;
     justify-content: center;

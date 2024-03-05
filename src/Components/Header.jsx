@@ -21,42 +21,41 @@ const Header = () => {
   const [logoutModalVisible, setLogoutModalVisible] = useState(false);
   const Navigate = useNavigate();
   const Dispatch = useDispatch();
-  // const [sessionTimeout, setSessionTimeout] = useState(null);
+//   const [sessionTimeout, setSessionTimeout] = useState(null);
 
-  // useEffect(() => {
-  //   const resetSessionTimeout = () => {
-  //     if (sessionTimeout) {
-  //       clearTimeout(sessionTimeout);
-  //     }
+// useEffect(() => {
+//   const resetSessionTimeout = () => {
+//     if (sessionTimeout) {
+//       clearTimeout(sessionTimeout);
+//     }
 
-  //     // Set new timeout
-  //     const timeout = setTimeout(logoutUser, 600000);
-  //     setSessionTimeout(timeout);
-  //   };
+//     // Set new timeout for one day (24 hours)
+//     const timeout = setTimeout(logoutUser, 24 * 60 * 60 * 1000); // 24 hours * 60 minutes * 60 seconds * 1000 milliseconds
+//     setSessionTimeout(timeout);
+//   };
 
-  //   const logoutUser = () => {
-  //     console.log('Session timed out. Logging out user.');
-  //     showLogoutModal();
-  //   };
+//   const logoutUser = () => {
+//     console.log('Session timed out. Logging out user.');
+//     showLogoutModal();
+//   };
 
-  //   // Reset session timeout on user activity
-  //   const handleUserActivity = () => {
-  //     resetSessionTimeout();
-  //   };
+//   // Reset session timeout on user activity
+//   const handleUserActivity = () => {
+//     resetSessionTimeout();
+//   };
 
-   
-  //   document.addEventListener('mousemove', handleUserActivity);
-  //   document.addEventListener('keydown', handleUserActivity);
+//   document.addEventListener('mousemove', handleUserActivity);
+//   document.addEventListener('keydown', handleUserActivity);
 
-  //   // Initialize session timeout
-  //   resetSessionTimeout();
+//   // Initialize session timeout
+//   resetSessionTimeout();
 
-   
-  //   return () => {
-  //     document.removeEventListener('mousemove', handleUserActivity);
-  //     document.removeEventListener('keydown', handleUserActivity);
-  //   };
-  // }, [sessionTimeout]);
+//   return () => {
+//     document.removeEventListener('mousemove', handleUserActivity);
+//     document.removeEventListener('keydown', handleUserActivity);
+//   };
+// }, [sessionTimeout]);
+
 
   const handleToggle = () => {
     setToggle(!Toggle);

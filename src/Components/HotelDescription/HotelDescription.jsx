@@ -22,6 +22,8 @@ const HotelDescription = () => {
   const Navigate = useNavigate();
   const userToken = useSelector((state) => state.mySlice.userToken);
   const [isBookingModalVisible, setIsBookingModalVisible] = useState(false);
+  // const [bookingId, setbookingId] = useState('')
+
   const [bookingData, setBookingData] = useState({
     guestName: '',
     email: '',
@@ -55,6 +57,7 @@ const HotelDescription = () => {
         ...prevData,
         roomId: roomId
       }));
+
       setIsBookingModalVisible(true);
      
     }

@@ -1,13 +1,12 @@
 import React, { useState } from 'react';
 import './Booking.css';
 import { format } from 'date-fns';
-import { useParams } from 'react-router-dom';
+import Swal from 'sweetalert2';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
 
 const Bookings = ({ bookingData, setBookingData }) => {
-  const { guestName, NoOfGuest,email, checkIn, checkOut, checkInTime, checkOutTime } = bookingData;
- 
+  const { guestName, NoOfGuest, email, checkIn, checkOut, checkInTime, checkOutTime } = bookingData
   const userToken = useSelector((state) => state.mySlice.userToken);
 
   const handleInputChange = (e) => {
@@ -15,64 +14,124 @@ const Bookings = ({ bookingData, setBookingData }) => {
     setBookingData(prevData => ({
       ...prevData,
       [name]: value,
-    }));
-  };
+    }))
+  }
 
   const handleCheckinDateChange = (e) => {
     const value = e.target.value;
     setBookingData(prevData => ({
       ...prevData,
       checkIn: value,
-    }));
-  };
+    }))
+  }
 
   const handleCheckoutDateChange = (e) => {
     const value = e.target.value;
     setBookingData(prevData => ({
       ...prevData,
       checkOut: value,
-    }));
-  };
+    }))
+  }
+
   const handleCheckinTimeChange = (e) => {
     const value = e.target.value;
-    const [hours, minutes] = value.split(':').map(Number);
+    const [hours, minutes] = value.split(':').map(Number)
     
-    const checkOutHours = (hours + 24) % 24;
+    const checkOutHours = (hours + 24) % 24
     
-    const checkOutTime = `${checkOutHours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`;
+    const checkOutTime = `${checkOutHours.toString().padStart(2, '0')}:${minutes.toString().padStart(2, '0')}`
   
     setBookingData(prevData => ({
       ...prevData,
       checkInTime: value,
       checkOutTime: checkOutTime,
-    }));
-  };
-  
+    }))
+  }
 
   const handleCheckoutTimeChange = (e) => {
-    const value = e.target.value;
+    const value = e.target.value
     setBookingData(prevData => ({
       ...prevData,
       checkOutTime: value,
-    }));
-  };
+    }))
+  }
 
   const headers = {
     Authorization : `Bearer ${userToken}`
   }
-
   const handleConfirmBooking = async () => {
-    const BookingUrl = `https://tour-haven-application.vercel.app/api/v1/users/bookings/${bookingData.roomId}`
+    const BookingUrl = `https://tour-haven-application.vercel.app/api/v1/users/bookings/${bookingData.roomId}`;
     const Bookdata = bookingData;
-   
     try {
-      const response = await axios.post(BookingUrl, Bookdata,{headers});
+      const response = await axios.post(BookingUrl, Bookdata, { headers });
+      console.log(response.data);
+      const { AmountToPay, Name, bookingId } = response.data.data;
+      console.log(AmountToPay, Name, bookingId);
+      Swal.fire({
+        icon: 'success',
+        title: 'Booking Successful',
+        text: 'Your booking has been confirmed!',
+      });
+      payKorapay(AmountToPay, Name, bookingId);
+    } catch (error) {
+      const errorMessage = error.response ? error.response.data.error : 'An error occurred';
+      Swal.fire({
+        icon: 'error',
+        title: 'Booking Failed',
+        text: errorMessage,
+      });
+      console.log(errorMessage);
+    }
+  };
+  
+  const payKorapay = (AmountToPay, Name, bookingId) => {
+    const Keys = `key${Math.random()}`;
+     
+  
+    window.Korapay.initialize({
+      key: "pk_test_eR5xsWZRG1XfPVe8JvDJyHQWR1nieyBU2DaE5dBm",
+      reference: Keys,
+      amount: AmountToPay, 
+      currency: "NGN",
+      customer: {
+        name: Name,
+        email: "daniel@gmail.com"
+      },
+      onClose: function () {
+        // Handle when modal is closed
+      },
+      onSuccess: function (data) {
+        console.log(data);
+        // Handle when payment is successful
+        HandleCheckOutPayment(bookingId);
+      },
+      onFailed: function (data) {
+        // Handle when payment fails
+      }
+    });
+  };
+  
+  const HandleCheckOutPayment = async (bookingId) => {
+    console.log('bookings id',bookingId);
+    try {
+      const response = await axios.put(`https://tour-haven-application.vercel.app/api/v1/users/bookings-checkout/${bookingId}`, {}, { headers });
+      Swal.fire({
+        icon: 'success',
+        title: 'Payment Successful',
+        text: response.data.message
+      });
       console.log(response.data);
     } catch (error) {
       const errorMessage = error.response ? error.response.data.error : 'An error occurred';
       console.log(errorMessage);
+      Swal.fire({
+        icon: 'error',
+        title: 'Payment Failed',
+        text: errorMessage
+      });
     }
-  }
+  };
+  
 
   return (
     <div className="BookingBody">
@@ -90,9 +149,9 @@ const Bookings = ({ bookingData, setBookingData }) => {
             <input type="email" name="email" value={email} onChange={handleInputChange} />
           </div>
           <div className="BookingNo">
-  <label htmlFor="">Number of Guest <span className="red-asterisk">*</span> </label>
-  <input type="number" name="NoOfGuest" value={NoOfGuest} onChange={handleInputChange} />
-</div>
+            <label htmlFor="">Number of Guest <span className="red-asterisk">*</span> </label>
+            <input type="number" name="NoOfGuest" value={NoOfGuest} onChange={handleInputChange} />
+          </div>
           <div className="BookingCheckinDate">
             <label htmlFor="">Check-in date <span className="red-asterisk">*</span></label>
             <input
