@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import './Booking.css';
 import { format } from 'date-fns';
 import Swal from 'sweetalert2';
@@ -6,9 +6,20 @@ import { useSelector } from 'react-redux';
 import axios from 'axios';
 
 const Bookings = ({ bookingData, setBookingData }) => {
+  const [success, setSuccess] = useState(false);
+  const [idBooking, setidBooking] = useState(null)
   const { guestName, NoOfGuest, email, checkIn, checkOut, checkInTime, checkOutTime } = bookingData
   const userToken = useSelector((state) => state.mySlice.userToken);
-
+  const initialBookingData = {
+    guestName: '',
+    NoOfGuest: '',
+    email: '',
+    checkIn: '',
+    checkOut: '',
+    checkInTime: '',
+    checkOutTime: ''
+  };
+  
   const handleInputChange = (e) => {
     const { name, value } = e.target;
     setBookingData(prevData => ({
@@ -66,6 +77,7 @@ const Bookings = ({ bookingData, setBookingData }) => {
       const response = await axios.post(BookingUrl, Bookdata, { headers });
       console.log(response.data);
       const { AmountToPay, Name, bookingId } = response.data.data;
+      setidBooking(bookingId)
       console.log(AmountToPay, Name, bookingId);
       Swal.fire({
         icon: 'success',
@@ -73,6 +85,7 @@ const Bookings = ({ bookingData, setBookingData }) => {
         text: 'Your booking has been confirmed!',
       });
       payKorapay(AmountToPay, Name, bookingId);
+      resetBookingData()
     } catch (error) {
       const errorMessage = error.response ? error.response.data.error : 'An error occurred';
       Swal.fire({
@@ -83,11 +96,15 @@ const Bookings = ({ bookingData, setBookingData }) => {
       console.log(errorMessage);
     }
   };
+
+  const resetBookingData = () => {
+    setBookingData(initialBookingData);
+  };
   
   const payKorapay = (AmountToPay, Name, bookingId) => {
     const Keys = `key${Math.random()}`;
-     
-  
+     console.log('Kora pay with :', AmountToPay,Name,bookingId)
+    
     window.Korapay.initialize({
       key: "pk_test_eR5xsWZRG1XfPVe8JvDJyHQWR1nieyBU2DaE5dBm",
       reference: Keys,
@@ -97,29 +114,35 @@ const Bookings = ({ bookingData, setBookingData }) => {
         name: Name,
         email: "daniel@gmail.com"
       },
-      onClose: function () {
-        // Handle when modal is closed
+      onClose: function (data) {
+        console.log(data);
       },
       onSuccess: function (data) {
-        console.log(data);
-        // Handle when payment is successful
-        HandleCheckOutPayment(bookingId);
+        // console.log("on suess",data, bookingId);
+        if(data.status === "success"){
+          
+          setSuccess(!success)
+        }
       },
       onFailed: function (data) {
-        // Handle when payment fails
+        console.log(data);
       }
     });
   };
   
   const HandleCheckOutPayment = async (bookingId) => {
-    console.log('bookings id',bookingId);
+    // console.log('bookings id',bookingId);
     try {
-      const response = await axios.put(`https://tour-haven-application.vercel.app/api/v1/users/bookings-checkout/${bookingId}`, {}, { headers });
-      Swal.fire({
-        icon: 'success',
-        title: 'Payment Successful',
-        text: response.data.message
-      });
+      const response = await axios.put(`https://tourhaven.onrender.com/api/v1/users/bookings-checkout/${bookingId}`, {}, { headers });
+      if(response){
+        Swal.fire({
+          icon: 'success',
+          title: 'Payment Successful',
+          text: response.data.message
+        });
+      }else{
+        console.log(error);
+      }
       console.log(response.data);
     } catch (error) {
       const errorMessage = error.response ? error.response.data.error : 'An error occurred';
@@ -131,6 +154,12 @@ const Bookings = ({ bookingData, setBookingData }) => {
       });
     }
   };
+
+  useEffect(()=>{
+    if(success === true){
+      HandleCheckOutPayment(idBooking);
+    }
+  },[success])
   
 
   return (

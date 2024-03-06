@@ -32,10 +32,15 @@ const Search = () => {
   const handleDateChange = (event) => {
     setSelectedDate(new Date(event.target.value));
   };
-
   const handleSelectedDestination = (e) => {
-    setSelectedDestination(e.target.value);
-    console.log(selectedDestination);
+    const inputValue = e.target.value
+
+    if (/\d/.test(inputValue)) {
+      const alphabeticValue = inputValue.replace(/\d/g, '')
+      setSelectedDestination(alphabeticValue);
+    } else {
+      setSelectedDestination(inputValue);
+    }
   };
 
   const urlHotels = `https://tour-haven-application.vercel.app/api/v1/users/search-location/${selectedDestination}`;

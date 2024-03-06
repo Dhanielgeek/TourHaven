@@ -13,7 +13,7 @@ import Contact from './Pages/Contact/Contact';
 import HotelDescription from './Components/HotelDescription/HotelDescription';
 import Verify from './Auth/Verify';
 import Bookings from './Components/Bookings/Bookings';
-import User from './Components/UserProfile/User';
+import HotelAdmin from './Components/HotelAdmin/HotelAdmin';
 
 const router = createBrowserRouter([
   {
@@ -65,8 +65,8 @@ const router = createBrowserRouter([
         element: <Bookings />
       },
       {
-        path: 'user',
-        element: <User />
+        path: 'admin',
+        element: <HotelAdmin/>
       }
     ]
   }

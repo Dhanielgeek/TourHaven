@@ -186,7 +186,7 @@ const Signup = () => {
                 <p className="error">{errorMessages.password}</p>
               </div>
               <div className="SignupConfirmPassword">
-                <label>ConfirmPassword</label>
+                <label>Confirm Password</label>
                 <div className="SignupConfirmeyes">
                   <input type={ShowConfirmPassword ? "text" : "password"} onChange={HandleConfirmPassword} />
                   {ShowConfirmPassword ?
@@ -197,11 +197,11 @@ const Signup = () => {
                 </div>
                 <p className="error">{errorMessages.confirmPassword}</p>
               </div>
-              <div className="SignupAgreeTerms">
+              {/* <div className="SignupAgreeTerms">
                 <input type="checkbox" />
                 &nbsp;
                 <label>I agree to terms of use</label>
-              </div>
+              </div> */}
               <div className="SignupBtn">
                 <button onClick={HandleSignUp}>
                   Sign Up

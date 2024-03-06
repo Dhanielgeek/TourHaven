@@ -3,7 +3,7 @@ import './HotelDescription.css';
 import axios from 'axios';
 import { ThreeDots } from 'react-loader-spinner';
 import { FaLocationDot } from "react-icons/fa6";
-import { IoFastFoodOutline, IoBeerOutline } from "react-icons/io5";
+import { IoFastFoodOutline, IoBeerOutline ,IoWifiOutline } from "react-icons/io5";
 import { MdHeatPump } from "react-icons/md";
 import { PiTelevisionSimple } from "react-icons/pi";
 import { FaSwimmer, FaCar } from "react-icons/fa";
@@ -13,6 +13,7 @@ import { useNavigate } from 'react-router-dom';
 import { useSelector } from 'react-redux';
 import { Modal, Button } from 'antd';
 import Bookings from '../Bookings/Bookings';
+import ScrollToTop from '../ScrollToTop';
 
 const HotelDescription = () => {
   const [HotelDes, setHotelDes] = useState({});
@@ -94,7 +95,9 @@ const HotelDescription = () => {
   }
 
   return (
-    <div className='HotelDesBody'>
+    <div>
+      <ScrollToTop/>
+ <div className='HotelDesBody'>
       {Isloading ? (
         <div className="LoaderContainer">
           <ThreeDots
@@ -176,6 +179,7 @@ const HotelDescription = () => {
                     {HotelDes.features.includes('DSTV') && <PiTelevisionSimple style={{ fontSize: "1.6rem" }} />}
                     {HotelDes.features.includes('swimming pool') && <FaSwimmer style={{ fontSize: "1.6rem" }} />}
                     {HotelDes.features.includes('car park') && <FaCar style={{ fontSize: "1.6rem" }} />}
+                    {HotelDes.features.includes('wifi') && <IoWifiOutline  style={{ fontSize: "1.6rem" }} />}
                   </div>
                   <div className="FeatureNames">
                     {HotelDes.features.map((feature, index) => (
@@ -233,6 +237,8 @@ const HotelDescription = () => {
         </>
       )}
     </div>
+    </div>
+   
   );
 
 };
