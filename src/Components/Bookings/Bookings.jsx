@@ -4,10 +4,12 @@ import { format } from 'date-fns';
 import Swal from 'sweetalert2';
 import { useSelector } from 'react-redux';
 import axios from 'axios';
+import {ThreeDots} from 'react-loader-spinner'
 
 const Bookings = ({ bookingData, setBookingData }) => {
   const [success, setSuccess] = useState(false);
   const [idBooking, setidBooking] = useState(null)
+  const [isLoading, setisLoading] = useState(false)
   const { guestName, NoOfGuest, email, checkIn, checkOut, checkInTime, checkOutTime } = bookingData
   const userToken = useSelector((state) => state.mySlice.userToken);
   const initialBookingData = {
@@ -73,8 +75,10 @@ const Bookings = ({ bookingData, setBookingData }) => {
   const handleConfirmBooking = async () => {
     const BookingUrl = `https://tour-haven-application.vercel.app/api/v1/users/bookings/${bookingData.roomId}`;
     const Bookdata = bookingData;
+    
     try {
-      const response = await axios.post(BookingUrl, Bookdata, { headers });
+     setisLoading(true) 
+     const response = await axios.post(BookingUrl, Bookdata, { headers });
       console.log(response.data);
       const { AmountToPay, Name, bookingId } = response.data.data;
       setidBooking(bookingId)
@@ -94,6 +98,9 @@ const Bookings = ({ bookingData, setBookingData }) => {
         text: errorMessage,
       });
       console.log(errorMessage);
+    }
+    finally{
+      setisLoading(false)
     }
   };
 
@@ -220,7 +227,24 @@ const Bookings = ({ bookingData, setBookingData }) => {
             </div>
           </div>
           <div className="BookingBtnToPayment">
-            <button onClick={handleConfirmBooking}>Confirm</button>
+          <button onClick={handleConfirmBooking}>
+          {isLoading ? (
+            <div className="Loadinghol">
+               <ThreeDots
+            visible={true}
+            height="80"
+            width="80"
+            color="#FFFF"
+            radius="9"
+            ariaLabel="three-dots-loading"
+            wrapperStyle={{}}
+            wrapperClass=""
+          />
+            </div>
+          ) : (
+            <span>Confirm</span>
+          )}
+        </button>
           </div>
         </div>
       </div>

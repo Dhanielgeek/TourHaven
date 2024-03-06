@@ -120,7 +120,9 @@ const HandleLogs = async (e)=>{
           <div className="LoginRight">
             <div className="LoginHeader">
               <div className="LoginImg">
+                <Link to='/'>
                 <img src={LoginLogo} alt="" />
+               </Link>
               </div>
               <div className="LoginTitle">
                 <h2>Login</h2>
@@ -130,7 +132,7 @@ const HandleLogs = async (e)=>{
             <div className="LoginForm">
               <div className="LoginEmail">
                 <label>Email</label>
-                <input type="email" onChange={HandleEmail}/>
+                <input type="email" onChange={HandleEmail} placeholder='johndoe@gmail.com'/>
                 <p className="error">{ErrorMessage.email}</p>
               </div>
               <div className="LoginPassword">
@@ -148,9 +150,9 @@ const HandleLogs = async (e)=>{
               </div>
               <div className="LoginForgetPassword">
                 <div className="LoginRemeber">
-                <input type="checkbox" />
+                {/* <input type="checkbox" /> */}
                 &nbsp;
-                  <span>Remember Me</span>
+                  {/* <span>Remember Me</span> */}
                 </div>
                   <Link className='ForgetPass' to='/forgetpass' >Forgot Password?</Link>
               </div>

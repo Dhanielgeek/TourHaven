@@ -14,6 +14,7 @@ import HotelDescription from './Components/HotelDescription/HotelDescription';
 import Verify from './Auth/Verify';
 import Bookings from './Components/Bookings/Bookings';
 import HotelAdmin from './Components/HotelAdmin/HotelAdmin';
+import Adminsign from './Components/HotelAdmin/Adminsign';
 
 const router = createBrowserRouter([
   {
@@ -35,6 +36,14 @@ const router = createBrowserRouter([
   {
     path: '/verify',
     element: <Verify />
+  },
+  {
+    path: '/admin',
+    element: <HotelAdmin/>,
+  },
+  {
+    path: '/adminsign',
+    element: <Adminsign/>
   },
   {
     path: '/',
@@ -64,10 +73,7 @@ const router = createBrowserRouter([
         path: 'bookings',
         element: <Bookings />
       },
-      {
-        path: 'admin',
-        element: <HotelAdmin/>
-      }
+     
     ]
   }
 ]);

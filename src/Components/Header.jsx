@@ -175,6 +175,10 @@ const Header = () => {
           {' '}
           Team
         </NavLink>
+        {/* <NavLink to="/adminsign" className={({ isActive }) => (isActive ? 'Active' : 'Inactive')}>
+          {' '}
+          Become a Partner
+        </NavLink> */}
       </div>
       <div className="HeaderProfile">
         <div className="ProfileLogo" onClick={handleOpen}>
@@ -304,6 +308,9 @@ const Header = () => {
               <NavLink to="/team" className={({ isActive }) => (isActive ? 'Active' : 'Inactive')} onClick={handleClose}>
                 Team
               </NavLink>
+              {/* <NavLink to="/admin" className={({ isActive }) => (isActive ? 'Active' : 'Inactive')}  onClick={handleClose}>
+                Become a Partner
+        </NavLink> */}
             </motion.div>
           )}
         </AnimatePresence>

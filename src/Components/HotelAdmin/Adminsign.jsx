@@ -1,32 +1,28 @@
 import React, { useState } from 'react';
-import './Auth.css';
-import Logo from '../assets/TourHavenLo.png';
-import { Link,useNavigate } from 'react-router-dom';
+import '../../Auth/Auth.css';
+import Logo from '../../assets/TourHavenLo.png';
+import { Link, useNavigate } from 'react-router-dom';
 import { AiOutlineEye, AiOutlineEyeInvisible } from "react-icons/ai";
-import SideImg from '../assets/signnnn4.jpeg';
-import SideImg2 from '../assets/signnnn3.jpeg';
 import axios from 'axios';
-import Loader from '../Components/Loader/Loading';
-import Swal from 'sweetalert2'
+import Loader from '../Loader/Loading';
+import Swal from 'sweetalert2';
 
-
-
-const Signup = () => {
+const Adminsign = () => {
   const [Showpassword, setShowpassword] = useState(false);
   const [ShowConfirmPassword, setShowConfirmPassword] = useState(false);
-  const [ImageChange, setImageChange] = useState([SideImg, SideImg2]);
-  const [Num, setNum] = useState(0);
   const [IsLoading, setIsLoading] = useState(false);
-  const [firstName, setFirstName] = useState('');
-  const [lastName, setLastName] = useState('');
+  const [hotelName, setHotelName] = useState('');
+  const [city, setCity] = useState('');
   const [email, setEmail] = useState('');
+  const [address, setAddress] = useState('');
   const [password, setPassword] = useState('');
   const [confirmPassword, setConfirmPassword] = useState('');
   const [phoneNumber, setPhoneNumber] = useState('');
   const [errorMessages, setErrorMessages] = useState({
-    firstName: '',
-    lastName: '',
+    hotelName: '',
+    city: '',
     email: '',
+    address: '',
     password: '',
     confirmPassword: '',
     phoneNumber: ''
@@ -34,19 +30,24 @@ const Signup = () => {
 
   const Navigate = useNavigate();
 
-  const HandleFirstName = (e) => {
-    setFirstName(e.target.value);
-    setErrorMessages({ ...errorMessages, firstName: '' })
+  const HandleHotelName = (e) => {
+    setHotelName(e.target.value);
+    setErrorMessages({ ...errorMessages, hotelName: '' })
   }
 
-  const HandleLastName = (e) => {
-    setLastName(e.target.value);
-    setErrorMessages({ ...errorMessages, lastName: '' })
+  const HandleCity = (e) => {
+    setCity(e.target.value);
+    setErrorMessages({ ...errorMessages, city: '' })
   }
 
   const HandleEmail = (e) => {
     setEmail(e.target.value);
     setErrorMessages({ ...errorMessages, email: '' })
+  }
+
+  const HandleAddress = (e) => {
+    setAddress(e.target.value);
+    setErrorMessages({ ...errorMessages, address: '' })
   }
 
   const HandlePassword = (e) => {
@@ -65,11 +66,12 @@ const Signup = () => {
   }
 
   const HandleSignUp = async () => {
-    if (!firstName || !lastName || !email || !password || !confirmPassword || !phoneNumber) {
+    if (!hotelName || !city || !email || !address || !password || !confirmPassword || !phoneNumber) {
       setErrorMessages({
-        firstName: !firstName ? 'First Name is required' : '',
-        lastName: !lastName ? 'Last Name is required' : '',
+        hotelName: !hotelName ? 'Hotel Name is required' : '',
+        city: !city ? 'City is required' : '',
         email: !email ? 'Email is required' : '',
+        address: !address ? 'Address is required' : '',
         password: !password ? 'Password is required' : '',
         confirmPassword: !confirmPassword ? 'Confirm Password is required' : '',
         phoneNumber: !phoneNumber ? 'Phone Number is required' : ''
@@ -82,10 +84,9 @@ const Signup = () => {
       return;
     }
 
-
     // Perform axios post request here
-    const Url = 'https://tourhaven.onrender.com/api/v1/users/signup';
-    const dataNeeded = { firstName, lastName, email, password, confirmPassword, phoneNumber };
+    const Url = 'https://tourhaven.onrender.com/api/v1/users/hotelsignup';
+    const dataNeeded = { hotelName, city, email, password, confirmPassword, phoneNumber, address };
 
     try {
       setIsLoading(true);
@@ -96,7 +97,6 @@ const Signup = () => {
         icon: 'success',
         showCancelButton: false,
         confirmButtonColor: '#00a6fb',
-        // confirmButtonText: 'Go to Login',
         allowOutsideClick: false,
       })
       console.log(res.data);
@@ -107,16 +107,11 @@ const Signup = () => {
         icon: "error",
         title: "Oops...",
         text: errorMessage,
-        // footer: '<a href="#">Why do I have this issue?</a>'
       });
       console.log(errorMessage);
     } finally {
       setIsLoading(false);
     }
-  }
-
-  const HandleNext = () => {
-    setNum(Num + 1);
   }
 
   const handleShowPassword = () => {
@@ -127,52 +122,47 @@ const Signup = () => {
     setShowConfirmPassword(!ShowConfirmPassword);
   }
 
-
   return (
     <div className="SignupBody">
       {IsLoading ? <Loader /> : (
-        <div className="SignupContainer">
-          <div className="SignSideImg">
-            <img src={ImageChange[Num % ImageChange.length]} alt="" /> 
-            <div className="HoldSpan">
-              <span onClick={HandleNext}></span>
-              <span onClick={HandleNext}></span>
-              <span onClick={HandleNext}></span>
-            </div>
-          </div>
-          <div className="SignHoldAll">
+        <div className="AdminSignupContainer">
+          <div className="AdminSignHoldAll">
             <div className="SignupHeader">
               <div className="SignupImg">
-                <Link to='/' className='linkimg'>
-               <img src={Logo} alt="" />
-             </Link>
+                <img src={Logo} alt="" />
               </div>
               <div className="SignupTitle">
                 <h4>Sign Up</h4>
-                <span>Let's get you set up so you can access your account</span>
               </div>
             </div>
             <div className="SignupForm">
-              <div className="SignupFirstandLastName">
-                <div className="SignupFirst">
-                  <label>First Name</label>
-                  <input type="text" onChange={HandleFirstName} placeholder='John' />
-                  <p className="error">{errorMessages.firstName}</p>
+              <div className="AdminSignupFirstandcity">
+                <div className="AdminSignup">
+                  <label>Hotel Name</label>
+                  <input type="text" onChange={HandleHotelName} />
+                  <p className="error">{errorMessages.hotelName}</p>
                 </div>
-                <div className="SignupLast">
-                  <label>Last Name</label>
-                  <input type="text" onChange={HandleLastName} placeholder='Doe' />
-                  <p className="error">{errorMessages.lastName}</p>
+                <div className="AdminCity">
+                  <label>City</label>
+                  <input type="text" onChange={HandleCity} />
+                  <p className="error">{errorMessages.city}</p>
                 </div>
               </div>
-              <div className="SignupEmail">
-                <label>Email</label>
-                <input type="email" onChange={HandleEmail} placeholder='johndoe@gmail.com' />
-                <p className="error">{errorMessages.email}</p>
+              <div className="AdminSignupEmailandAddress">
+                <div className="AdminEmail">
+                  <label>Email</label>
+                  <input type="email" onChange={HandleEmail} />
+                  <p className="error">{errorMessages.email}</p>
+                </div>
+                <div className="AdminAddress">
+                  <label>Address</label>
+                  <input type="text" onChange={HandleAddress} />
+                  <p className="error">{errorMessages.address}</p>
+                </div>
               </div>
               <div className="SignupPhoneNumber">
                 <label>Phone Number</label>
-                <input type="text" onChange={HandlePhoneNumber} placeholder='+234' />
+                <input type="text" onChange={HandlePhoneNumber} />
                 <p className="error">{errorMessages.phoneNumber}</p>
               </div>
               <div className="SignupPassword">
@@ -199,11 +189,6 @@ const Signup = () => {
                 </div>
                 <p className="error">{errorMessages.confirmPassword}</p>
               </div>
-              {/* <div className="SignupAgreeTerms">
-                <input type="checkbox" />
-                &nbsp;
-                <label>I agree to terms of use</label>
-              </div> */}
               <div className="SignupBtn">
                 <button onClick={HandleSignUp}>
                   Sign Up
@@ -220,4 +205,4 @@ const Signup = () => {
   )
 }
 
-export default Signup
+export default Adminsign

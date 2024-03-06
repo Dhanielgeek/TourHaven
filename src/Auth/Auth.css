@@ -64,15 +64,23 @@ width: 50%;
     align-items: center;
     flex-direction: column;
 }
-.SignupImg{
-    width: 60%;
-    height: 60%;
-    /* border: 2px solid black; */
+.linkimg{
+    width: 100%;
+    height: 100%;
+   /* background: #000; */
     display: flex;
     justify-content: center;
     align-items: center;
 }
-.SignupImg img{
+.SignupImg{
+    width: 60%;
+    height: 60%;
+   /* background: #000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.linkimg img{
     width: 100%;
     height: 100%;
     object-fit: contain;
@@ -118,10 +126,15 @@ width: 50%;
 .SignupConfirmPassword,
 .SignupEmail,
 .SignupPassword,
-.SignupPhoneNumber label{
+.SignupPhoneNumber,
+.AdminSignup,
+.AdminCity,
+.AdminEmail,
+.AdminAddress label{
     color: #05446E;
     font-weight: 500;
     font-size: 15px;
+    font-family: 'Lora',serif;
 }
 .SignupFirst label{
     display: block;
@@ -144,6 +157,8 @@ width: 50%;
     font-weight: 500;
     color: #494848;
     background: transparent;
+    padding-inline: 10px;
+    font-family: 'Lora',serif;
 }
 
 
@@ -158,6 +173,8 @@ width: 50%;
     font-weight: 500;
     color: #494848;
     background: transparent;
+    padding-inline: 10px;
+    font-family: 'Lora',serif;
 }
 .SignupEmail{
     width: 90%;
@@ -177,6 +194,8 @@ width: 50%;
     font-weight: 500;
     color: #494848;
     background: transparent;
+    padding-inline: 10px;
+    font-family: 'Lora',serif;
 }
 .SignupPhoneNumber{
     width: 90%;
@@ -196,6 +215,8 @@ width: 50%;
     font-weight: 500;
     color: #494848;
     background: transparent;
+    padding-inline: 10px;
+    font-family: 'Lora',serif;
 }
 .SignupPassword{
     width: 90%;
@@ -295,6 +316,9 @@ width: 50%;
     justify-content: center;
     align-items: center;
     color: #05446E;
+}
+.SignupAlready span{
+    font-family: 'Lora',serif;
 }
 
 .SignupAgreeTerms{
@@ -439,6 +463,8 @@ width: 50%;
     font-weight: 500;
     color: #494848;
     background: transparent;
+    padding-inline: 10px;
+    font-family: 'Lora',serif;
 }
 .LoginPassword{
     width: 90%;
@@ -859,6 +885,76 @@ width: 50%;
 }
 
 
+.AdminSignupContainer{
+    width: 40%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+.AdminSignHoldAll{
+    width: 90%;
+}
+.AdminSignupFirstandcity{
+    width: 90%;
+    height: 17%;
+    display: flex;
+    align-items: center;
+}
+.AdminSignup input{
+    width: 90%;
+    height: 2rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #d9d9d9;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #494848;
+    background: transparent;
+}
+.AdminCity input{
+    width: 90%;
+    height: 2rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #d9d9d9;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #494848;
+    background: transparent;
+}
+.AdminSignupEmailandAddress{
+    width: 90%;
+    height: 17%;
+    display: flex;
+    align-items: center;
+}
+.AdminEmail input{
+    width: 90%;
+    height: 2rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #d9d9d9;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #494848;
+    background: transparent;
+}
+.AdminAddress input{
+    width: 90%;
+    height: 2rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #d9d9d9;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #494848;
+    background: transparent;
+}
 
 
 

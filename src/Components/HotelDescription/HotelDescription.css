@@ -219,6 +219,8 @@
     display: flex;
     justify-content: space-around;
     align-items: center;
+    /* background: #000; */
+    gap: 5%;
 }
 .FeatureNames{
     width: 87%;
@@ -229,7 +231,7 @@
 .feat span{
     font-size: 1.2rem;
     font-family: 'Lora',serif;
-    font-weight: 700;
+    font-weight: 500;
 }
 .HotelAvailableRooms{
     width: 100%;

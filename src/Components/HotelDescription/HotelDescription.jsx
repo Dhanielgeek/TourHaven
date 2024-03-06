@@ -173,13 +173,12 @@ const HotelDescription = () => {
               {HotelDes.features && HotelDes.features.length > 0 ? (
                 <div className='feat'>
                   <div className="FeatureIcons">
-                    {HotelDes.features.includes('Restaurant') && <IoFastFoodOutline style={{ fontSize: "1.6rem" }} />}
-                    {HotelDes.features.includes('Bar/lounge') && <IoBeerOutline style={{ fontSize: "1.6rem" }} />}
-                    {HotelDes.features.includes('Air condition') && <MdHeatPump style={{ fontSize: "1.6rem" }} />}
-                    {HotelDes.features.includes('DSTV') && <PiTelevisionSimple style={{ fontSize: "1.6rem" }} />}
-                    {HotelDes.features.includes('swimming pool') && <FaSwimmer style={{ fontSize: "1.6rem" }} />}
-                    {HotelDes.features.includes('car park') && <FaCar style={{ fontSize: "1.6rem" }} />}
-                    {HotelDes.features.includes('wifi') && <IoWifiOutline  style={{ fontSize: "1.6rem" }} />}
+                    {HotelDes.features.includes('Restaurant') && <IoFastFoodOutline style={{ fontSize: "1.6rem",color:'orangered' }} />}
+                    {HotelDes.features.includes('Bar/lounge') && <IoBeerOutline style={{ fontSize: "1.6rem",color:'lawngreen' }} />}
+                    {HotelDes.features.includes('Air condition') && <MdHeatPump style={{ fontSize: "1.6rem",color:'orange' }} />}
+                    {HotelDes.features.includes('swimming pool') && <FaSwimmer style={{ fontSize: "1.6rem",color:'lightblue' }} />}
+                    {HotelDes.features.includes('car park') && <FaCar style={{ fontSize: "1.6rem",color:"red" }} />}
+                    {HotelDes.features.includes('wifi') && <IoWifiOutline  style={{ fontSize: "1.6rem",color:"lightgreen" }} />}
                   </div>
                   <div className="FeatureNames">
                     {HotelDes.features.map((feature, index) => (
