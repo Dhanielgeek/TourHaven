@@ -120,7 +120,7 @@ const HandleLogs = async (e)=>{
           <div className="LoginRight">
             <div className="LoginHeader">
               <div className="LoginImg">
-                <Link to='/'>
+                <Link to='/' className='linkimg' >
                 <img src={LoginLogo} alt="" />
                </Link>
               </div>
