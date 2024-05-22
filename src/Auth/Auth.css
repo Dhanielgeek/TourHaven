@@ -1,0 +1,1271 @@
+.SignupBody{
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.SignupContainer{
+    width: 60%;
+    height: 95%;
+    background: #FDFDF7;
+    border-radius: 10px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    border-radius: 0px 10px 10px 0px;
+    display: flex;
+}
+.SignSideImg{
+    width: 50%;
+    height: 100%;
+    /* background: pink; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+.HoldSpan{
+    width: 20%;
+    height: 8%;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 84%;
+}
+.HoldSpan span{
+    width: 10px;
+    height: 10px;
+    background: #FDFDF7;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.HoldSpan span:hover{
+    background: #EC8B05;
+    transition: 300ms ease all;
+}
+.SignSideImg img{
+    width: 80%;
+    height: 90%;
+    object-fit: contain;
+}
+.SignHoldAll{
+width: 50%;
+}
+.SignupHeader{
+    width: 100%;
+    height: 20%;
+    /* background: pink; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.linkimg{
+    width: 100%;
+    height: 100%;
+   /* background: #000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.SignupImg{
+    width: 60%;
+    height: 60%;
+   /* background: #000; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.linkimg img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.SignupTitle{
+    width:90%;
+    height: 55%;
+    /* border:  2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10%;
+}
+.SignupTitle h4{
+    color: #05446E; 
+    font-weight: 600;
+    font-size: 1.5rem;
+}
+.SignupTitle span{
+    color: #05446E; 
+    font-weight: 500;
+    font-size: 12px;
+}
+.SignupForm{
+    width: 100%;
+    height: 80%;
+    /* background: pink; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.SignupFirstandLastName{
+    width: 90%;
+    height: 17%;
+    /* border: 2px solid black; */
+    display: flex;
+    align-items: center;
+}
+.SignupLast,
+.SignupFirst,
+.SignupConfirmPassword,
+.SignupEmail,
+.SignupPassword,
+.SignupPhoneNumber,
+.AdminSignup,
+.AdminCity,
+.AdminEmail,
+.AdminAddress label{
+    color: #05446E;
+    font-weight: 500;
+    font-size: 15px;
+    font-family: 'Lora',serif;
+}
+.SignupFirst label{
+    display: block;
+}
+.SignupLast label{
+    display: block;
+}
+.SignupAgreeTerms label{
+    color: #05446E;
+    font-weight: 400;
+}
+.SignupFirst input{
+    width: 90%;
+    height: 2rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #d9d9d9;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #494848;
+    background: transparent;
+    padding-inline: 10px;
+    font-family: 'Lora',serif;
+}
+
+
+.SignupLast input{
+    width: 90%;
+    height: 2rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #d9d9d9;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #494848;
+    background: transparent;
+    padding-inline: 10px;
+    font-family: 'Lora',serif;
+}
+.SignupEmail{
+    width: 90%;
+    height: 15%;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+}
+.SignupEmail input{
+    width: 100%;
+    height: 55%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #d9d9d9;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #494848;
+    background: transparent;
+    padding-inline: 10px;
+    font-family: 'Lora',serif;
+}
+.SignupPhoneNumber{
+    width: 90%;
+    height: 15%;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+}
+.SignupPhoneNumber input{
+    width: 100%;
+    height: 55%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #d9d9d9;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #494848;
+    background: transparent;
+    padding-inline: 10px;
+    font-family: 'Lora',serif;
+}
+.SignupPassword{
+    width: 90%;
+    height: 15%;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+}
+.PasswordInput{
+    width: 100%;
+    height: 60%;
+    border: 2px solid #d9d9d9;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    border-radius: 8px;
+    padding-right: 15px;
+}
+.PasswordInput input{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #494848;
+}
+
+.SignupConfirmPassword{
+    width: 90%;
+    height: 15%;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+}
+.SignupConfirmeyes{
+    width: 100%;
+    height: 60%;
+    border: 2px solid #d9d9d9;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    border-radius: 7px;
+    padding-right: 15px;
+}
+.SignupConfirmeyes input{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    background: transparent;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #494848;
+}
+
+
+
+.SignupBtn{
+    width: 100%;
+    height: 9%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.SignupBtn button{
+    width: 90%;
+    height: 90%;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: white;
+    background: #05446E;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(1);
+    transition: all 350ms ease-in-out;
+}
+.SignupBtn button:hover{
+    background-color: #fb8500;
+}
+.SignupAlready{
+    width: 100%;
+    height: 10%;
+    /* border: 2px solid beige; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #05446E;
+}
+.SignupAlready span{
+    font-family: 'Lora',serif;
+}
+
+.SignupAgreeTerms{
+    width: 90%;
+    height: 10%;
+    /* border: 2px solid beige; */
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: #05446E;
+}
+
+
+.LoginBody{
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.LoginContainer{
+    width: 60%;
+    height: 80%;
+    background: #FDFDF7;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    display: flex;
+
+}
+.LoginRight{
+    width: 40%;
+    height: 100%;
+    background: #FDFDF7;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+.LoginLeft{
+    width: 50%;
+    height: 100%;
+    /* background: pink; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+.LoginLeft img{
+    width: 80%;
+    height: 90%;
+    object-fit: contain;
+}
+.LoginHoldSpan{
+    width: 20%;
+    height: 8%;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: absolute;
+    top: 84%;
+}
+.LoginHoldSpan span{
+    width: 10px;
+    height: 10px;
+    background: #FDFDF7;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.LoginHoldSpan span:hover{
+    background: #EC8B05;
+    transition: 300ms ease all;
+}
+.LoginHeader{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.LoginImg{
+    width: 50%;
+    height: 60%;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.LoginImg img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.LoginTitle{
+    width: 90%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 10%;
+}
+.LoginTitle h2{
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: #05446E;
+    font-family: 'Lora', serif;
+}
+.LoginTitle span{
+    font-size: 0.92rem;
+    font-weight: 400;
+    color: #05446E;
+    font-family: 'Lora', serif;
+}
+.LoginForm{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.LoginEmail{
+    width: 90%;
+    height: 18%;
+    /* background: #000; */
+    display: flex;
+    flex-direction: column;
+}
+.LoginEmail input{
+    width: 100%;
+    height: 80%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #d9d9d9;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #494848;
+    background: transparent;
+    padding-inline: 10px;
+    font-family: 'Lora',serif;
+}
+.LoginPassword{
+    width: 90%;
+    height: 18%;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+}
+.LoginPassword,
+.LoginEmail label{
+    font-size: 1rem;
+    font-weight: 600;
+    color: #05446E;
+    font-family: 'Lora', serif;
+}
+.ShowPasswrd{
+    width: 100%;
+    height: 47px;
+    border: 2px solid #d9d9d9;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    border-radius: 5px;
+    padding-right: 15px;
+    /* background: #000; */
+}
+.ShowPasswrd input{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+    font-size: 0.9rem;
+    color: #494848;
+    font-weight: 500;
+    background: transparent;
+}
+.LoginForgetPassword{
+    width: 90%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: 'Lora', serif;
+}
+.LoginRemeber span{
+    font-size: 1rem;
+    font-weight: 500;
+    color: #05446E;
+}
+
+.LoginBtn{
+    width: 90%;
+    height: 15%;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.LoginBtn button{
+    width: 100%;
+    height: 70%;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #ffff;
+    background: #05446E;
+    transition: all 0.3s ease-in-out;
+    transform: scale(1);
+    font-family: 'Lora', serif;
+}
+.LoginBtn button:hover{
+    background: #fb8500;
+}
+.LoginAlready{
+    width: 90%;
+    height: 15%;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'Lora', serif;
+}
+.LoginAlready span{
+    font-size: 0.9rem;
+}
+.ForgetPass{
+    font-size: 0.9rem;
+    color: #fb8500;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.ForgetBody{
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.ForgetHolder{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.ForgetHeader{
+    width: 40%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ForgetHeader h1{
+    color: #05446E;
+    font-size: 2rem;
+}
+.ForgetContainer{
+    width: 40%;
+    height: 60%;
+    background: #FDFDF7;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.ForgetTitle{
+    width: 100%;
+    height: 30%;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+.ForgetTitle h2{
+    color: #fb8500;
+    font-size: 1.5rem;
+}
+.ForgetTitle,
+.ResetTitle span{
+    font-size: 1.2em;
+    color: #05446E;
+}
+.ForgetForm{
+    width: 95%;
+    height: 60%;
+    /* background: #000; */
+}
+.ForgetEmail{
+    width: 100%;
+    height: 40%;
+    /* background: red; */
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    gap: 2%;
+}
+.ForgetEmail input{
+    width: 100%;
+    height: 50%;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #05446E;
+    font-size: 1rem;
+    font-weight: 500;
+    color: black;
+    background: transparent;
+    padding-inline: 10px;
+}
+.ForgetBtn{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ForgetBtn button{
+    width: 100%;
+    height: 50%;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #ffff;
+    background: #05446E;
+}
+.ResetpasswordBody{
+    width: 100%;
+    height: 100vh;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.ResetHolder{
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.ResetHeader{
+    width: 40%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+.ResetHeader h1{
+    color: #05446E;
+    font-size: 2rem;
+}
+.ResetContainer{
+    width: 35%;
+    height: 60%;
+    background: #FDFDF7;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px, rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+}
+.ResetTitle{
+    width: 100%;
+    height: 30%;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+.ResetTitle h2{
+    color: #fb8500;
+    font-size: 1.5rem;
+}
+.ResetForm{
+    width: 100%;
+    height: 70%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.ResetNewPass{
+    width: 90%;
+    height: 30%;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+}
+.ShowNewPasswrd{
+    width: 100%;
+    height: 35px;
+    border: 2px solid #05446E;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    border-radius: 5px;
+    padding-right: 15px;
+}
+.ShowNewPasswrd input{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+}
+.ResetConfirmPass{
+    width: 90%;
+    height: 30%;
+    /* border: 2px solid black; */
+    display: flex;
+    flex-direction: column;
+}
+.ConfirmShPas{
+    width: 100%;
+    height: 35px;
+    border: 2px solid #05446E;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    border-radius: 5px;
+    padding-right: 15px;
+}
+.ConfirmShPas input{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+}
+
+.ResetBtnPassword{
+    width: 90%;
+    height: 40%;
+    /* border: 2px solid black; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ResetBtnPassword button{
+    width: 100%;
+    height: 40%;
+    border-radius: 8px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    color: #ffff;
+    background: #05446E;
+}
+
+
+
+.ShowNewPasswrd{
+    width: 100%;
+    height: 30px;
+    border: 2px solid #05446E;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    border-radius: 5px;
+    padding-right: 15px;
+    /* background: #000; */
+}
+.ShowNewPasswrd input{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    padding-left: 10px;
+}
+.error{
+    font-size: 0.6rem;
+    color: red;
+    font-family: 'Explora',sans-serif;
+}
+.VerifyBody{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.VerifyContainer{
+    width: 30%;
+    height: 70%;
+    background: #FDFDF7;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.VerifyIcon{
+    width: 90%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.VerifyTitle{
+    width: 90%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.VerifyTitle h2{
+    font-size: 1.5rem;
+    font-family: 'Lora',serif;
+    font-weight: 500;
+    color: #05446E;
+}
+.VerifyTitle span{
+    font-family: 'Lora',serif;
+    font-size: 0.9rem;
+    color: #615b5b;
+}
+.VerifyBtn{
+    width: 90%;
+    height: 13%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.VerifyBtn button{
+    width: 90%;
+    height: 90%;
+    background: #05446E;
+    color: #FDFDF7;
+    border: none;
+    border-radius: 9px;
+    font-size: 1.2rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.AdminSignupContainer{
+    width: 40%;
+    height: 95%;
+    display: flex;
+    justify-content: center;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+.AdminSignHoldAll{
+    width: 90%;
+}
+.AdminSignupFirstandcity{
+    width: 90%;
+    height: 17%;
+    display: flex;
+    align-items: center;
+}
+.AdminSignup input{
+    width: 90%;
+    height: 2rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #d9d9d9;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #494848;
+    background: transparent;
+}
+.AdminCity input{
+    width: 90%;
+    height: 2rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #d9d9d9;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #494848;
+    background: transparent;
+}
+.AdminSignupEmailandAddress{
+    width: 90%;
+    height: 17%;
+    display: flex;
+    align-items: center;
+}
+.AdminEmail input{
+    width: 90%;
+    height: 2rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #d9d9d9;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #494848;
+    background: transparent;
+}
+.AdminAddress input{
+    width: 90%;
+    height: 2rem;
+    border: none;
+    outline: none;
+    border-radius: 5px;
+    border: 2px solid #d9d9d9;
+    font-size: 1rem;
+    font-weight: 500;
+    color: #494848;
+    background: transparent;
+}
+
+
+
+
+@media screen and (max-width: 800px) {
+    .SignupContainer{
+        width: 90%;
+    }
+    .SignupHeader{
+        flex-direction: column;
+    }
+    .LoginContainer{
+        width: 90%;
+    }
+  
+    .LoginRight{
+        width: 50%;
+    }
+    .ForgetPass{
+        font-size: 15px;
+    }
+   
+    .ForgetContainer{
+        width: 60%;
+    }
+    .ForgetHeader{
+        width: 100%;
+    }
+    .ForgetTitle span{
+        font-size: 1rem;
+        text-align: center;
+    }
+    .ResetContainer{
+        width: 50%;
+    }
+    .ResetHeader{
+        width: 50%;
+    }
+    .LoginPassword,
+    .LoginEmail label{
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #05446E;
+        font-family: 'Lora', serif;
+    }
+    .VerifyContainer{
+        width: 60%;
+    }
+    .VerifyTitle{
+        width: 100%;
+        text-align: center;
+        height: 20%;
+        gap: 8%;
+    }
+    .VerifyTitle span{
+        font-size: 0.8rem;
+    }
+    .VerifyTitle h2{
+        font-size: 1.1rem;
+    }
+
+}
+
+@media screen and (max-width: 600px) {
+    .SignupContainer{
+        width: 90%;
+    }
+    .SignupHeader{
+        flex-direction: column;
+    }
+    .LoginContainer{
+        width: 80%;
+    }
+    .LoginRight{
+        width: 100%;
+    }
+    .ForgetPass{
+        font-size: 15px;
+    }
+    .ForgetContainer{
+        width: 90%;
+    }
+    .ForgetHeader{
+        width: 100%;
+    }
+    .ForgetTitle span{
+        font-size: 1rem;
+        text-align: center;
+    }
+    .SignSideImg{
+        display: none;
+    }
+    .SignHoldAll{
+        width: 100%;
+    }
+    .LoginLeft{
+        display: none;
+    }
+    .ResetContainer{
+        width: 90%;
+    }
+    .ResetHeader{
+        width: 90%;
+    }
+    .LoginPassword,
+    .LoginEmail label{
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #05446E;
+        font-family: 'Lora', serif;
+    }
+    .LoginRemeber span{
+        font-size: 0.7rem;
+    }
+    .LoginTitle span{
+        font-size: 0.8rem;
+    }
+    .LoginTitle h2{
+        font-size: 1.2rem;
+    }
+    .VerifyContainer{
+        width: 90%;
+    }
+    .VerifyTitle{
+        width: 100%;
+        text-align: center;
+        height: 20%;
+        gap: 5%;
+    }
+    .VerifyTitle span{
+        font-size: 0.8rem;
+    }
+    .VerifyTitle h2{
+        font-size: 1.1rem;
+    }
+   
+}
+
+@media screen and (max-width: 400px) {
+    .SignupContainer{
+        width: 90%;
+    }
+    .SignupHeader{
+        flex-direction: column;
+        height: 20%;
+        /* background: #000; */
+    }
+    .SignupTitle h4{
+        font-size: 17px;
+    }
+    .SignupTitle{
+        width: 100%;
+        padding-inline: 17px;
+    }
+    .SignupTitle span{
+        font-size: 12px;
+    }
+    .LoginContainer{
+        width: 90%;
+    }
+    .LoginRight{
+        width: 100%;
+    }
+    .ForgetPass{
+        font-size: 15px;
+    }
+    .ForgetContainer{
+        width: 90%;
+    }
+    .ForgetHeader{
+        width: 100%;
+    }
+    .ForgetTitle span{
+        font-size: 1rem;
+        text-align: center;
+    }
+    .SignSideImg{
+        display: none;
+    }
+    .SignHoldAll{
+        width: 100%;
+    }
+    .LoginLeft{
+        display: none;
+    }
+    .ResetContainer{
+        width: 90%;
+    }
+    .ResetHeader{
+        width: 90%;
+    }
+    .LoginPassword,
+    .LoginEmail label{
+        font-size: 0.9rem;
+        font-weight: 500;
+        color: #05446E;
+        font-family: 'Lora', serif;
+    }
+    .LoginRemeber span{
+        font-size: 0.7rem;
+    }
+    .LoginTitle span{
+        font-size: 0.8rem;
+    }
+    .LoginTitle h2{
+        font-size: 1.2rem;
+    }
+    .VerifyContainer{
+        width: 90%;
+    }
+    .VerifyTitle{
+        width: 100%;
+        text-align: center;
+        height: 20%;
+    }
+    .VerifyTitle span{
+        font-size: 0.8rem;
+    }
+    .VerifyTitle h2{
+        font-size: 1.1rem;
+    }
+ 
+}
+
+
+
+@media screen and (max-width: 320px) {
+    .SignupContainer{
+        width: 90%;
+    }
+    .SignupHeader{
+        flex-direction: column;
+        height: 20%;
+        /* background: #000; */
+    }
+    .SignupTitle h4{
+        font-size: 17px;
+    }
+    .SignupTitle{
+        width: 100%;
+        padding-inline: 17px;
+    }
+    .SignupTitle span{
+        font-size: 0.6rem;
+    }
+    .LoginContainer{
+        width: 90%;
+    }
+    .LoginRight{
+        width: 100%;
+    }
+    .ForgetPass{
+        font-size: 15px;
+    }
+    .ForgetContainer{
+        width: 90%;
+    }
+    .ForgetHeader{
+        width: 100%;
+    }
+    .ForgetHeader h1{
+        font-size: 1.3rem;
+    }
+    .ForgetTitle span{
+        font-size: 0.9rem;
+        text-align: center;
+    }
+    .SignSideImg{
+        display: none;
+    }
+    .SignHoldAll{
+        width: 100%;
+    }
+    .LoginLeft{
+        display: none;
+    }
+    .ResetContainer{
+        width: 90%;
+    }
+    .ResetHeader{
+        width: 90%;
+    }
+    .LoginRemeber span{
+        font-size: 0.7rem;
+    }
+    .LoginTitle span{
+        font-size: 0.8rem;
+    }
+    .LoginTitle h2{
+        font-size: 1.2rem;
+    }
+    .LoginPassword,
+.LoginEmail label{
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #05446E;
+    font-family: 'Lora', serif;
+}
+.VerifyContainer{
+    width: 90%;
+}
+.VerifyTitle{
+    width: 100%;
+    text-align: center;
+    height: 20%;
+}
+.VerifyTitle span{
+    font-size: 0.8rem;
+}
+.VerifyTitle h2{
+    font-size: 1.1rem;
+}
+    
+}

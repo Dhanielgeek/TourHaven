@@ -1,0 +1,218 @@
+.BookingBody{
+    width: 100%;
+    height: 50rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.BookingContainer{
+    width: 90%;
+    height: 85%;
+    background: #fdfdf7;
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+}
+.BookingHeader{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.BookingHeader h3{
+    font-size: 1.4rem;
+    font-family: 'Lora',serif;
+    color: #05446E;
+}
+.BookingForm{
+    width: 100%;
+    height: 90%;
+    background: #fdfdf7;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+}
+.BookingName{
+    width: 100%;
+    height: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-inline: 10px;
+    gap: 4%;
+}
+.BookingName input{
+    width: 95%;
+    height: 45%;
+    border-radius: 3px;
+    outline: none;
+    padding: 6px;
+    font-family: 'Lora',serif;
+    border: none;
+    border: 1px solid #d9d9d9;
+}
+.BookingEmail{
+    width: 100%;
+    height: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-inline: 10px;
+    gap: 4%;
+}
+.BookingEmail input{
+    width: 95%;
+    height: 45%;
+    border-radius: 3px;
+    outline: none;
+    padding: 6px;
+    font-family: 'Lora',serif;
+    border: none;
+    border: 1px solid #d9d9d9;
+}
+.BookingNo{
+    width: 100%;
+    height: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-inline: 10px;
+    gap: 4%;
+}
+.BookingNo input{
+    width: 95%;
+    height: 45%;
+    border-radius: 3px;
+    outline: none;
+    padding: 6px;
+    font-family: 'Lora',serif;
+    border: none;
+    border: 1px solid #d9d9d9;
+}
+.BookingCheckinDate{
+    width: 100%;
+    height: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-inline: 10px;
+    gap: 4%;
+}
+.BookingCheckinDate input{
+    width: 95%;
+    height: 45%;
+    border-radius: 3px;
+    outline: none;
+    padding: 6px;
+    font-family: 'Lora',serif;
+    border: none;
+    border: 1px solid #d9d9d9;
+}
+.BookingCheckoutDate{
+    width: 100%;
+    height: 12%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-inline: 10px;
+    gap: 4%;
+}
+.BookingCheckoutDate input{
+    width: 95%;
+    height: 45%;
+    border-radius: 3px;
+    outline: none;
+    padding: 6px;
+    font-family: 'Lora',serif;
+    border: 1px solid #d9d9d9;
+}
+
+.BookingBtnToPayment{
+    width: 100%;
+    height: 10%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-inline: 10px;
+}
+.BookingBtnToPayment button{
+    width: 40%;
+    height: 50%;
+    border: none;
+    outline: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 350ms ease-in-out;
+    color: #fff;
+    background: #FFA500;
+    font-size: 1rem;
+    font-family: 'Lora',serif;
+}
+.BookingBtnToPayment button:hover{
+    background: #05446E;
+}
+.BookingCheckinDate,
+.BookingCheckoutDate,
+.BookingEmail,
+.BookingName,
+.BookingNo,
+.rightTime,
+.leftTime label{
+    font-size: 0.9rem;
+    font-family: 'Lora',serif;
+    color: #05446E;
+    font-weight: 600;
+}
+.red-asterisk {
+    color: red;
+  }
+  .BookingCheckinTime{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: space-between;
+  }
+  .rightTime{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-inline: 10px;
+    gap: 4%;
+  }
+  .rightTime input{
+    width: 95%;
+    height: 45%;
+    border-radius: 3px;
+    outline: none;
+    padding: 6px;
+    font-family: 'Lora',serif;
+    border: 1px solid #d9d9d9;
+  }
+  .leftTime{
+    width: 45%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding-inline: 10px;
+    gap: 4%;
+  }
+  .leftTime input{
+    width: 95%;
+    height: 45%;
+    border-radius: 3px;
+    outline: none;
+    padding: 6px;
+    font-family: 'Lora',serif;
+    border: 1px solid #d9d9d9;
+  }
+  

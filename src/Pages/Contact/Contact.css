@@ -1,0 +1,351 @@
+.ContactHero{
+    width: 100%;
+    height: 20rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    background: linear-gradient(#05446E,#FDFDF7);
+}
+.HeroLeft{
+    width: 50%;
+    height: 100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.HeroLeft img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.HeroRight{
+    width: 50%;
+    height: 100%;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.HeroRight{
+    font-size:2rem;
+    font-family:'Lora',serif;
+    font-weight: 700;
+    color: #FDFDF7;
+}
+.TalkPage{
+    width: 100%;
+    height:25rem;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.TalkLeft{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Suggestion{
+    width: 50%;
+    height: 20%;
+}
+.Suggestion h3{
+    font-size: 1.4rem;
+    font-family: 'Lora',serif;
+    color:#05446E;
+
+}
+.Suggestion p{
+    font-family: 'Lora',serif;
+    font-size: 0.9rem; 
+    color: #D9D9D9;
+}
+.IconHold{
+    width: 50%;
+    height: 50%;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+}
+.IconHolder{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3%;
+}
+.IconHolder,
+.PhoneHolder,
+.MailHolder, h5{
+    font-size: 0.9rem;
+    font-family: 'Lora',serif;
+    font-weight: 600;
+    color:#05446E;
+}
+.PhoneHolder{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3%;
+}
+.MailHolder{
+    width: 100%;
+    height: 30%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 3%;
+}
+.TalkRight{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.FormHo{
+    width: 70%;
+    height: 90%;
+}
+.NameHolder{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.NameHolder input{
+    width: 40%;
+    height: 70%;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid #828282;
+    padding-inline: 5px;
+    background: transparent;
+}
+.EmailHolder{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.EmailHolder input{
+    width: 90%;
+    height: 70%;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid #828282;
+    padding-inline: 5px;
+    background: transparent;
+}
+.PhoneNumberHolder{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.PhoneNumberHolder input{
+    width: 90%;
+    height: 70%;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid #828282;
+    padding-inline: 5px;
+    background: transparent;
+}
+.TextareaHolder{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.TextareaHolder textarea{
+    width: 90%;
+    height: 80%;
+    border-radius: 10px;
+    outline: none;
+    border: 2px solid #828282;
+    padding: 10px 5px;
+    background: transparent;
+}
+.ContactBtn{
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.ContactBtn button{
+    width: 90%;
+    height: 70%;
+    border: none;
+    background: #05446E;
+    color: #FDFDF7;
+    font-size: 0.9rem;
+    border-radius: 10px;
+    font-weight: 700;
+    cursor: pointer;
+}
+@media screen and (max-width: 800px) {
+    .HeroRight{
+       font-size: 1.1rem;
+       width: 70%;
+    }
+    .TalkPage{
+       flex-direction: column;
+    }
+    .TalkLeft{
+       width: 100%;
+       
+    }
+    .TalkRight{
+       width: 90%;
+    }
+    .Suggestion{
+       width: 90%;
+       height: 50%;
+    }
+    .Suggestion h3{
+       font-size: 1.4rem;
+    }
+    .Suggestion p{
+       font-size: 0.7rem;
+    }
+    .IconHold{
+       width: 90%;
+    }
+    .IconHolder,
+    .PhoneHolder,
+    .MailHolder , h5{
+       font-size: 0.7rem;
+    }
+    .FormHo{
+       width: 100%;
+       height: 17rem;
+    }
+   }
+
+@media screen and (max-width:600px) {
+    .HeroRight{
+       font-size: 1.1rem;
+       width: 70%;
+    }
+    .TalkPage{
+       flex-direction: column;
+    }
+    .TalkLeft{
+       width: 100%;
+       
+    }
+    .TalkRight{
+       width: 100%;
+    }
+    .Suggestion{
+       width: 90%;
+       height: 50%;
+    }
+    .Suggestion h3{
+       font-size: 1.4rem;
+    }
+    .Suggestion p{
+       font-size: 0.7rem;
+    }
+    .IconHold{
+       width: 90%;
+    }
+    .IconHolder,
+    .PhoneHolder,
+    .MailHolder , h5{
+       font-size: 0.7rem;
+    }
+    .FormHo{
+       width: 100%;
+       height: 15rem;
+    }
+   }
+
+
+@media screen and (max-width: 400px) {
+    .HeroRight{
+       font-size: 1.1rem;
+       width: 70%;
+    }
+    .TalkPage{
+       flex-direction: column;
+    }
+    .TalkLeft{
+       width: 100%;
+       
+    }
+    .TalkRight{
+       width: 100%;
+    }
+    .Suggestion{
+       width: 90%;
+       height: 50%;
+    }
+    .Suggestion h3{
+       font-size: 1.4rem;
+    }
+    .Suggestion p{
+       font-size: 0.7rem;
+    }
+    .IconHold{
+       width: 90%;
+    }
+    .IconHolder,
+    .PhoneHolder,
+    .MailHolder , h5{
+       font-size: 0.7rem;
+    }
+    .FormHo{
+       width: 100%;
+       height: 15rem;
+    }
+   }
+
+@media screen and (max-width: 320px) {
+ .HeroRight{
+    font-size: 1.1rem;
+    width: 70%;
+ }
+ .TalkPage{
+    flex-direction: column;
+ }
+ .TalkLeft{
+    width: 100%;
+    
+ }
+ .TalkRight{
+    width: 100%;
+ }
+ .Suggestion{
+    width: 90%;
+    height: 50%;
+ }
+ .Suggestion h3{
+    font-size: 1.4rem;
+ }
+ .Suggestion p{
+    font-size: 0.7rem;
+ }
+ .IconHold{
+    width: 90%;
+ }
+ .IconHolder,
+ .PhoneHolder,
+ .MailHolder , h5{
+    font-size: 0.7rem;
+ }
+ .FormHo{
+    width: 100%;
+    height: 15rem;
+ }
+}

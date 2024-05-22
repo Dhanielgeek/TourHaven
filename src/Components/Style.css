@@ -1,0 +1,789 @@
+.Header{
+    width: 100%;
+    height: 65px;
+    /* background: pink; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.HeaderLogo{
+    width: 17%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.HeaderLogo img{
+    width: 150%;
+    height: 150%;
+    object-fit: contain;
+}
+
+.HeaderLink{
+    width: 50%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.Active{
+    font-size: 1rem;
+    color: #fb8500;
+    cursor: pointer;
+    transition: all 350ms ease-in;
+    transform: scale(1);
+    text-decoration: none;
+    width: 15%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 5px;
+    font-family: 'Lora', serif;
+}
+.Active:hover{
+    transform: scale(1.1);
+    color: #fb8500;
+  }
+.Inactive{
+    font-size: 1.1rem;
+    font-family: 'Lora', serif;
+    color: #05446E;
+    cursor: pointer;
+    transition: all 350ms ease-in;
+    transform: scale(1);
+    text-decoration: none;
+}
+.Inactive:hover{
+    transform: scale(1.1);
+    color: #fb8500;
+  }
+.HeaderProfile{
+    width: 15%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    position: relative;
+}
+.ProfileLogo{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.HeaderMobile{
+    display: none;
+}
+.UserDropDown{
+    width: 90%;
+    height:13rem;
+    position: absolute;
+    top: 75%;
+    background: #fdfdf7;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+    border-radius: 8px;
+}
+.SignsHoldall{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.SignUpOfferText{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+}
+.SignUpOfferText span{
+    font-size: 15px;
+    font-family: 'Lora', serif;
+    color: #05446E;
+    text-align: center;
+}
+.LineSign{
+    width: 50%;
+    height: 1%;
+    border: 2px solid #05446E;
+}
+.LoginLink{
+    width: 60%;
+    height: 15%;
+    background: #05446E;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    font-family: 'Lora', serif;
+    font-weight: 700;
+}
+.NewMember{
+    width: 90%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    font-family: 'Lora', serif;
+}
+.NewMember span{
+    color: #05446E;
+    font-size:0.8rem;
+}
+.FooterBody{
+    width: 100%;
+    height: 40vh;
+    background: #05446E;
+    margin-top: 10%;
+}
+.FooterContainer{
+    width: 100%;
+    height: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+}
+.FooterLastLine{
+    width: 100%;
+    height: 20%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    border-top: 2px solid white;
+}
+.FooterLastLine p{
+    font-size: 18px;
+    font-family: 'Lora', serif;
+    color: white;
+}
+.FooterDetail{
+    width: 30%;
+    height: 90%;
+    display: flex;
+    align-items: center;
+}
+.FooterDetailHeader{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.FooterDetailImgHold{
+    width: 20%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #ffff;
+    border-radius: 9px;
+}
+.FooterDetailImgHold img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+}
+.FooterDetailHeader h3{
+    font-size: 20px;
+    font-family: 'Lora', serif;
+    color: white;
+    padding: 20px;
+}
+.FooterContext{
+    width: 80%;
+    height: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.FooterContext span{
+    text-align: center;
+    font-size: 18px;
+    font-family: 'Lora', serif;
+    color: white;
+}
+.FooterSocial{
+    width: 60%;
+    height: 20%;
+    background: pink;
+}
+.FooterLinks{
+    width: 30%;
+    height: 90%;
+    display: flex;
+    flex-direction: column;
+}
+.FooterLinksHeader{
+    width: 100%;
+    height: 40%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.FooterHold{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.FooterwebHold{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.FooterwebHold span{
+    color: #fdfdf7;
+    cursor: pointer;
+    font-family:'Lora', serif;
+}
+.FooterserHold{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+.FooterLinksHeader h3{
+    font-size: 20px;
+    font-family: 'Lora', serif;
+    color: white;
+}    
+
+.FooterserHold span{
+    color: #fdfdf7;
+    cursor: pointer;
+    font-family:'Lora', serif;
+}
+.UserNameHolderCircle{
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 1px solid #05446E;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 350ms ease-in-out;
+}
+.UserNameHolderCircle:hover{
+    background: #05446E;
+}
+
+.UserNameHolderCircle h3{
+    font-size: 0.9rem;
+    font-family: 'Lora',serif;
+    color: #fb8500;
+}
+.UserHoldall{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 8%;
+}
+.ViewAccount{
+    width: 80%;
+    height: 18%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 9px;
+    transition: all 350ms ease-in-out;
+}
+.ViewAccount span{
+    font-family: 'Lora',serif;
+    cursor: pointer;
+    font-weight: 600;
+}
+.ViewAccount:hover{
+    background: #fb8500;
+}
+.HeaderLogOut{
+    width: 90%;
+    height: 20%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.HeaderLogOut button{
+    width: 80%;
+    height: 90%;
+    border: 1px solid #05446E;
+    border-radius: 8px;
+    color: #fb8500;
+    cursor: pointer;
+    background: none;
+    font-family: 'Lora',serif;
+    font-size: 0.9rem;
+    transition: all 350ms ease-in-out;
+}
+.HeaderLogOut button:hover{
+    background: #fb8500;
+    border: none;
+    color: #fdfdf7;
+}
+
+
+
+@media screen and (max-width: 800px) {
+    .Header{
+        /* background: pink; */
+        position: relative;
+    }
+    .HeaderLink,
+    .HeaderProfile{
+        display: none;
+    }
+    .HeaderMobile{
+         width: 30%;
+         height: 2.5rem;
+        /* background: purple; */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .MenuHold{
+        font-size: 1.4rem;
+        cursor: pointer;
+        color: #05446E;
+        position: absolute;
+        right: 10%;
+    }
+    .HeaderHold{
+        width: 100%;
+        height: 22rem;
+        background: #fdfdf7;
+        position: absolute;
+        top: 90%;
+        right: 1%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 8px;
+    }
+    .Active{
+        width: 60%;
+        height: 7%;
+    }
+    .FooterBody{
+        height: 40rem;
+    }
+    .FooterContainer{
+        flex-direction: column;
+    }
+    .FooterDetail{
+        width: 90%;
+    }
+    .FooterDetailHeader h3{
+        font-size: 1.2rem;
+    }
+    .FooterContext span{
+        font-size: 0.8rem;
+    }
+    .FooterLinks{
+        width: 70%;
+    }
+    .FooterLastLine{
+        text-align: center;
+    }
+   
+    .UserInitials{
+        width: 45px;
+        height: 45px;
+        border: 1px solid #05446E;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: all 350ms ease-in-out;
+        border-radius: 50%;
+    }
+    .UserInitials h3{
+        font-size: 0.8rem;
+        font-family: 'Lora', serif;
+        color: #05446E;
+    }
+    .UserLog{
+        width: 40%;
+        height: 60%;
+        border: 1px solid #d9d9d9;
+        background: transparent;
+        border-radius: 5px;
+        font-size: 0.8rem;
+        font-family: 'Lora', serif;
+        color: #05446E;
+        font-weight: 500;
+    }
+    .UserSign{
+        width: 40%;
+        height: 60%;
+        background: #05446E;
+        border-radius: 5px;
+        border: none;
+        font-size: 0.6rem;
+        font-family: 'Lora', serif;
+        color: #ffff;
+        font-weight: 500;
+    }
+    .ProfileUser{
+        width: 95%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 15%;
+    }
+    .UserMobileHold{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 7%;
+        gap: 5%;
+    }
+   
+}
+@media screen and (max-width: 600px) {
+    .Header{
+        position: relative;
+    }
+    .HeaderLink,
+    .HeaderProfile{
+        display: none;
+    }
+    .HeaderMobile{
+         width: 80%;
+         height: 2.5rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .MenuHold{
+        font-size: 1.4rem;
+        cursor: pointer;
+        color: #05446E;
+        position: absolute;
+        right: 1%;
+    }
+    .HeaderHold{
+        width: 100%;
+        height: 25rem;
+        background: #fdfdf7;
+        position: absolute;
+        top: 90%;
+        right: 1%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 8px;
+    }
+    .Active{
+        width: 60%;
+        height: 7%;
+    }
+    .FooterBody{
+        height: 40rem;
+    }
+    .FooterContainer{
+        flex-direction: column;
+    }
+    .FooterDetail{
+        width: 90%;
+    }
+    .FooterDetailHeader h3{
+        font-size: 1.2rem;
+    }
+    .FooterContext span{
+        font-size: 0.8rem;
+    }
+    .FooterLinks{
+        width: 100%;
+    }
+    .FooterLastLine{
+        text-align: center;
+    }
+   
+    .UserLog{
+        width: 20%;
+        height: 60%;
+        border: 1px solid #d9d9d9;
+        background: transparent;
+        border-radius: 5px;
+        font-size: 0.8rem;
+        font-family: 'Lora', serif;
+        color: #05446E;
+        font-weight: 500;
+    }
+    .UserSign{
+        width: 20%;
+        height: 60%;
+        background: #05446E;
+        border-radius: 5px;
+        border: none;
+        font-size: 0.6rem;
+        font-family: 'Lora', serif;
+        color: #ffff;
+        font-weight: 500;
+    }
+    .ProfileUser{
+        width: 95%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 15%;
+    }
+    .UserMobileHold{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 7%;
+        gap: 5%;
+    }
+ 
+}
+
+@media screen and (max-width: 400px) {
+    .Header{
+        /* background: pink; */
+        position: relative;
+        
+    }
+    .HeaderLink,
+    .HeaderProfile{
+        display: none;
+    }
+    .HeaderMobile{
+         width: 80%;
+         height: 3rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .MenuHold{
+        font-size: 1.4rem;
+        cursor: pointer;
+        color: #05446E;
+        position: absolute;
+        right: 3%;
+    }
+    .HeaderHold{
+        width: 100%;
+        height: 20rem;
+        background: #fdfdf7;
+        position: absolute;
+        top: 90%;
+        right: 1%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 8px;
+    }
+    .Active{
+        width: 60%;
+        height: 7%;
+    }
+    .FooterBody{
+        height: 40rem;
+    }
+    .FooterContainer{
+        flex-direction: column;
+    }
+    .FooterDetail{
+        width: 90%;
+    }
+    .FooterDetailHeader h3{
+        font-size: 1.2rem;
+    }
+    .FooterContext span{
+        font-size: 0.8rem;
+    }
+    .FooterLinks{
+        width: 100%;
+    }
+    .FooterLastLine{
+        text-align: center;
+    }
+   
+    .UserLog{
+        width: 20%;
+        height: 60%;
+        border: 1px solid #d9d9d9;
+        background: transparent;
+        border-radius: 5px;
+        font-size: 0.8rem;
+        font-family: 'Lora', serif;
+        color: #05446E;
+        font-weight: 500;
+    }
+    .UserSign{
+        width: 20%;
+        height: 60%;
+        background: #05446E;
+        border-radius: 5px;
+        border: none;
+        font-size: 0.6rem;
+        font-family: 'Lora', serif;
+        color: #ffff;
+        font-weight: 500;
+    }
+    .ProfileUser{
+        width: 95%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 15%;
+        /* background: #000; */
+    }
+    .UserMobileHold{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 14%;
+        /* background: pink; */
+        gap: 5%;
+    }
+    
+    
+}
+
+
+@media screen and (max-width: 320px) {
+    .Header{
+        /* background: pink; */
+        position: relative;
+        
+    }
+    .HeaderLink,
+    .HeaderProfile{
+        display: none;
+    }
+    .HeaderMobile{
+         width: 80%;
+         height: 3rem;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .MenuHold{
+        font-size: 1.4rem;
+        cursor: pointer;
+        color: #05446E;
+        position: absolute;
+        right: 3%;
+    }
+    .HeaderHold{
+        width: 100%;
+        height: 20rem;
+        background: #fdfdf7;
+        position: absolute;
+        top: 90%;
+        right: 1%;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        border-radius: 8px;
+    }
+    .Active{
+        width: 60%;
+        height: 7%;
+    }
+    .HeaderLogo{
+        margin-right: 80px;
+    }
+    .FooterBody{
+        height: 40rem;
+    }
+    .FooterContainer{
+        flex-direction: column;
+    }
+    .FooterDetail{
+        width: 90%;
+    }
+    .FooterDetailHeader h3{
+        font-size: 1.2rem;
+    }
+    .FooterContext span{
+        font-size: 0.8rem;
+    }
+    .FooterLinks{
+        width: 100%;
+    }
+    .FooterLastLine{
+        text-align: center;
+    }
+  
+    .UserLog{
+        width: 30%;
+        height: 60%;
+        border: 1px solid #d9d9d9;
+        background: transparent;
+        border-radius: 5px;
+        font-size: 0.6rem;
+        font-family: 'Lora', serif;
+        color: #05446E;
+        font-weight: 500;
+    }
+    .UserSign{
+        width: 30%;
+        height: 60%;
+        background: #05446E;
+        border-radius: 5px;
+        border: none;
+        font-size: 0.5rem;
+        font-family: 'Lora', serif;
+        color: #ffff;
+        font-weight: 500;
+    }
+    .ProfileUser{
+        width: 93%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-left: 12%;
+        /* background: #000; */
+    }
+    .UserMobileHold{
+        display: flex;
+        width: 100%;
+        height: 100%;
+        justify-content: flex-end;
+        align-items: center;
+        padding-right: 17%;
+        /* background: pink; */
+        /* gap: 5%; */
+    }
+    
+   
+}

@@ -1,0 +1,1015 @@
+/*  */
+  .HeroBody{
+    width: 100%;
+    height: 91.5vh;
+    /* background: #000; */
+    background-image:  url('../assets/lanndddher.webp');
+    background-size: cover;
+    background-position: center;
+  }
+  .HeroWrapper{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+  .HeroContainer{
+    width: 70%;
+    height: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .HeroTitle{
+    width: 100%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .HeroTitle h1{
+    font-size: 3.9rem;
+    font-weight: 500;
+    color: #ffff;
+    font-family: 'Lora',serif;
+    text-align: center;
+  }
+  .HeroSubTitle{
+    width: 70%;
+    height: 24%;
+    background: #fb8500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+  }
+  .HeroSubTitle h3{
+    font-weight: 400;
+    color: #ffff;
+    font-size: 1.4rem;
+    font-family: 'Lora', serif;
+  }
+  .SearchBody{
+    width: 80%;
+    height: 15%;
+    background: #fdfdf7;
+    border-radius: 8px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .SearchDestination{
+    width: 40%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+  }
+  .SearchCheck{
+    width: 25%;
+    height: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .SearchBtn{
+    width: 20%;
+    height: 55%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .SearchBtn button{
+    width: 70%;
+    height: 90%;
+    background: #05446E;
+    font-size: 1.2rem;
+    font-family: 'Lora',serif;
+    font-weight: 600;
+    border: none;
+    border-radius: 7px;
+    color: white;
+    cursor: pointer;
+  }
+  .Loadinghol{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .InputfileDestination{
+    width: 100%;
+    height: 100vh;
+    background-color: #FDFDF7;
+    height: 70%;
+    background: white;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    border-radius: 7px;
+    padding-right: 3px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .InputfileDestination input{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    padding-left: 9px;
+    font-size: 1.1rem;
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    border-radius: 7px;
+  }
+  .DateCheck{
+    width: 100%;
+    height: 70%;
+    background: white;
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    border-radius: 9px;
+    padding-right: 3px;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  }
+  .DateCheck input{
+    border: none;
+    outline: none;
+    width: 100%;
+    height: 100%;
+    padding-left: 12px;
+    font-size: 1.1rem;
+    font-family: 'Lora', serif;
+    font-weight: 500;
+    border-radius: 9px;
+
+  }
+  .BestBody{
+    width: 100%;
+    height: 25vh;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column;
+    align-items: center;
+  }
+  .BestTitle{
+    width: 40%;
+    height: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .BestTitle h1{
+    font-size: 3rem;
+    font-weight: 700;
+    color: #05446E;
+    font-family: 'Lora', serif;
+    text-align: center;
+  }
+  .BestSubTitle{
+    width: 40%;
+    height: 60%;
+    display: flex;
+    justify-content:center;
+    align-items: center;
+    flex-direction: column;
+    gap: 2%;
+  }
+  .BestSubTitle span{
+    font-size: 1.2rem;
+    font-weight: 700;
+    color: #05446E;
+    font-family: 'Lora', serif;
+    text-align: center;
+  }
+  .TotalEverything{
+    width: 100%;
+    height: 50vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .TotalContainer{
+    width: 90%;
+    height: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #FDFDF7;
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    border-radius: 9px;
+  }
+  .TotalClient{
+    width: 25%;
+    height: 90%;
+    /* background: red; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3%;
+  }
+  .TotalHotels{
+    width: 25%;
+    height: 90%;
+    /* background: greenyellow; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3%;
+  }
+  .TotalSatisfaction{
+    width: 25%;
+    height: 90%;
+    /* background: salmon; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: 3%;
+  }
+.TotalClient h3{
+  font-size: 3.4rem;
+  font-family: 'Lora', serif;
+  color: #05446E;
+  
+}
+.TotalHotels h3{
+  font-size: 3.2rem;
+  font-family: 'Lora', serif;
+  color: #05446E;
+
+}
+.TotalSatisfaction h3{
+  font-size: 3.2rem;
+  font-family: 'Lora', serif;
+  color: #05446E;
+}
+.TotalClient h2{
+  font-size: 1.9rem;
+  font-family: 'Lora', serif;
+  font-weight: 500;
+  color: #05446E;
+}
+.TotalHotels h2{
+  font-size: 1.9rem;
+  font-family: 'Lora', serif;
+  font-weight: 500;
+  color: #05446E;
+}
+.TotalSatisfaction h2{
+  font-size: 1.9rem;
+  font-family: 'Lora', serif;
+  font-weight: 500;
+  color: #05446E;
+}
+.ServicesBody{
+  width: 100%;
+  height: 45vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.ServicesContainer{
+  width: 60%;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+.ServicesContainer span{
+  font-size: 1.2rem;
+  font-family: 'Lora', serif;
+  font-weight: 500;
+  color: #05446E;
+  text-align: center;
+}
+.ServicesContainer h2{
+  font-size: 2rem;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  color: #05446E;
+  text-align: center;
+}
+.TestimonalsBody{
+  width: 100%;
+  height: 45rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.TestimonalsHeader{
+  width: 100%;
+  height: 20%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10%;
+}
+.TestimonalsHeader h1{
+  font-size: 2rem;
+  font-family: 'Lora', serif;
+  font-weight: 700;
+  color: #05446E;
+}
+.TestimonalsHeader h3{
+  font-size: 1.4rem;
+  font-family: 'Lora', serif;
+  font-weight: 500;
+  color: #05446E;
+}
+.TestimonialsContiner{
+  width: 90%;
+  height: 80%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+.TestimonialsCard{
+  width: 25%;
+  height: 60%;
+  background: #fdfdf7;
+  border-radius: 10px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-direction: column;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+.TestimonialsText{
+  width: 100%;
+  height: 40%;
+  /* border: 2px solid black; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-inline: 20px;
+}
+.TestimonialsText span{
+  text-align: center;
+  font-family: 'Lora', serif;
+  color: #05446E;
+  font-size: 1rem;
+  font-weight: 600;
+}
+.TestimonalsImage{
+  width: 100%;
+  height: 20%;
+  /* border: 3px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Testimonalimgholder{
+  width: 70px;
+  height: 70px;
+  /* background: #000; */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.Testimonalimgholder img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.TestimonalsName{
+  width: 100%;
+  height: 10%;
+  /* border: 3px solid red; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.TestimonalsName h4{
+  font-size: 1.2rem;
+  font-family: 'Lora', serif;
+  color: #05446E;
+  font-weight: 400;
+}
+.SubBody{
+  width: 100%;
+  height: 30vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.SubContainer{
+  width: 90%;
+  height: 70%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  background: #05446E;
+  border-radius: 12px;
+}
+.SubLeft{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 4%;
+  font-family: 'Lora', serif;
+  color: #fdfdf7;
+}
+.SubRight{
+  width: 40%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10%;
+}
+.SubRightInput{
+  width: 60%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.SubRightInput input{
+  width: 90%;
+  height: 70%;
+  padding: 10px;
+  border-radius: 8px;
+  outline: none;
+  background: transparent;
+  border: 2px solid #d9d9d9;
+  font-family: 'Lora', serif;
+}
+.SubRightBtn{
+  width: 40%;
+  height: 40%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.SubRightBtn button{
+  width: 80%;
+  height: 90%;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+  font-family: 'Lora', serif;
+  font-weight: 500;
+  color: #fdfdf7;
+  cursor: pointer;
+  background: #fb8500;
+}
+
+
+
+  @media screen and (max-width: 800px) {
+   
+    .HeroBody{
+      background-image: url('../assets/heroo2.svg');
+      background-size: cover;
+      background-position: center;
+     }
+     .HeroContainer{
+       /* background: #000; */
+       width: 100%;
+     }
+     .HeroTitle{
+       width: 100%;
+      text-align: center;
+     }
+     .HeroTitle h1{
+       font-size: 2.4rem;
+     }
+     .HeroSubTitle{
+       width: 95%;
+       text-align: center;
+     }
+     .HeroSubTitle h3{
+       font-size: 1.3rem;
+     }
+     .BestBody{
+      width: 100%;
+      height: 25vh;
+      /* background: #000; */
+    }
+    .BestTitle{
+      width: 90%;
+      height: 50%;
+      /* border: 2px solid white; */
+    }
+    .BestTitle h1{
+      font-size: 2rem;
+    }
+    .BestSubTitle{
+      width: 90%;
+      height: 50%;
+      /* border: 2px solid white; */
+    }
+    .BestSubTitle span{
+      font-size: 1.3rem;
+    }
+    .TestimonalsBody{
+      height: 100vh;
+    }
+    .TestimonialsContiner{
+      height: 60%;
+    
+    }
+    .TestimonialsCard{
+      width: 30%;
+      height: 70%;
+    }
+    .TestimonialsText span{
+      font-size: 0.9rem;
+    }
+    .Testimonalimgholder{
+      width: 50px;
+      height: 50px;
+    }
+    .TestimonalsName h4{
+      font-size: 0.8rem;
+    }
+  }
+
+  @media screen and (max-width: 600px) {
+    
+    .HeroBody{
+      background-image: url('../assets/heroo2.svg');
+      background-size: cover;
+      background-position: center;
+     }
+     .HeroContainer{
+       /* background: #000; */
+       width: 100%;
+     }
+     .HeroTitle{
+       width: 100%;
+      text-align: center;
+     }
+     .HeroTitle h1{
+       font-size: 1.7rem;
+     }
+     .HeroSubTitle{
+       width: 95%;
+       text-align: center;
+     }
+     .HeroSubTitle h3{
+       font-size: 1.1rem;
+     }
+     .SearchBody{
+      width: 94%;
+    }
+    .SearchDestination{
+      width: 80%;
+    }
+    .SearchCheck{
+      display: none;
+    }
+    .SearchBtn{
+      width: 30%;
+      height: 60%;
+    }
+    .SearchBtn button{
+      font-size: 0.9rem;
+    }
+    .InputfileDestination input{
+      font-size: 0.8rem;
+    }
+    .BestBody{
+      width: 100%;
+      height: 20vh;
+      justify-content: center;
+    }
+    .BestTitle{
+      width: 90%;
+      height: 20%;
+    }
+    .BestTitle h1{
+      font-size: 1rem;
+    }
+    .BestSubTitle{
+      width: 90%;
+      height: 35%;
+    }
+    .BestSubTitle span{
+      font-size: 0.7rem;
+    }
+    .TotalEverything{
+      width: 100%;
+      height: 100vh;
+      /* background: #000; */
+    }
+    .TotalContainer{
+      width: 90%;
+      height: 90%;
+      /* background: green; */
+      flex-direction: column;
+    }
+    .TotalClient h3{
+      font-size: 2.4rem;
+    }
+    .TotalHotels h3{
+      font-size: 2.4rem;
+    }
+    .TotalSatisfaction h3{
+      font-size: 2.4rem;
+    }
+    .TotalClient h2{
+      font-size: 1.8rem;
+    }
+    .TotalHotels h2{
+      font-size: 1.9rem;
+    }
+    .ServicesBody{
+      /* background: #000; */
+      height: 100vh;
+    }
+    .ServicesContainer{
+      width: 90%;
+      height: 90%;
+      /* background: green; */
+    }
+    .ServicesContainer h2{
+      font-size: 2.2rem;
+    }
+    .ServicesContainer span{
+      font-size: 1.3rem;
+    }
+    .TestimonalsHeader{
+  justify-content: center;
+  gap: 5%;
+  height: 10%;
+  }
+  .TestimonalsHeader h1{
+  font-size: 1.3rem;
+  }
+  .TestimonalsHeader h3{
+  font-size: 1.2rem;
+  }
+  .TestimonalsBody{
+    height: 50rem;
+  }
+  .TestimonialsContiner{
+    flex-direction: column;
+    height: 90%;
+  }
+  .TestimonialsCard{
+    width: 90%;
+    height: 30%;
+  }
+  .TestimonialsText span{
+    font-size: 0.9rem;
+  }
+  .Testimonalimgholder{
+    width: 50px;
+    height: 50px;
+  }
+  .TestimonalsName h4{
+    font-size: 0.8rem;
+  }
+  .SubBody{
+    height: 60vh;
+  }
+  .SubContainer{
+    height: 90%;
+    flex-direction: column;
+  }
+  .SubLeft{
+    width: 100%;
+    text-align: center;
+  }
+  .SubRight{
+    width: 100%;
+  }
+  .SubRightBtn button{
+    width: 90%;
+    height: 60%;
+    font-size: 0.7rem;
+  }
+     
+  }
+  @media screen and (max-width: 400px) {
+ 
+    .HeroBody{
+      background-image: url('../assets/heroo2.svg');
+      background-size: cover;
+      background-position: center;
+     }
+     .HeroContainer{
+       /* background: #000; */
+       width: 100%;
+     }
+     .HeroTitle{
+       width: 100%;
+      text-align: center;
+     }
+     .HeroTitle h1{
+       font-size: 1.7rem;
+     }
+     .HeroSubTitle{
+       width: 95%;
+       text-align: center;
+     }
+     .HeroSubTitle h3{
+       font-size: 1.1rem;
+     }
+     .SearchBody{
+      width: 94%;
+    }
+    .SearchDestination{
+      width: 80%;
+    }
+    .SearchCheck{
+      display: none;
+    }
+    .SearchBtn{
+      width: 30%;
+      height: 60%;
+    }
+    .SearchBtn button{
+      font-size: 0.9rem;
+    }
+    .InputfileDestination input{
+      font-size: 0.8rem;
+    }
+    .BestBody{
+      width: 100%;
+      height: 20vh;
+      justify-content: center;
+    }
+    .BestTitle{
+      width: 90%;
+      height: 20%;
+    }
+    .BestTitle h1{
+      font-size: 1rem;
+    }
+    .BestSubTitle{
+      width: 90%;
+      height: 35%;
+    }
+    .BestSubTitle span{
+      font-size: 0.7rem;
+    }
+    .TotalEverything{
+      width: 100%;
+      height: 100vh;
+      /* background: #000; */
+    }
+    .TotalContainer{
+      width: 90%;
+      height: 90%;
+      /* background: green; */
+      flex-direction: column;
+    }
+    .TotalClient h3{
+      font-size: 2.4rem;
+    }
+    .TotalHotels h3{
+      font-size: 2.4rem;
+    }
+    .TotalSatisfaction h3{
+      font-size: 2.4rem;
+    }
+    .TotalClient h2{
+      font-size: 1.8rem;
+    }
+    .TotalHotels h2{
+      font-size: 1.9rem;
+    }
+    .ServicesBody{
+      /* background: #000; */
+      height: 100vh;
+    }
+    .ServicesContainer{
+      width: 90%;
+      height: 90%;
+      /* background: green; */
+    }
+    .ServicesContainer h2{
+      font-size: 2.2rem;
+    }
+    .ServicesContainer span{
+      font-size: 1.3rem;
+    }
+    .TestimonalsHeader{
+  justify-content: center;
+  gap: 5%;
+  height: 10%;
+  }
+  .TestimonalsHeader h1{
+  font-size: 1.3rem;
+  }
+  .TestimonalsHeader h3{
+  font-size: 1.2rem;
+  }
+  .TestimonalsBody{
+    height: 50rem;
+  }
+  .TestimonialsContiner{
+    flex-direction: column;
+    height: 90%;
+  }
+  .TestimonialsCard{
+    width: 90%;
+    height: 30%;
+  }
+  .TestimonialsText span{
+    font-size: 0.9rem;
+  }
+  .Testimonalimgholder{
+    width: 50px;
+    height: 50px;
+  }
+  .TestimonalsName h4{
+    font-size: 0.8rem;
+  }
+  .SubBody{
+    height: 60vh;
+  }
+  .SubContainer{
+    height: 90%;
+    flex-direction: column;
+  }
+  .SubLeft{
+    width: 100%;
+    text-align: center;
+  }
+  .SubRight{
+    width: 100%;
+  }
+  .SubRightBtn button{
+    width: 90%;
+    height: 60%;
+    font-size: 0.7rem;
+  }
+     
+  }
+
+  @media screen and (max-width: 320px) {
+  
+  .HeroBody{
+   background-image: url('../assets/heroo2.svg');
+   background-size: cover;
+   background-position: center;
+  }
+  .HeroContainer{
+    /* background: #000; */
+    width: 100%;
+  }
+  .HeroTitle{
+    width: 100%;
+   text-align: center;
+  }
+  .HeroTitle h1{
+    font-size: 1.7rem;
+  }
+  .HeroSubTitle{
+    width: 95%;
+    text-align: center;
+    height: 20%;
+  }
+  .HeroSubTitle h3{
+    font-size: 1.1rem;
+  }
+  .SearchBody{
+    width: 94%;
+  }
+  .SearchDestination{
+    width: 80%;
+  }
+  .SearchCheck{
+    display: none;
+  }
+  .SearchBtn{
+    width: 30%;
+    height: 60%;
+  }
+  .SearchBtn button{
+    font-size: 0.9rem;
+  }
+  .InputfileDestination input{
+    font-size: 0.8rem;
+  }
+  .BestBody{
+    width: 100%;
+    height: 20vh;
+    justify-content: center;
+  }
+  .BestTitle{
+    width: 90%;
+    height: 20%;
+  }
+  .BestTitle h1{
+    font-size: 1rem;
+  }
+  .BestSubTitle{
+    width: 90%;
+    height: 35%;
+  }
+  .BestSubTitle span{
+    font-size: 0.7rem;
+  }
+  .TotalEverything{
+    width: 100%;
+    height: 100vh;
+    /* background: #000; */
+  }
+  .TotalContainer{
+    width: 90%;
+    height: 90%;
+    /* background: green; */
+    flex-direction: column;
+  }
+  .TotalClient h3{
+    font-size: 2.4rem;
+  }
+  .TotalHotels h3{
+    font-size: 2.4rem;
+  }
+  .TotalSatisfaction h3{
+    font-size: 2.4rem;
+  }
+  .TotalClient h2{
+    font-size: 1.8rem;
+  }
+  .TotalHotels h2{
+    font-size: 1.9rem;
+  }
+  .ServicesBody{
+    /* background: #000; */
+    height: 60vh;
+  }
+  .ServicesContainer{
+    width: 90%;
+    height: 90%;
+    /* background: green; */
+  }
+  .ServicesContainer h2{
+    font-size: 2.2rem;
+  }
+  .ServicesContainer span{
+    font-size: 1rem;
+  }
+  .TestimonalsHeader{
+  justify-content: center;
+  gap: 5%;
+  height: 10%;
+  }
+  .TestimonalsHeader h1{
+  font-size: 1.1rem;
+  }
+  .TestimonalsHeader h3{
+  font-size: 0.9rem;
+  }
+  .TestimonalsBody{
+    height: 50rem;
+  }
+  .TestimonialsContiner{
+    flex-direction: column;
+    height: 90%;
+  }
+  .TestimonialsCard{
+    width: 90%;
+    height: 30%;
+  }
+  .TestimonialsText span{
+    font-size: 0.7rem;
+  }
+  .Testimonalimgholder{
+    width: 50px;
+    height: 50px;
+  }
+  .TestimonalsName h4{
+    font-size: 0.8rem;
+  }
+  .SubBody{
+    height: 60vh;
+  }
+  .SubContainer{
+    height: 90%;
+    flex-direction: column;
+  }
+  .SubLeft{
+    width: 100%;
+    text-align: center;
+  }
+  .SubRight{
+    width: 100%;
+  }
+  .SubRightBtn button{
+    width: 90%;
+    height: 60%;
+    font-size: 0.7rem;
+  }
+
+  }
